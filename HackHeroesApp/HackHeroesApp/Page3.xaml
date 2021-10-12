@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage Title="Rejestracja"
+             BackgroundColor="Gray"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HackHeroesApp.Page3">
+    <StackLayout VerticalOptions="Center" Spacing="15">
+        <StackLayout Margin="0,0,0,40">
+            <Label 
+			Text="Tworzenie konta"
+			TextColor="White"
+			FontSize="30" 
+			FontAttributes="Bold"  
+			HorizontalOptions="Center" />
+        </StackLayout>
+        <Label 
+			Text="Email" 
+			TextColor="White"
+			FontSize="18" 
+			HorizontalOptions="Center" />
+        <StackLayout Margin="30,0,30,0">
+            <Entry Keyboard="Email" Placeholder="email"/>
+        </StackLayout>
+        <Label 
+			Text="Hasło" 
+			TextColor="White"
+			FontSize="18" 
+			HorizontalOptions="Center" />
+        <StackLayout Margin="30,0,30,0">
+        <Entry IsPassword="true" Placeholder="hasło"/>
+        </StackLayout>
+    <Label 
+			Text="Powtórz hasło" 
+			TextColor="White"
+			FontSize="18" 
+			HorizontalOptions="Center" />
+        <StackLayout Margin="30,0,30,0">
+            <Entry IsPassword="true" Placeholder="hasło"/>
+        </StackLayout>
+        <StackLayout Margin="30,0,30,0">
+            <Button 
+			Text="Zarejestruj" 
+			TextColor="White"
+			BackgroundColor="#1dabf0" 
+            Clicked="Register"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

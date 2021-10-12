@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+			BackgroundColor="Gray"
+			NavigationPage.HasNavigationBar="false"
+			Title="Page1"
+			xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HackHeroesApp.Page1">
+    <StackLayout VerticalOptions="Center" Spacing="20">
+        <Label 
+			Text="Witaj w HackHeroesApp"
+			TextColor="White"
+			FontSize="30" 
+			FontAttributes="Bold"  
+			HorizontalOptions="Center" />
+        <Label 
+			Text="Aplikacji dzieki, której zdasz!" 
+			TextColor="White"
+			FontSize="18" 
+			HorizontalOptions="Center" />
+        <Button 
+			Text="Logowanie" 
+			TextColor="White"
+			BackgroundColor="#1dabf0" 
+            Clicked="LoginPage"/>
+			
+        <Button 
+			Text="Rejestracja" 
+			TextColor="White"
+			BackgroundColor="#1dabf0" 
+            Clicked="RegisterPage"/>
+    </StackLayout>
+</ContentPage>
