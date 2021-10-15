@@ -19,7 +19,7 @@
 			FontSize="18" 
 			HorizontalOptions="Center" />
         <StackLayout Margin="30,0,30,0">
-            <Entry Keyboard="Email" Placeholder="email"/>
+            <Entry Keyboard="Email" Placeholder="email" x:Name="LoginEmail"/>
         </StackLayout>
         <Label 
 			Text="Hasło" 
@@ -27,7 +27,7 @@
 			FontSize="18" 
 			HorizontalOptions="Center" />
         <StackLayout Margin="30,0,30,0">
-            <Entry IsPassword="true" Placeholder="hasło"/>
+            <Entry IsPassword="true" Placeholder="hasło" x:Name="LoginPassword"/>
         </StackLayout>
         <StackLayout Margin="30,0,30,0">
         <Button 
@@ -35,6 +35,9 @@
 			TextColor="White"
 			BackgroundColor="#1dabf0" 
             Clicked="Login"/>
+        </StackLayout>
+        <StackLayout>
+            <Label Text="{Binding LoginErrors}" MinimumWidthRequest="40" HorizontalTextAlignment="Center" TextColor="Black" FontSize="10" VerticalOptions="Center"/>
         </StackLayout>
     </StackLayout>
 </ContentPage>

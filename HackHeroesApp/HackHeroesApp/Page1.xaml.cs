@@ -19,23 +19,10 @@ namespace HackHeroesApp
             InitializeComponent();
         }
 
-        //IMyAPI myAPI;
 
         async void LoginPage(object sender, EventArgs e)
         {
-            //myAPI = RestService.For<IMyAPI>("https://jsonplaceholder.typicode.com");
-            //try
-            //{
-            //    PostContent post = new PostContent();
-            //    post.userId = 1;
-            //    PostContent result = await myAPI.SubmitPost(post);
-            //    Console.WriteLine(result.id);
-            //}
-            //catch (Exception ex)
-            //{
-            //    Console.WriteLine(ex);
-            //}
-            //Console.WriteLine("Przycisk");
+
             await Navigation.PushModalAsync(new Page2());
         }
 
