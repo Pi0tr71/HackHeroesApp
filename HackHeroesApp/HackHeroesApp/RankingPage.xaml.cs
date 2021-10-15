@@ -1,7 +1,6 @@
 ﻿using HackHeroesApp.Models;
 using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,7 +11,7 @@ using Xamarin.Forms.Xaml;
 namespace HackHeroesApp
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Page4 : TabbedPage
+    public partial class RankingPage : ContentPage
     {
 
         /// <summary>
@@ -20,16 +19,10 @@ namespace HackHeroesApp
         /// </summary>
         private List<UserModel> users = new List<UserModel>();
 
-        public Page4()
+        public RankingPage()
         {
             InitializeComponent();
-            this.BindingContext = this;
             UsersRanking();
-        }
-
-        async void KursT(object sender, EventArgs e)
-        {
-            await Navigation.PushModalAsync(new Page5());
         }
 
         /// <summary>
@@ -43,14 +36,15 @@ namespace HackHeroesApp
             for (int i = 1; i <= 30; i++)
             {
                 int level = rnd.Next(1, 20);
-                users.Add(new UserModel(i, $"Nazwa{i}", $"user{i}@test.com",  level, i));
+                users.Add(new UserModel(i, $"Nazwa{i}", $"user{i}@test.com", level, i));
             }
 
             // Sortuję tablicę użytkowników po ilości punktów
             List<UserModel> sorted = users.OrderByDescending(user => user.Level).ToList();
 
             // Zmienia miejsca w rankingu po sortowaniu
-            foreach(UserModel user in sorted){
+            foreach (UserModel user in sorted)
+            {
                 user.ChangeUserRankingPlace(sorted.IndexOf(user));
             }
 
