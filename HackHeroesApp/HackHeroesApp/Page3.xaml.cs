@@ -36,7 +36,7 @@ namespace HackHeroesApp
             {
                 Console.WriteLine("Wpisz poprawnie email");
             }
-            if (RegisterEmailValue.Length > 39)
+            else if (RegisterEmailValue.Length > 39)
             {
                 Console.WriteLine("Za długi email");
             }
@@ -72,7 +72,6 @@ namespace HackHeroesApp
             {
                 Console.WriteLine("Hasła nie są takie same");
             }
-
             else
             {
                 myAPI = RestService.For<IMyAPIReg>("http://192.168.0.180:5000/api/v1");
