@@ -19,7 +19,7 @@ namespace HackHeroesApp
             InitializeComponent();
         }
 
-        IMyAPI myAPI;
+        IMyAPILog myAPI;
 
         async void Login(object sender, EventArgs e)
         {
@@ -37,24 +37,38 @@ namespace HackHeroesApp
             {
                 Console.WriteLine("Brak Hasła");
             }
+
             else
             {
-                myAPI = RestService.For<IMyAPI>("https://jsonplaceholder.typicode.com");
+                myAPI = RestService.For<IMyAPILog>("http://192.168.0.180:5000/api/v1");
                 try
                 {
-                    PostContent post = new PostContent();
-                    post.userId = 1;
-                    PostContent result = await myAPI.SubmitPost(post);
-                    Console.WriteLine(result.id);
-                    if (result.id == 101)
+
+                    LogPost post = new LogPost();
+                    post.email = LoginEmailValue;
+                    post.haslo = LoginPasswordValue;
+                    LogPost result = await myAPI.SubmitPost(post);
+                    Console.WriteLine(result.status);
+                    Console.WriteLine(result.token);
+                    Console.WriteLine(result.poziom);
+                    if (result.status == "loged in")
                     {
                         await Navigation.PushModalAsync(new Page4());
                     }
+                    if (result.status == "user not found")
+                    {
+                        Console.WriteLine("Błędne email");
+                    }
+                    if (result.status == "bad password")
+                    {
+                        Console.WriteLine("Błędne Hasło");
+                    }
+
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine("Przycisk");
                     Console.WriteLine(ex);
+
 
                 }
             }

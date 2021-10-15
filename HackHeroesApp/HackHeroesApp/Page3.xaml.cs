@@ -20,7 +20,7 @@ namespace HackHeroesApp
             InitializeComponent();
         }
 
-        IMyAPI myAPI;
+        IMyAPIReg myAPI;
 
         async void Register(object sender, EventArgs e)
         {
@@ -36,13 +36,21 @@ namespace HackHeroesApp
             {
                 Console.WriteLine("Wpisz poprawnie email");
             }
-            if (RegisterEmailValue.Length > 40)
+            if (RegisterEmailValue.Length > 39)
             {
                 Console.WriteLine("Za długi email");
             }
             else if (RegisterLoginValue == null)
             {
                 Console.WriteLine("Brak Loginu");
+            }
+            else if (RegisterLoginValue.Length < 5)
+            {
+                Console.WriteLine("Login za krótki");
+            }
+            else if (RegisterLoginValue.Length > 40)
+            {
+                Console.WriteLine("Login za długi");
             }
             else if (RegisterPassword1Value == null)
             {
@@ -67,25 +75,31 @@ namespace HackHeroesApp
 
             else
             {
-                myAPI = RestService.For<IMyAPI>("https://jsonplaceholder.typicode.com");
+                myAPI = RestService.For<IMyAPIReg>("http://192.168.0.180:5000/api/v1");
                 try
                 {
 
-                    PostContent post = new PostContent();
-                    post.userId = 1;
-                    PostContent result = await myAPI.SubmitPost(post);
-                    Console.WriteLine(result.id);
-                    if (result.id == 101)
+                    RegPost post = new RegPost();
+                    post.email = RegisterEmailValue;
+                    post.haslo = RegisterPassword1Value;
+                    post.login = RegisterLoginValue;
+                    RegPost result = await myAPI.SubmitPost(post);
+                    Console.WriteLine(result.status);
+                    if (result.status == "user created")
                     {
                         await DisplayAlert("Utworzono Konto", "Teraz możesz się zalogować", "OK");
                         await Navigation.PopModalAsync();
+                    }
+                    if (result.status == "cant create user")
+                    {
+                        Console.WriteLine("Login lub Email są już zajęte");
                     }
 
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine("Przycisk");
                     Console.WriteLine(ex);
+
 
                 }
             }

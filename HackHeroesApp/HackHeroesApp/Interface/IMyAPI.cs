@@ -7,9 +7,14 @@ using System.Threading.Tasks;
 
 namespace HackHeroesApp.Interface
 {
-    public interface IMyAPI
+    public interface IMyAPIReg
     {
-        [Post("/posts")]
-        Task<PostContent> SubmitPost([Body] PostContent post);
+        [Post("/users/registration")]
+        Task<RegPost> SubmitPost([Body] RegPost post);
+    }
+    public interface IMyAPILog
+    {
+        [Post("/users/login")]
+        Task<LogPost> SubmitPost([Body] LogPost post);
     }
 }
