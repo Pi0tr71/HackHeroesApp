@@ -2,10 +2,29 @@
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HackHeroesApp.Page4"
-            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core" xmlns:viewmodel="clr-namespace:HackHeroesApp.ViewModels"
             android:TabbedPage.ToolbarPlacement="Bottom">
     <ContentPage Title="Statystyki" IconImageSource="https://img.icons8.com/color/48/000000/ok--v3.png">
-        <Label Text="Tu kiedyś będą statysyki ale jeszcze teraz ich nie ma bo nie chciało mi sie ich robić" HorizontalOptions="Center" VerticalOptions="Center"/>
+        <ContentPage.BindingContext>
+            <viewmodel:RestViewModel/>
+        </ContentPage.BindingContext>
+        <ContentPage.Content>
+            <ScrollView>
+                <Grid>
+                    <CollectionView ItemsSource="{Binding Questions}" SelectionMode="None">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+
+                                <StackLayout HorizontalOptions="FillAndExpand" Margin="0" Padding="0">
+                                    <Label Text="{Binding Question}" FontSize="Medium" TextColor="Black"/>
+                                </StackLayout>
+                                
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </Grid>
+            </ScrollView>
+        </ContentPage.Content>
     </ContentPage>
     <ContentPage Padding="0,20,0,0" Title="Nauka" IconImageSource="https://img.icons8.com/color/48/000000/bookmark--v2.png">
         <RelativeLayout>
