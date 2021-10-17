@@ -4,56 +4,60 @@
              xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HackHeroesApp.Page3">
-    <StackLayout VerticalOptions="Center" Spacing="15">
-        <StackLayout Margin="0,0,0,40">
-            <Label 
+    <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <Image Source="background.png" AbsoluteLayout.LayoutBounds="1,1,1,1" AbsoluteLayout.LayoutFlags="All" Aspect="AspectFill"></Image>
+        <StackLayout AbsoluteLayout.LayoutBounds="1,1,1,1" AbsoluteLayout.LayoutFlags="All" BackgroundColor="Transparent" VerticalOptions="Center" Spacing="15">
+            <StackLayout Margin="0,0,0,40">
+                <Label 
 			Text="Tworzenie konta"
 			TextColor="White"
 			FontSize="30" 
 			FontAttributes="Bold"  
 			HorizontalOptions="Center" />
-        </StackLayout>
-        <Label 
+            </StackLayout>
+            <Label 
 			Text="Email" 
 			TextColor="White"
 			FontSize="18" 
 			HorizontalOptions="Center" />
-        <StackLayout Margin="30,0,30,0">
-            <Entry Keyboard="Email" Placeholder="email" x:Name="RegisterEmail"/>
-        </StackLayout>
-        <Label 
+            <StackLayout Margin="30,0,30,0">
+                <Entry Keyboard="Email" Placeholder="email" x:Name="RegisterEmail"/>
+            </StackLayout>
+            <Label 
 			Text="Login" 
 			TextColor="White"
 			FontSize="18" 
 			HorizontalOptions="Center" />
-        <StackLayout Margin="30,0,30,0">
-            <Entry Keyboard="Text" Placeholder="login" x:Name="RegisterLogin"/>
-        </StackLayout>
-        <Label 
+            <StackLayout Margin="30,0,30,0">
+                <Entry Keyboard="Text" Placeholder="login" x:Name="RegisterLogin"/>
+            </StackLayout>
+            <Label 
 			Text="Hasło" 
 			TextColor="White"
 			FontSize="18" 
 			HorizontalOptions="Center" />
-        <StackLayout Margin="30,0,30,0">
-            <Entry IsPassword="true" Placeholder="hasło" x:Name="RegisterPassword1"/>
-        </StackLayout>
-    <Label 
+            <StackLayout Margin="30,0,30,0">
+                <Entry IsPassword="true" Placeholder="hasło" x:Name="RegisterPassword1"/>
+            </StackLayout>
+            <Label 
 			Text="Powtórz hasło" 
 			TextColor="White"
 			FontSize="18" 
 			HorizontalOptions="Center" />
-        <StackLayout Margin="30,0,30,0">
-            <Entry IsPassword="true" Placeholder="hasło" x:Name="RegisterPassword2"/>
-        </StackLayout>
-        <StackLayout Margin="30,0,30,0">
-            <Button 
+            <StackLayout Margin="30,0,30,0">
+                <Entry IsPassword="true" Placeholder="hasło" x:Name="RegisterPassword2"/>
+            </StackLayout>
+            <StackLayout Margin="30,0,30,0">
+                <Button 
 			Text="Zarejestruj" 
 			TextColor="White"
-			BackgroundColor="#1dabf0" 
+			BackgroundColor="#3c987a" 
+            CornerRadius="10"
             Clicked="Register"/>
+            </StackLayout>
+            <StackLayout>
+                <Label Text="{Binding RegisterErrors}" MinimumWidthRequest="40" HorizontalTextAlignment="Center" TextColor="Black" FontSize="10" VerticalOptions="Center"/>
+            </StackLayout>
         </StackLayout>
-        <StackLayout>
-            <Label Text="{Binding RegisterErrors}" MinimumWidthRequest="40" HorizontalTextAlignment="Center" TextColor="Black" FontSize="10" VerticalOptions="Center"/>
-        </StackLayout>
-    </StackLayout>
+    </AbsoluteLayout>
 </ContentPage>

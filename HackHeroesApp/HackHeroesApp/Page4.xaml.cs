@@ -14,7 +14,6 @@ namespace HackHeroesApp
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Page4 : TabbedPage
     {
-
         /// <summary>
         /// Lista wszytkich użytkowników
         /// </summary>
@@ -23,7 +22,15 @@ namespace HackHeroesApp
         public Page4()
         {
             InitializeComponent();
+
+            var imageSource1 = new UriImageSource { Uri = new Uri("https://upload.wikimedia.org/wikipedia/commons/8/81/Polski_Fiat_126p_rocznik_1973.jpg") };
+            image1.Source = imageSource1;
+            this.BindingContext = this;   
+            
+            var imageSource2 = new UriImageSource { Uri = new Uri("https://cdn.w600.comps.canstockphoto.pl/prosty-stickman-cz%C5%82owiek-klipart-wektorowy_csp43585411.jpg") };
+            image2.Source = imageSource2;
             this.BindingContext = this;
+           
             UsersRanking();
         }
 

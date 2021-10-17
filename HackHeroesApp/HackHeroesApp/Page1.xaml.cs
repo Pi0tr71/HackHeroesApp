@@ -17,6 +17,7 @@ namespace HackHeroesApp
         public Page1()
         {
             InitializeComponent();
+
         }
 
 

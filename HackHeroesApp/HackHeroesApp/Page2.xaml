@@ -4,40 +4,44 @@
              xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HackHeroesApp.Page2">
-    <StackLayout VerticalOptions="Center" Spacing="15">
-        <StackLayout Margin="0,0,0,40">
-            <Label 
+    <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <Image Source="background.png" AbsoluteLayout.LayoutBounds="1,1,1,1" AbsoluteLayout.LayoutFlags="All" Aspect="AspectFill"></Image>
+        <StackLayout AbsoluteLayout.LayoutBounds="1,1,1,1" AbsoluteLayout.LayoutFlags="All" BackgroundColor="Transparent" VerticalOptions="Center" Spacing="20">
+            <StackLayout Margin="0,0,0,40">
+                <Label 
 			Text="Logowanie do konta"
 			TextColor="White"
 			FontSize="30" 
 			FontAttributes="Bold"  
 			HorizontalOptions="Center" />
-        </StackLayout>
-        <Label 
+            </StackLayout>
+            <Label 
 			Text="Email" 
 			TextColor="White"
 			FontSize="18" 
 			HorizontalOptions="Center" />
-        <StackLayout Margin="30,0,30,0">
-            <Entry Keyboard="Email" Placeholder="email" x:Name="LoginEmail"/>
-        </StackLayout>
-        <Label 
+            <StackLayout Margin="30,0,30,0">
+                <Entry Keyboard="Email" Placeholder="email" x:Name="LoginEmail"/>
+            </StackLayout>
+            <Label 
 			Text="Hasło" 
 			TextColor="White"
 			FontSize="18" 
 			HorizontalOptions="Center" />
-        <StackLayout Margin="30,0,30,0">
-            <Entry IsPassword="true" Placeholder="hasło" x:Name="LoginPassword"/>
-        </StackLayout>
-        <StackLayout Margin="30,0,30,0">
-        <Button 
+            <StackLayout Margin="30,0,30,0">
+                <Entry IsPassword="true" Placeholder="hasło" x:Name="LoginPassword"/>
+            </StackLayout>
+            <StackLayout Margin="30,0,30,0">
+                <Button 
 			Text="Login" 
 			TextColor="White"
-			BackgroundColor="#1dabf0" 
+			BackgroundColor="#3c987a" 
+            CornerRadius="10"
             Clicked="Login"/>
+            </StackLayout>
+            <StackLayout>
+                <Label Text="{Binding LoginErrors}" MinimumWidthRequest="40" HorizontalTextAlignment="Center" TextColor="Black" FontSize="10" VerticalOptions="Center"/>
+            </StackLayout>
         </StackLayout>
-        <StackLayout>
-            <Label Text="{Binding LoginErrors}" MinimumWidthRequest="40" HorizontalTextAlignment="Center" TextColor="Black" FontSize="10" VerticalOptions="Center"/>
-        </StackLayout>
-    </StackLayout>
+    </AbsoluteLayout>
 </ContentPage>

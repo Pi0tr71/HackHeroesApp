@@ -4,7 +4,94 @@
              x:Class="HackHeroesApp.Page4"
             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core" xmlns:viewmodel="clr-namespace:HackHeroesApp.ViewModels" xmlns:model="clr-namespace:HackHeroesApp.Models" xmlns:hackheroesapp="clr-namespace:HackHeroesApp" xmlns:d="http://xamarin.com/schemas/2014/forms/design" x:DataType="hackheroesapp:Page4"
             android:TabbedPage.ToolbarPlacement="Bottom">
-    <ContentPage Title="Statystyki" IconImageSource="https://img.icons8.com/color/48/000000/ok--v3.png">
+    <ContentPage Title="Statystyki" IconImageSource="https://img.icons8.com/external-kiranshastry-lineal-kiranshastry/64/000000/external-stats-data-science-kiranshastry-lineal-kiranshastry.png" BackgroundColor="White">
+        <StackLayout>
+                <Grid Margin="0,0,0,20">
+                    <Image Grid.Row="0" Grid.ColumnSpan="2" x:Name="image1"/>
+                    <Image Grid.Row="0" Grid.Column="2" x:Name="image2"/>
+                </Grid>
+                <StackLayout Spacing="0">
+                <Label Text="Machel_Dzban" FontAttributes="Bold" FontSize="30" TextColor="Black" BackgroundColor="#3c987a" Padding="0,10,0,0" />
+                <Label Text="Poziom: 0" FontAttributes="Bold" FontSize="20"  Margin="0,0,0,30" TextColor="Black"  VerticalTextAlignment="Center" BackgroundColor="#3c987a" Padding="0,0,0,10"/>
+                </StackLayout>
+                <StackLayout Margin="10,0,0,0">
+                    <Label Text="Najlepszy czas teoria: 00:10:00" FontSize="15" TextColor="Black"/>
+                    <Label Text="Nauczonych pytań 0/2100" FontSize="15" TextColor="Black"/>
+                </StackLayout>
+            </StackLayout>
+    </ContentPage>
+    <ContentPage BackgroundImageSource="background.png" Padding="0,20,0,0" Title="Nauka" IconImageSource="https://img.icons8.com/external-itim2101-lineal-itim2101/64/000000/external-learning-elearning-itim2101-lineal-itim2101-1.png">
+        <RelativeLayout>
+            <Button  x:Name="banner" BorderRadius="30" FontSize="35"  TextColor="White" Text="Pytania" Clicked="KursT"
+			RelativeLayout.HeightConstraint="{ConstraintExpression 
+				Type=RelativeToParent,
+				Property=Height,
+				Factor=0.31}"
+			RelativeLayout.WidthConstraint="{ConstraintExpression
+				Type=RelativeToParent,
+				Property=Width,
+				Factor=1}" />
+            <Button  x:Name="banner2" BorderRadius="30" FontSize="35"   TextColor="White" Text="Skrzyżowania" 
+			RelativeLayout.YConstraint="{ConstraintExpression 
+				Type=RelativeToView,
+				ElementName=banner,
+				Property=Height,
+				Factor=1,
+                Constant=20}"
+            RelativeLayout.HeightConstraint="{ConstraintExpression 
+				Type=RelativeToParent,
+				Property=Height,
+				Factor=0.31}"
+			RelativeLayout.WidthConstraint="{ConstraintExpression
+				Type=RelativeToParent,
+				Property=Width,
+				Factor=1}" />
+            <Button BorderRadius="30" FontSize="35"   TextColor="White" Text="Budowa Auta"
+			RelativeLayout.YConstraint="{ConstraintExpression 
+				Type=RelativeToView,
+				ElementName=banner2,
+				Property=Height,
+				Factor=2,
+                Constant=40}"
+            RelativeLayout.HeightConstraint="{ConstraintExpression 
+				Type=RelativeToParent,
+				Property=Height,
+				Factor=0.31}"
+			RelativeLayout.WidthConstraint="{ConstraintExpression
+				Type=RelativeToParent,
+				Property=Width,
+				Factor=1}" />
+        </RelativeLayout>
+    </ContentPage>
+    <ContentPage Padding="0,20,0,0" BackgroundImageSource="background.png" Title="Testy" IconImageSource="https://img.icons8.com/external-vitaliy-gorbachev-lineal-vitaly-gorbachev/50/000000/external-test-back-to-school-vitaliy-gorbachev-lineal-vitaly-gorbachev.png">
+        <RelativeLayout>
+            <Button x:Name="banner5" BorderRadius="30" FontSize="35"  TextColor="White" Text="Teoria" Clicked="KursT"
+			RelativeLayout.HeightConstraint="{ConstraintExpression 
+				Type=RelativeToParent,
+				Property=Height,
+				Factor=0.47}"
+			RelativeLayout.WidthConstraint="{ConstraintExpression
+				Type=RelativeToParent,
+				Property=Width,
+				Factor=1}" />
+            <Button  BorderRadius="30" FontSize="35"   TextColor="White" Text="Praktyka" 
+			RelativeLayout.YConstraint="{ConstraintExpression 
+				Type=RelativeToView,
+				ElementName=banner5,
+				Property=Height,
+				Factor=1,
+                Constant=20}"
+            RelativeLayout.HeightConstraint="{ConstraintExpression 
+				Type=RelativeToParent,
+				Property=Height,
+				Factor=0.47}"
+			RelativeLayout.WidthConstraint="{ConstraintExpression
+				Type=RelativeToParent,
+				Property=Width,
+				Factor=1}" />
+        </RelativeLayout>
+    </ContentPage>
+    <ContentPage Title="Ranking" IconImageSource="https://img.icons8.com/external-bearicons-detailed-outline-bearicons/50/000000/external-ranking-reputation-bearicons-detailed-outline-bearicons.png">
         <!-- <ContentPage.BindingContext>
             <viewmodel:RestViewModel/>
         </ContentPage.BindingContext>
@@ -25,7 +112,7 @@
                 </Grid>
             </ScrollView>
         </ContentPage.Content> -->
-        <!-- Nie chciało mi się dodawać łącza do rankingu więc tu jest podgląd -->
+        <!-- Nie chciało mi się dodawać łącza do rankingu więc tu jest podgląd  No-->
         <ScrollView>
             <ListView x:Name="UserRankingList" SeparatorColor="LightGray" VerticalOptions="FillAndExpand"
                           HorizontalOptions="FillAndExpand" >
@@ -33,7 +120,7 @@
                     <FlexLayout Padding="10, 20" Direction="Row" AlignItems="Center" JustifyContent="SpaceBetween" BackgroundColor="#3160ad" HorizontalOptions="FillAndExpand">
                         <Label Text="Miejsce" MinimumWidthRequest="40" HorizontalTextAlignment="Center" FontAttributes="Bold" TextColor="White" FontSize="Medium" VerticalOptions="Center" />
                         <Label Text="Użytkownik" TextColor="White" FontSize="Medium" FontAttributes="Bold" VerticalOptions="Center"/>
-                        <Label Text="Poziom" MinimumWidthRequest="40" HorizontalTextAlignment="Center" FontAttributes="Bold" TextColor="White" FontSize="Medium" VerticalOptions="Center"/>
+                        <Label Text="Czas" MinimumWidthRequest="40" HorizontalTextAlignment="Center" FontAttributes="Bold" TextColor="White" FontSize="Medium" VerticalOptions="Center"/>
                     </FlexLayout>
                 </ListView.Header>
                 <ListView.ItemTemplate>
@@ -49,91 +136,5 @@
                 </ListView.ItemTemplate>
             </ListView>
         </ScrollView>
-    </ContentPage>
-    <ContentPage Padding="0,20,0,0" Title="Nauka" IconImageSource="https://img.icons8.com/color/48/000000/bookmark--v2.png">
-        <RelativeLayout>
-            <Button BackgroundColor="#f7f7f7" x:Name="banner" BorderRadius="30" FontSize="30"  FontAttributes="Bold" TextColor="CornflowerBlue" Text="Kurs do egzaminu teoretycznego" Clicked="KursT"
-			RelativeLayout.HeightConstraint="{ConstraintExpression 
-				Type=RelativeToParent,
-				Property=Height,
-				Factor=0.31}"
-			RelativeLayout.WidthConstraint="{ConstraintExpression
-				Type=RelativeToParent,
-				Property=Width,
-				Factor=1}" />
-            <Button BackgroundColor="#f7f7f7" x:Name="banner2" BorderRadius="30" FontSize="30"  FontAttributes="Bold" TextColor="CornflowerBlue" Text="Kurs do egzaminu teoretycznego"
-			RelativeLayout.YConstraint="{ConstraintExpression 
-				Type=RelativeToView,
-				ElementName=banner,
-				Property=Height,
-				Factor=1,
-                Constant=20}"
-            RelativeLayout.HeightConstraint="{ConstraintExpression 
-				Type=RelativeToParent,
-				Property=Height,
-				Factor=0.31}"
-			RelativeLayout.WidthConstraint="{ConstraintExpression
-				Type=RelativeToParent,
-				Property=Width,
-				Factor=1}" />
-            <Button BackgroundColor="#f7f7f7" x:Name="banner3" BorderRadius="30" FontSize="30"  FontAttributes="Bold" TextColor="CornflowerBlue" Text="Kurs do egzaminu teoretycznego"
-			RelativeLayout.YConstraint="{ConstraintExpression 
-				Type=RelativeToView,
-				ElementName=banner,
-				Property=Height,
-				Factor=2,
-                Constant=40}"
-            RelativeLayout.HeightConstraint="{ConstraintExpression 
-				Type=RelativeToParent,
-				Property=Height,
-				Factor=0.31}"
-			RelativeLayout.WidthConstraint="{ConstraintExpression
-				Type=RelativeToParent,
-				Property=Width,
-				Factor=1}" />
-        </RelativeLayout>
-    </ContentPage>
-    <ContentPage Padding="0,20,0,0" Title="Testy" IconImageSource="https://img.icons8.com/color/48/000000/scroll.png">
-        <RelativeLayout>
-            <Button BackgroundColor="#f7f7f7" x:Name="test1" BorderRadius="30" FontSize="30"  FontAttributes="Bold" TextColor="CornflowerBlue" Text="Kurs do egzaminu teoretycznego"
-			RelativeLayout.HeightConstraint="{ConstraintExpression 
-				Type=RelativeToParent,
-				Property=Height,
-				Factor=0.31}"
-			RelativeLayout.WidthConstraint="{ConstraintExpression
-				Type=RelativeToParent,
-				Property=Width,
-				Factor=1}" />
-            <Button BackgroundColor="#f7f7f7" x:Name="test2" BorderRadius="30" FontSize="30"  FontAttributes="Bold" TextColor="CornflowerBlue" Text="Kurs do egzaminu teoretycznego"
-			RelativeLayout.YConstraint="{ConstraintExpression 
-				Type=RelativeToView,
-				ElementName=test1,
-				Property=Height,
-				Factor=1,
-                Constant=20}"
-            RelativeLayout.HeightConstraint="{ConstraintExpression 
-				Type=RelativeToParent,
-				Property=Height,
-				Factor=0.31}"
-			RelativeLayout.WidthConstraint="{ConstraintExpression
-				Type=RelativeToParent,
-				Property=Width,
-				Factor=1}" />
-            <Button BackgroundColor="#f7f7f7" x:Name="test3" BorderRadius="30" FontSize="30"  FontAttributes="Bold" TextColor="CornflowerBlue" Text="Kurs do egzaminu teoretycznego"
-			RelativeLayout.YConstraint="{ConstraintExpression 
-				Type=RelativeToView,
-				ElementName=test1,
-				Property=Height,
-				Factor=2,
-                Constant=40}"
-            RelativeLayout.HeightConstraint="{ConstraintExpression 
-				Type=RelativeToParent,
-				Property=Height,
-				Factor=0.31}"
-			RelativeLayout.WidthConstraint="{ConstraintExpression
-				Type=RelativeToParent,
-				Property=Width,
-				Factor=1}" />
-        </RelativeLayout>
     </ContentPage>
 </TabbedPage>
