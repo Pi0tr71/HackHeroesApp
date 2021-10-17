@@ -24,4 +24,11 @@ namespace HackHeroesApp.Interface
         [Post("/users/checkUserToken")]
         Task<TokenPost> SubmitPost([Body] TokenPost post);
     }
+
+    //[Headers("Authorization: Bearer")]
+    //public interface IMyAPICourse
+    //{
+    //    [Post("/users/checkUserToken")]
+    //    Task<CoursePost> SubmitPost([Body] CoursePost post);
+    //}
 }

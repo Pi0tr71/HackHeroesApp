@@ -50,3 +50,4 @@ C:\Users\Piotr\source\repos\HackHeroesApp-Git\HackHeroesApp\HackHeroesApp\obj\De
 C:\Users\Piotr\source\repos\HackHeroesApp-Git\HackHeroesApp\HackHeroesApp\obj\Debug\netstandard2.1\HackHeroesApp.dll
 C:\Users\Piotr\source\repos\HackHeroesApp-Git\HackHeroesApp\HackHeroesApp\obj\Debug\netstandard2.1\ref\HackHeroesApp.dll
 C:\Users\Piotr\source\repos\HackHeroesApp-Git\HackHeroesApp\HackHeroesApp\obj\Debug\netstandard2.1\HackHeroesApp.pdb
+C:\Users\Piotr\source\repos\HackHeroesApp-Git\HackHeroesApp\HackHeroesApp\obj\Debug\netstandard2.1\Course.xaml.g.cs

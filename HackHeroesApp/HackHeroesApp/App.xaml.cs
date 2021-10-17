@@ -14,7 +14,7 @@ namespace HackHeroesApp
             InitializeComponent();
 
             DependencyService.Register<MockDataStore>();
-            MainPage = new NavigationPage(new Page1());
+            MainPage = new NavigationPage(new Course());
         }
 
         protected override void OnStart()
