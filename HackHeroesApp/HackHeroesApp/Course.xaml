@@ -16,7 +16,7 @@
         <Button Grid.Row="3" Grid.ColumnSpan="4" Opacity="1" x:Name="button1"/>
         <Button Grid.Row="4" Grid.ColumnSpan="4" x:Name="button2"/>
         <Button Grid.Row="5" Grid.ColumnSpan="4" x:Name="button3"/>
-        <Button Grid.Row="6" Grid.ColumnSpan="2" x:Name="button4"/>
-        <Button Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="2" x:Name="button5"/>
+        <Button Grid.Row="6" Grid.ColumnSpan="2" x:Name="button4" Text="Dalej"/>
+        <Button Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="2" x:Name="button5" Text="Jestem niepewny"/>
     </Grid>
 </ContentPage>
