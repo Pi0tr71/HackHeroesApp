@@ -16,8 +16,8 @@
                 </StackLayout>
                 <StackLayout Margin="10,0,0,0">
                     <Label Text="Najlepszy czas teoria: 00:10:00" FontSize="15" TextColor="Black"/>
-                    <Label Text="Nauczonych pytań 0/2100" FontSize="15" TextColor="Black"/>
-                </StackLayout>
+                <Label Text="Nauczonych pytań 0/2100" FontSize="15" TextColor="Black"/>
+            </StackLayout>
             </StackLayout>
     </ContentPage>
     <ContentPage BackgroundImageSource="background.png" Padding="0,20,0,0" Title="Nauka" IconImageSource="https://img.icons8.com/external-itim2101-lineal-itim2101/64/000000/external-learning-elearning-itim2101-lineal-itim2101-1.png">
