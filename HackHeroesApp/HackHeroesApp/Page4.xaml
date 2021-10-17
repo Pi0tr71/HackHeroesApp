@@ -6,23 +6,28 @@
             android:TabbedPage.ToolbarPlacement="Bottom">
     <ContentPage Title="Statystyki" IconImageSource="https://img.icons8.com/external-kiranshastry-lineal-kiranshastry/64/000000/external-stats-data-science-kiranshastry-lineal-kiranshastry.png" BackgroundColor="White">
         <StackLayout>
-                <Grid Margin="0,0,0,20">
-                    <Image Grid.Row="0" Grid.ColumnSpan="2" x:Name="image1"/>
-                    <Image Grid.Row="0" Grid.Column="2" x:Name="image2"/>
-                </Grid>
-                <StackLayout Spacing="0">
-                <Label Text="Machel_Dzban" FontAttributes="Bold" FontSize="30" TextColor="Black" BackgroundColor="#3c987a" Padding="0,10,0,0" />
-                <Label Text="Poziom: 0" FontAttributes="Bold" FontSize="20"  Margin="0,0,0,30" TextColor="Black"  VerticalTextAlignment="Center" BackgroundColor="#3c987a" Padding="0,0,0,10"/>
-                </StackLayout>
+            <FlexLayout Direction="Row" BackgroundColor="#3c987a" JustifyContent="SpaceBetween" Padding="10, 10">
+                <Frame CornerRadius="90" Padding="0">
+                    <Image HeightRequest="120" WidthRequest="120" Source="https://cdn.w600.comps.canstockphoto.pl/prosty-stickman-cz%C5%82owiek-klipart-wektorowy_csp43585411.jpg"/>
+                </Frame>
+                <FlexLayout Direction="Column">
+                    <!--<Label x:Name="LoginText" Text="..dasdsadsadasdsadsadsad." FontAttributes="Bold" FontSize="26" TextColor="Black" />
+                    <Label x:Name="PoziomText" Text="dsadsadsadsadas" FontSize="20"  Margin="0,0,0,30" TextColor="LightGray"/>-->
+                </FlexLayout>
+            </FlexLayout>
+            <StackLayout Spacing="0">
+            </StackLayout>
                 <StackLayout Margin="10,0,0,0">
-                    <Label Text="Najlepszy czas teoria: 00:10:00" FontSize="15" TextColor="Black"/>
+                <Label x:Name="LoginText" Text="..dasdsadsadasdsadsadsad." FontAttributes="Bold" FontSize="26" TextColor="Black" />
+                <Label x:Name="PoziomText" Text="dsadsadsadsadas" FontSize="20"  Margin="0,0,0,30" TextColor="LightGray"/>
+                <Label Text="Najlepszy czas teoria: 00:10:00" FontSize="15" TextColor="Black"/>
                 <Label Text="Nauczonych pytań 0/2100" FontSize="15" TextColor="Black"/>
             </StackLayout>
             </StackLayout>
     </ContentPage>
-    <ContentPage BackgroundImageSource="background.png" Padding="0,20,0,0" Title="Nauka" IconImageSource="https://img.icons8.com/external-itim2101-lineal-itim2101/64/000000/external-learning-elearning-itim2101-lineal-itim2101-1.png">
+    <ContentPage Padding="0,20,0,0" Title="Nauka" IconImageSource="https://img.icons8.com/external-itim2101-lineal-itim2101/64/000000/external-learning-elearning-itim2101-lineal-itim2101-1.png">
         <RelativeLayout>
-            <Button  x:Name="banner" BorderRadius="30" FontSize="35"  TextColor="White" Text="Pytania" Clicked="KursT"
+            <Button x:Name="banner" BorderRadius="30" FontSize="35"  TextColor="White" Text="Pytania" Clicked="KursT"
 			RelativeLayout.HeightConstraint="{ConstraintExpression 
 				Type=RelativeToParent,
 				Property=Height,
@@ -117,23 +122,25 @@
             <ListView x:Name="UserRankingList" SeparatorColor="LightGray" VerticalOptions="FillAndExpand"
                           HorizontalOptions="FillAndExpand" >
                 <ListView.Header>
-                    <FlexLayout Padding="10, 20" Direction="Row" AlignItems="Center" JustifyContent="SpaceBetween" BackgroundColor="#3160ad" HorizontalOptions="FillAndExpand">
-                        <Label Text="Miejsce" MinimumWidthRequest="40" HorizontalTextAlignment="Center" FontAttributes="Bold" TextColor="White" FontSize="Medium" VerticalOptions="Center" />
-                        <Label Text="Użytkownik" TextColor="White" FontSize="Medium" FontAttributes="Bold" VerticalOptions="Center"/>
-                        <Label Text="Czas" MinimumWidthRequest="40" HorizontalTextAlignment="Center" FontAttributes="Bold" TextColor="White" FontSize="Medium" VerticalOptions="Center"/>
-                    </FlexLayout>
+                    <Frame HasShadow="True" Padding="0">
+                        <FlexLayout Padding="10, 20" Direction="Row" AlignItems="Center" JustifyContent="SpaceBetween" BackgroundColor="#3c987a" HorizontalOptions="FillAndExpand">
+                            <Label Text="Miejsce" WidthRequest="100" HorizontalTextAlignment="Center" FontAttributes="Bold" TextColor="White" FontSize="Medium" VerticalOptions="Center" />
+                            <Label Text="Użytkownik" TextColor="White" FontSize="Medium" FontAttributes="Bold" VerticalOptions="Center"/>
+                            <Label Text="Poziom" WidthRequest="100" HorizontalTextAlignment="Center" FontAttributes="Bold" TextColor="White" FontSize="Medium" VerticalOptions="Center"/>
+                        </FlexLayout>
+                    </Frame>
                 </ListView.Header>
-                <ListView.ItemTemplate>
-                    <DataTemplate x:DataType="model:UserModel">
+                <!--<ListView.ItemTemplate> Tu masz zakomentowane i sb potem to popraw 
+                    <DataTemplate x:DataType="model:UserRanking">
                         <ViewCell>
-                            <FlexLayout Padding="10, 0" Direction="Row" AlignItems="Center" JustifyContent="SpaceBetween" BackgroundColor="#ffffff" HorizontalOptions="FillAndExpand">
-                                <Label Text="{Binding RankingPlace}" MinimumWidthRequest="40" HorizontalTextAlignment="Center" TextColor="Gold" FontSize="16" VerticalOptions="Center" />
-                                <Label Text="{Binding Login}" TextColor="Black" FontSize="12" FontAttributes="Bold" VerticalOptions="Center"/>
-                                <Label Text="{Binding Level}" MinimumWidthRequest="40" HorizontalTextAlignment="Center" TextColor="Black" FontSize="10" VerticalOptions="Center"/>
+                            <FlexLayout BackgroundColor="{Binding BackgroundColor}" Padding="10, 0" Direction="Row" AlignItems="Center" JustifyContent="SpaceBetween" HorizontalOptions="FillAndExpand">
+                                <Label Text="{Binding User.RankingPlace}" WidthRequest="100" HorizontalTextAlignment="Center" TextColor="{Binding FontColor}" FontSize="16" VerticalOptions="Center" />
+                                <Label Text="{Binding User.Login}" TextColor="{Binding FontColor}" FontSize="16" FontAttributes="Bold" VerticalOptions="Center"/>
+                                <Label Text="{Binding User.Level}" WidthRequest="100" HorizontalTextAlignment="Center" TextColor="{Binding FontColor}" FontSize="16" VerticalOptions="Center"/>
                             </FlexLayout>
                         </ViewCell>
                     </DataTemplate>
-                </ListView.ItemTemplate>
+                </ListView.ItemTemplate>-->
             </ListView>
         </ScrollView>
     </ContentPage>

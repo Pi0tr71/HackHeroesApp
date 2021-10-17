@@ -9,6 +9,7 @@ using Refit;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using System.Text.RegularExpressions;
+using HackHeroesApp.ValuesF;
 namespace HackHeroesApp
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
@@ -20,6 +21,7 @@ namespace HackHeroesApp
         }
 
         IMyAPILog myAPI;
+        IMyAPIToken myAPIT;
 
         async void Login(object sender, EventArgs e)
         {
@@ -41,6 +43,7 @@ namespace HackHeroesApp
             else
             {
                 myAPI = RestService.For<IMyAPILog>("http://192.168.0.180:5000/api/v1");
+                
                 try
                 {
 
@@ -48,11 +51,28 @@ namespace HackHeroesApp
                     post.email = LoginEmailValue;
                     post.haslo = LoginPasswordValue;
                     LogPost result = await myAPI.SubmitPost(post);
+                    Console.WriteLine("Tu pojawią się 3 zmienne status token i poziom");
                     Console.WriteLine(result.status);
                     Console.WriteLine(result.token);
                     Console.WriteLine(result.poziom);
+
+                    var v = new Values(result.token, result.poziom,"a");
+                    //var v = new Values(result.token, result.poziom, Values.Cos.Login);
+
                     if (result.status == "loged in")
                     {
+                        var authHeader = Values.Cos.Token;
+                        var refitSettings = new RefitSettings()
+                        {
+                            AuthorizationHeaderValueGetter = () => Task.FromResult(authHeader)
+                        };
+                        Console.WriteLine(refitSettings.ToString());
+                        myAPIT = RestService.For<IMyAPIToken>("http://192.168.0.180:5000/api/v1", refitSettings);
+                        TokenPost post1 = new TokenPost();
+                        TokenPost result1 = await myAPIT.SubmitPost(post1);
+                        Console.WriteLine(result1.login);
+                        var a = new Values(Values.Cos.Token, Values.Cos.Poziom, result1.login);
+
                         await Navigation.PushModalAsync(new Page4());
                     }
                     if (result.status == "user not found")

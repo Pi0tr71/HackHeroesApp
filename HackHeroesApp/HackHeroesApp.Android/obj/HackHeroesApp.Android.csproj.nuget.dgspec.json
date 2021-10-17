@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Piotr\\Source\\Repos\\HackHeroesApp\\HackHeroesApp\\HackHeroesApp.Android\\HackHeroesApp.Android.csproj": {}
+    "C:\\Users\\Piotr\\source\\repos\\HackHeroesApp-Git\\HackHeroesApp\\HackHeroesApp.Android\\HackHeroesApp.Android.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Piotr\\Source\\Repos\\HackHeroesApp\\HackHeroesApp\\HackHeroesApp.Android\\HackHeroesApp.Android.csproj": {
+    "C:\\Users\\Piotr\\source\\repos\\HackHeroesApp-Git\\HackHeroesApp\\HackHeroesApp.Android\\HackHeroesApp.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Piotr\\Source\\Repos\\HackHeroesApp\\HackHeroesApp\\HackHeroesApp.Android\\HackHeroesApp.Android.csproj",
+        "projectUniqueName": "C:\\Users\\Piotr\\source\\repos\\HackHeroesApp-Git\\HackHeroesApp\\HackHeroesApp.Android\\HackHeroesApp.Android.csproj",
         "projectName": "HackHeroesApp.Android",
-        "projectPath": "C:\\Users\\Piotr\\Source\\Repos\\HackHeroesApp\\HackHeroesApp\\HackHeroesApp.Android\\HackHeroesApp.Android.csproj",
+        "projectPath": "C:\\Users\\Piotr\\source\\repos\\HackHeroesApp-Git\\HackHeroesApp\\HackHeroesApp.Android\\HackHeroesApp.Android.csproj",
         "packagesPath": "C:\\Users\\Piotr\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Piotr\\Source\\Repos\\HackHeroesApp\\HackHeroesApp\\HackHeroesApp.Android\\obj\\",
+        "outputPath": "C:\\Users\\Piotr\\source\\repos\\HackHeroesApp-Git\\HackHeroesApp\\HackHeroesApp.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -34,8 +34,8 @@
         "frameworks": {
           "monoandroid11.0": {
             "projectReferences": {
-              "C:\\Users\\Piotr\\Source\\Repos\\HackHeroesApp\\HackHeroesApp\\HackHeroesApp\\HackHeroesApp.csproj": {
-                "projectPath": "C:\\Users\\Piotr\\Source\\Repos\\HackHeroesApp\\HackHeroesApp\\HackHeroesApp\\HackHeroesApp.csproj"
+              "C:\\Users\\Piotr\\source\\repos\\HackHeroesApp-Git\\HackHeroesApp\\HackHeroesApp\\HackHeroesApp.csproj": {
+                "projectPath": "C:\\Users\\Piotr\\source\\repos\\HackHeroesApp-Git\\HackHeroesApp\\HackHeroesApp\\HackHeroesApp.csproj"
               }
             }
           }
@@ -60,14 +60,14 @@
         }
       }
     },
-    "C:\\Users\\Piotr\\Source\\Repos\\HackHeroesApp\\HackHeroesApp\\HackHeroesApp\\HackHeroesApp.csproj": {
+    "C:\\Users\\Piotr\\source\\repos\\HackHeroesApp-Git\\HackHeroesApp\\HackHeroesApp\\HackHeroesApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Piotr\\Source\\Repos\\HackHeroesApp\\HackHeroesApp\\HackHeroesApp\\HackHeroesApp.csproj",
+        "projectUniqueName": "C:\\Users\\Piotr\\source\\repos\\HackHeroesApp-Git\\HackHeroesApp\\HackHeroesApp\\HackHeroesApp.csproj",
         "projectName": "HackHeroesApp",
-        "projectPath": "C:\\Users\\Piotr\\Source\\Repos\\HackHeroesApp\\HackHeroesApp\\HackHeroesApp\\HackHeroesApp.csproj",
+        "projectPath": "C:\\Users\\Piotr\\source\\repos\\HackHeroesApp-Git\\HackHeroesApp\\HackHeroesApp\\HackHeroesApp.csproj",
         "packagesPath": "C:\\Users\\Piotr\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Piotr\\Source\\Repos\\HackHeroesApp\\HackHeroesApp\\HackHeroesApp\\obj\\",
+        "outputPath": "C:\\Users\\Piotr\\source\\repos\\HackHeroesApp-Git\\HackHeroesApp\\HackHeroesApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Visual Studio shared\\NuGetPackages",

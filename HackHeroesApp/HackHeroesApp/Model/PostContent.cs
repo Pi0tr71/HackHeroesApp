@@ -19,4 +19,8 @@ namespace HackHeroesApp.Model
         public string token { get; set; }
         public int poziom { get; set; }
     }
+    public class TokenPost
+    {
+        public string login { get; set; }
+    }
 }
