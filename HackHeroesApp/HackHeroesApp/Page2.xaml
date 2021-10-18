@@ -35,7 +35,6 @@
                 <Button 
 			Text="Login" 
 			TextColor="White"
-			BackgroundColor="#3c987a" 
             CornerRadius="10"
             Clicked="Login"/>
             </StackLayout>

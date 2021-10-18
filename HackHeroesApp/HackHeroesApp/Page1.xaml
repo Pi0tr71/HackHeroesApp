@@ -24,7 +24,6 @@
                 <Button 
 			Text="Logowanie" 
 			TextColor="White"
-			BackgroundColor="#3c987a" 
             CornerRadius="10"
             Clicked="LoginPage"/>
             </StackLayout>
@@ -33,7 +32,6 @@
 			Text="Rejestracja" 
 			TextColor="White"
             CornerRadius="10"
-			BackgroundColor="#3c987a" 
             Clicked="RegisterPage"/>
             </StackLayout>
         </StackLayout>

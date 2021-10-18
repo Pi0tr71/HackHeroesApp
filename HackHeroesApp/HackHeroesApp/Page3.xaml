@@ -51,7 +51,6 @@
                 <Button 
 			Text="Zarejestruj" 
 			TextColor="White"
-			BackgroundColor="#3c987a" 
             CornerRadius="10"
             Clicked="Register"/>
             </StackLayout>
