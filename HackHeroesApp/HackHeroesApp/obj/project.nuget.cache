@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Ekby0nTiyEwYBUfpybq0DM8DZG9jUPhNqyxpcWM1Yb9CM1nSAOqDzqo2VGpEDG31oIMNgF6egqrxuWOKwcQ9Mg==",
+  "dgSpecHash": "/hYFhEUhnmHujXy8DIqC3X5OLOVHucRzT5tYguMGtaP6uPraT8F8nCX0qltsPtNdgz9Atu9kDdmxvlIOvuVYKg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Piotr\\source\\repos\\HackHeroesApp-Git\\HackHeroesApp\\HackHeroesApp\\HackHeroesApp.csproj",
+  "projectFilePath": "C:\\Users\\Piotr\\Source\\Repos\\Pi0tr71\\HackHeroesApp\\HackHeroesApp\\HackHeroesApp\\HackHeroesApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Piotr\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\5.0.0\\microsoft.bcl.asyncinterfaces.5.0.0.nupkg.sha512",
     "C:\\Users\\Piotr\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",

@@ -754,11 +754,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Piotr\\source\\repos\\HackHeroesApp-Git\\HackHeroesApp\\HackHeroesApp\\HackHeroesApp.csproj",
+      "projectUniqueName": "C:\\Users\\Piotr\\Source\\Repos\\Pi0tr71\\HackHeroesApp\\HackHeroesApp\\HackHeroesApp\\HackHeroesApp.csproj",
       "projectName": "HackHeroesApp",
-      "projectPath": "C:\\Users\\Piotr\\source\\repos\\HackHeroesApp-Git\\HackHeroesApp\\HackHeroesApp\\HackHeroesApp.csproj",
+      "projectPath": "C:\\Users\\Piotr\\Source\\Repos\\Pi0tr71\\HackHeroesApp\\HackHeroesApp\\HackHeroesApp\\HackHeroesApp.csproj",
       "packagesPath": "C:\\Users\\Piotr\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Piotr\\source\\repos\\HackHeroesApp-Git\\HackHeroesApp\\HackHeroesApp\\obj\\",
+      "outputPath": "C:\\Users\\Piotr\\Source\\Repos\\Pi0tr71\\HackHeroesApp\\HackHeroesApp\\HackHeroesApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\Visual Studio shared\\NuGetPackages",
