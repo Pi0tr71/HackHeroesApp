@@ -40,7 +40,7 @@
                         </FlexLayout>
                     </Frame>
                 </StackLayout>
-                <Button Grid.Row="0" Grid.RowSpan="1" Clicked="KursT" BackgroundColor="Transparent" TextColor="Transparent" />
+                <Button Grid.Row="0" Grid.RowSpan="1" Clicked="KursT" Opacity="0" BackgroundColor="Black" TextColor="Transparent" x:Name="KursButton" />
             </Grid>
             <Grid Margin="0, 0, 0, 15">
                 <Grid.RowDefinitions>
@@ -54,7 +54,7 @@
                         </FlexLayout>
                     </Frame>
                 </StackLayout>
-                <Button Grid.Row="0" Grid.RowSpan="1" BackgroundColor="Transparent" TextColor="Transparent" />
+                <Button Grid.Row="0" Grid.RowSpan="1" Opacity="0" BackgroundColor="Black" TextColor="Transparent" x:Name="SkrzyzowaniaButton"  Clicked="Skrzyzowania"/>
             </Grid>
             <Grid Margin="0, 0, 0, 15">
                 <Grid.RowDefinitions>
@@ -68,7 +68,7 @@
                         </FlexLayout>
                     </Frame>
                 </StackLayout>
-                <Button Grid.Row="0" Grid.RowSpan="1" BackgroundColor="Transparent" TextColor="Transparent" />
+                <Button Grid.Row="0" Grid.RowSpan="1"  Opacity="0" BackgroundColor="Black" TextColor="Transparent" x:Name="BudowaButton" Clicked="Budowa"/>
             </Grid>
             <!-- <Button FontFamily="fa-solid-900.otf#Font Awesome 5 Free Solid" Grid.Row="1" BorderRadius="30" FontSize="Large" TextColor="White" Text="&#xf00d; Skrzyżowania" />
             <Button FontFamily="fa-solid-900.otf#Font Awesome 5 Free Solid" Grid.Row="2" BorderRadius="30" FontSize="Large" TextColor="White" Text="&#xf7d9; Budowa samochodu" /> -->

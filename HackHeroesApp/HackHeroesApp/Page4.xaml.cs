@@ -64,7 +64,21 @@ namespace HackHeroesApp
         }
         async void KursT(object sender, EventArgs e)
         {
+            KursButton.Opacity = 0.3;
             await Navigation.PushModalAsync(new Page5());
+            KursButton.Opacity = 0;
+        }
+        async void Skrzyzowania(object sender, EventArgs e)
+        {
+            SkrzyzowaniaButton.Opacity = 0.3;
+            await Navigation.PushModalAsync(new Page5());
+            SkrzyzowaniaButton.Opacity = 0;
+        }
+        async void Budowa(object sender, EventArgs e)
+        {
+            BudowaButton.Opacity = 0.3;
+            await Navigation.PushModalAsync(new Page5());
+            BudowaButton.Opacity = 0;
         }
     }
 }

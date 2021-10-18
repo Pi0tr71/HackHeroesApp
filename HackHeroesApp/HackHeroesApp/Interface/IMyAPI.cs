@@ -25,10 +25,17 @@ namespace HackHeroesApp.Interface
         Task<TokenPost> SubmitPost([Body] TokenPost post);
     }
 
-    //[Headers("Authorization: Bearer")]
-    //public interface IMyAPICourse
-    //{
-    //    [Post("/users/checkUserToken")]
-    //    Task<CoursePost> SubmitPost([Body] CoursePost post);
-    //}
+    [Headers("Authorization: Bearer")]
+    public interface IMyAPIQL
+    {
+        [Post("/queries/continueCourse")]
+        Task<QLPost> SubmitPost([Body] QLPost post);
+    }
+
+    [Headers("Authorization: Bearer")]
+    public interface IMyAPIQID
+    {
+        [Post("/queries/getQuestionById")]
+        Task<QIDPost> SubmitPost([Body] QIDPost post);
+    }
 }

@@ -2,21 +2,21 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HackHeroesApp.Course">
-              
-    <Grid>
+
+    <Grid x:Name="Gridd">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
-            
-           
+
+
         </Grid.RowDefinitions>
-        <Label Grid.Row="0" Grid.ColumnSpan="4" Text="Pkt Zakres Nr Pytania" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+        <Label Grid.Row="0" Grid.ColumnSpan="4" Text="Pkt Zakres Nr Pytania" x:Name="PZN" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
         <Image Grid.Row="1" Grid.ColumnSpan="4" Source="background.png" Aspect="AspectFit" x:Name="PytanieZdj"/>
-        <Label Grid.Row="2" Grid.ColumnSpan="4" Text="Co było pierwsze kura czy jajko?" FontSize="20" Padding="8,0,0,8" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" x:Name="PytanieText"/>
-        <Button Grid.Row="3" Grid.ColumnSpan="4" Opacity="1" x:Name="button1"/>
+        <Label Grid.Row="2" Grid.ColumnSpan="4" Text="Co było pierwsze kura czy jajko?" x:Name="PytanieText" FontSize="20" Padding="8,0,0,8" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+        <Button Grid.Row="3" Grid.ColumnSpan="4" x:Name="button1"/>
         <Button Grid.Row="4" Grid.ColumnSpan="4" x:Name="button2"/>
         <Button Grid.Row="5" Grid.ColumnSpan="4" x:Name="button3"/>
-        <Button Grid.Row="6" Grid.ColumnSpan="2" x:Name="button4" Text="Dalej"/>
+        <Button Grid.Row="6" Grid.ColumnSpan="2" x:Name="button4" Text="Dalej" Clicked="button4_Clicked"/>
         <Button Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="2" x:Name="button5" Text="Jestem niepewny"/>
     </Grid>
 </ContentPage>

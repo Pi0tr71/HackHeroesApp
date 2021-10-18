@@ -6,7 +6,7 @@ namespace HackHeroesApp.Model
 {
     public class API_ENV
     {
-        public static string API_URL = "http://192.168.8.112:5000/api/v1";
+        public static string API_URL = "http://46.41.136.62:5000/api/v1";
     }
 
     public class RegPost
@@ -28,4 +28,29 @@ namespace HackHeroesApp.Model
     {
         public string login { get; set; }
     }
+    public class QLPost
+    {
+        public List<int> pytania { get; set; }
+    }
+    public class Pytanie
+    {
+        public string numer_pytania { get; set; }
+        public string pytanie { get; set; }
+        public string odpowiedz_a { get; set; }
+        public string odpowiedz_b { get; set; }
+        public string odpowiedz_c { get; set; }
+        public string poprawna_odp { get; set; }
+        public string media { get; set; }
+        public string zakres_struktury { get; set; }
+        public string liczba_punktow { get; set; }
+        public string nazwa_bloku { get; set; }
+        public int id { get; set; }
+    }
+
+    public class QIDPost
+    {
+        public Pytanie pytanie { get; set; }
+        public string pytanie_id { get; set; }
+    }
+
 }

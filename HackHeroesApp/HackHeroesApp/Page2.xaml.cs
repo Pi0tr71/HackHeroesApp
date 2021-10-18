@@ -26,9 +26,9 @@ namespace HackHeroesApp
         async void Login(object sender, EventArgs e)
         {
             // var LoginEmailValue = LoginEmail.Text;
-            var LoginEmailValue = "blazejjaworskixd@gmail.com";
+            var LoginEmailValue = "machel@dzban.com";
             // var LoginPasswordValue = LoginPassword.Text;
-            var LoginPasswordValue = "!JaworroChan445";
+            var LoginPasswordValue = "macheldzban";
             string emailL = "a"; //Dodałem tu a bo inaczej wywala błąd że jest pusty więc regex się wywala i apka pada
             emailL += LoginEmailValue;
             Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$"); //Walidacja email
