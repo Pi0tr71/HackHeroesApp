@@ -51,7 +51,7 @@ namespace HackHeroesApp
             //        };
             //        grid.Children.Add(button,0, 0);
             //        Grid.SetRow(button, i);
-            //        Grid.SetColumn(button, o);
+            //        Grid.SetColumn(button, o);n
             //    }
             //}
 
