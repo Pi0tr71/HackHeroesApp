@@ -74,7 +74,7 @@ namespace HackHeroesApp
             }
             else
             {
-                myAPI = RestService.For<IMyAPIReg>("http://192.168.0.180:5000/api/v1");
+                myAPI = RestService.For<IMyAPIReg>(API_ENV.API_URL);
                 try
                 {
 

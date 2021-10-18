@@ -6,66 +6,30 @@
             android:TabbedPage.ToolbarPlacement="Bottom">
     <ContentPage Title="Statystyki" IconImageSource="https://img.icons8.com/external-kiranshastry-lineal-kiranshastry/64/000000/external-stats-data-science-kiranshastry-lineal-kiranshastry.png" BackgroundColor="White">
         <StackLayout>
-            <FlexLayout Direction="Row" BackgroundColor="#3c987a" JustifyContent="SpaceBetween" Padding="10, 10">
-                <Frame CornerRadius="90" Padding="0">
-                    <Image HeightRequest="120" WidthRequest="120" Source="https://cdn.w600.comps.canstockphoto.pl/prosty-stickman-cz%C5%82owiek-klipart-wektorowy_csp43585411.jpg"/>
-                </Frame>
-                <FlexLayout Direction="Column">
-                    <!--<Label x:Name="LoginText" Text="..dasdsadsadasdsadsadsad." FontAttributes="Bold" FontSize="26" TextColor="Black" />
-                    <Label x:Name="PoziomText" Text="dsadsadsadsadas" FontSize="20"  Margin="0,0,0,30" TextColor="LightGray"/>-->
-                </FlexLayout>
-            </FlexLayout>
-            <StackLayout Spacing="0">
-            </StackLayout>
-                <StackLayout Margin="10,0,0,0">
-                <Label x:Name="LoginText" Text="..dasdsadsadasdsadsadsad." FontAttributes="Bold" FontSize="26" TextColor="Black" />
-                <Label x:Name="PoziomText" Text="dsadsadsadsadas" FontSize="20"  Margin="0,0,0,30" TextColor="LightGray"/>
+            <Grid ColumnDefinitions="120, *" ColumnSpacing="15" BackgroundColor="#3c987a" Padding="10, 30">
+                <StackLayout Grid.Column="0">
+                    <Frame CornerRadius="90" Padding="0" HeightRequest="120" WidthRequest="120">
+                        <Image HeightRequest="120" WidthRequest="120" Source="https://cdn.w600.comps.canstockphoto.pl/prosty-stickman-cz%C5%82owiek-klipart-wektorowy_csp43585411.jpg"/>
+                    </Frame>
+                </StackLayout>
+                <StackLayout Grid.Column="1">
+                    <FlexLayout Direction="Column">
+                        <Label x:Name="LoginText" FontAttributes="Bold" FontSize="26" TextColor="White" />
+                        <Label x:Name="PoziomText" FontSize="20"  Margin="0,0,0,30" TextColor="LightGray"/>
+                    </FlexLayout>
+                </StackLayout>
+            </Grid>
+            <StackLayout Padding="10">
                 <Label Text="Najlepszy czas teoria: 00:10:00" FontSize="15" TextColor="Black"/>
                 <Label Text="Nauczonych pytań 0/2100" FontSize="15" TextColor="Black"/>
             </StackLayout>
-            </StackLayout>
+        </StackLayout>
     </ContentPage>
-    <ContentPage Padding="0,20,0,0" Title="Nauka" IconImageSource="https://img.icons8.com/external-itim2101-lineal-itim2101/64/000000/external-learning-elearning-itim2101-lineal-itim2101-1.png">
+    <ContentPage Padding="0,20,0,0" Title="Nauka" BackgroundImageSource="background.png" IconImageSource="https://img.icons8.com/external-itim2101-lineal-itim2101/64/000000/external-learning-elearning-itim2101-lineal-itim2101-1.png">
         <RelativeLayout>
-            <Button x:Name="banner" BorderRadius="30" FontSize="35"  TextColor="White" Text="Pytania" Clicked="KursT"
-			RelativeLayout.HeightConstraint="{ConstraintExpression 
-				Type=RelativeToParent,
-				Property=Height,
-				Factor=0.31}"
-			RelativeLayout.WidthConstraint="{ConstraintExpression
-				Type=RelativeToParent,
-				Property=Width,
-				Factor=1}" />
-            <Button  x:Name="banner2" BorderRadius="30" FontSize="35"   TextColor="White" Text="Skrzyżowania" 
-			RelativeLayout.YConstraint="{ConstraintExpression 
-				Type=RelativeToView,
-				ElementName=banner,
-				Property=Height,
-				Factor=1,
-                Constant=20}"
-            RelativeLayout.HeightConstraint="{ConstraintExpression 
-				Type=RelativeToParent,
-				Property=Height,
-				Factor=0.31}"
-			RelativeLayout.WidthConstraint="{ConstraintExpression
-				Type=RelativeToParent,
-				Property=Width,
-				Factor=1}" />
-            <Button BorderRadius="30" FontSize="35"   TextColor="White" Text="Budowa Auta"
-			RelativeLayout.YConstraint="{ConstraintExpression 
-				Type=RelativeToView,
-				ElementName=banner2,
-				Property=Height,
-				Factor=2,
-                Constant=40}"
-            RelativeLayout.HeightConstraint="{ConstraintExpression 
-				Type=RelativeToParent,
-				Property=Height,
-				Factor=0.31}"
-			RelativeLayout.WidthConstraint="{ConstraintExpression
-				Type=RelativeToParent,
-				Property=Width,
-				Factor=1}" />
+            <Button x:Name="banner" BorderRadius="30" FontSize="35"  TextColor="White" Text="Pytania" Clicked="KursT" />
+            <Button  x:Name="banner2" BorderRadius="30" FontSize="35"   TextColor="White" Text="Skrzyżowania" />
+            <Button BorderRadius="30" FontSize="35"   TextColor="White" Text="Budowa Auta" />
         </RelativeLayout>
     </ContentPage>
     <ContentPage Padding="0,20,0,0" BackgroundImageSource="background.png" Title="Testy" IconImageSource="https://img.icons8.com/external-vitaliy-gorbachev-lineal-vitaly-gorbachev/50/000000/external-test-back-to-school-vitaliy-gorbachev-lineal-vitaly-gorbachev.png">
@@ -130,7 +94,7 @@
                         </FlexLayout>
                     </Frame>
                 </ListView.Header>
-                <!--<ListView.ItemTemplate> Tu masz zakomentowane i sb potem to popraw 
+                <ListView.ItemTemplate>
                     <DataTemplate x:DataType="model:UserRanking">
                         <ViewCell>
                             <FlexLayout BackgroundColor="{Binding BackgroundColor}" Padding="10, 0" Direction="Row" AlignItems="Center" JustifyContent="SpaceBetween" HorizontalOptions="FillAndExpand">
@@ -140,7 +104,7 @@
                             </FlexLayout>
                         </ViewCell>
                     </DataTemplate>
-                </ListView.ItemTemplate>-->
+                </ListView.ItemTemplate>
             </ListView>
         </ScrollView>
     </ContentPage>

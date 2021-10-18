@@ -25,8 +25,10 @@ namespace HackHeroesApp
 
         async void Login(object sender, EventArgs e)
         {
-            var LoginEmailValue = LoginEmail.Text;
-            var LoginPasswordValue = LoginPassword.Text;
+            // var LoginEmailValue = LoginEmail.Text;
+            var LoginEmailValue = "blazejjaworskixd@gmail.com";
+            // var LoginPasswordValue = LoginPassword.Text;
+            var LoginPasswordValue = "!JaworroChan445";
             string emailL = "a"; //Dodałem tu a bo inaczej wywala błąd że jest pusty więc regex się wywala i apka pada
             emailL += LoginEmailValue;
             Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$"); //Walidacja email
@@ -42,7 +44,7 @@ namespace HackHeroesApp
 
             else
             {
-                myAPI = RestService.For<IMyAPILog>("http://192.168.0.180:5000/api/v1");
+                myAPI = RestService.For<IMyAPILog>(API_ENV.API_URL);
                 
                 try
                 {
@@ -67,7 +69,7 @@ namespace HackHeroesApp
                             AuthorizationHeaderValueGetter = () => Task.FromResult(authHeader)
                         };
                         Console.WriteLine(refitSettings.ToString());
-                        myAPIT = RestService.For<IMyAPIToken>("http://192.168.0.180:5000/api/v1", refitSettings);
+                        myAPIT = RestService.For<IMyAPIToken>(API_ENV.API_URL, refitSettings);
                         TokenPost post1 = new TokenPost();
                         TokenPost result1 = await myAPIT.SubmitPost(post1);
                         Console.WriteLine(result1.login);
