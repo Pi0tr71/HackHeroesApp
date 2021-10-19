@@ -34,43 +34,43 @@ namespace HackHeroesApp
             Match match = regex.Match(emailR);
             if (!match.Success)
             {
-                Console.WriteLine("Wpisz poprawnie email");
+                errorDisplay.Text = "Wpisz poprawnie email";
             }
             else if (RegisterEmailValue.Length > 39)
             {
-                Console.WriteLine("Za długi email");
+                errorDisplay.Text = "Email jest za długi";
             }
             else if (RegisterLoginValue == null)
             {
-                Console.WriteLine("Brak Loginu");
+                errorDisplay.Text = "Wpisz login";
             }
             else if (RegisterLoginValue.Length < 5)
             {
-                Console.WriteLine("Login za krótki");
+                errorDisplay.Text = "Login jest za krótki";
             }
             else if (RegisterLoginValue.Length > 40)
             {
-                Console.WriteLine("Login za długi");
+                errorDisplay.Text = "Login jest za długi";
             }
             else if (RegisterPassword1Value == null)
             {
-                Console.WriteLine("Brak hasła1");
+                errorDisplay.Text = "Podaj hasło";
             }
             else if (RegisterPassword1Value.Length < 7)
             {
-                Console.WriteLine("Hasło za krótkie");
+                errorDisplay.Text = "Hasło jest za krótkie";
             }
             else if (RegisterPassword1Value.Length > 15)
             {
-                Console.WriteLine("Hasło za długie");
+                errorDisplay.Text = "Hasło jest za długie";
             }
             else if (RegisterPassword2Value == null)
             {
-                Console.WriteLine("Brak hasła2");
+                errorDisplay.Text = "Powtórz hasło";
             }
             else if (RegisterPassword1Value != RegisterPassword2Value)
             {
-                Console.WriteLine("Hasła nie są takie same");
+                errorDisplay.Text = "Hasła nie są takie same";
             }
             else
             {
@@ -91,7 +91,7 @@ namespace HackHeroesApp
                     }
                     if (result.status == "cant create user")
                     {
-                        Console.WriteLine("Login lub Email są już zajęte");
+                        errorDisplay.Text = "Login lub email jest już zajęty";
                     }
 
                 }

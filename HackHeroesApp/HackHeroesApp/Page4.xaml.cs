@@ -25,8 +25,9 @@ namespace HackHeroesApp
         public Page4()
         {
             InitializeComponent();
-            int poziom = Values.Cos.Poziom;
-            string login = Values.Cos.Login;
+            // int poziom = Values.Cos.Poziom;
+            int poziom = 0;
+            string login = "JaworroChan";
             PoziomText.Text = "Poziom " + poziom;
             LoginText.Text = login;
 

@@ -6,7 +6,7 @@
              x:Class="HackHeroesApp.Page3">
     <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
         <Image Source="background.png" AbsoluteLayout.LayoutBounds="1,1,1,1" AbsoluteLayout.LayoutFlags="All" Aspect="AspectFill"></Image>
-        <StackLayout AbsoluteLayout.LayoutBounds="1,1,1,1" AbsoluteLayout.LayoutFlags="All" BackgroundColor="Transparent" VerticalOptions="Center" Spacing="15">
+        <StackLayout AbsoluteLayout.LayoutBounds="1,1,1,1" Padding="30, 0" AbsoluteLayout.LayoutFlags="All" BackgroundColor="Transparent" VerticalOptions="Center" Spacing="15">
             <StackLayout Margin="0,0,0,40">
                 <Label 
 			Text="Tworzenie konta"
@@ -15,47 +15,31 @@
 			FontAttributes="Bold"  
 			HorizontalOptions="Center" />
             </StackLayout>
-            <Label 
-			Text="Email" 
-			TextColor="White"
-			FontSize="18" 
-			HorizontalOptions="Center" />
-            <StackLayout Margin="30,0,30,0">
-                <Entry Keyboard="Email" Placeholder="email" x:Name="RegisterEmail"/>
+            <Grid ColumnDefinitions="Auto, *" ColumnSpacing="10">
+                <Label Grid.Column="0" FontFamily="fa-solid-900.otf#Font Awesome 5 Free Solid" FontSize="Large" TextColor="White" Text="&#xf0e0;" VerticalOptions="Center"/>
+                <Entry Grid.Column="1" Keyboard="Email" Placeholder="E-mail" x:Name="RegisterEmail" TextColor="White" ClearButtonVisibility="WhileEditing" PlaceholderColor="LightGray"/>
+            </Grid>
+            <Grid ColumnDefinitions="Auto, *" ColumnSpacing="10">
+                <Label Grid.Column="0" FontFamily="fa-solid-900.otf#Font Awesome 5 Free Solid" FontSize="Large" TextColor="White" Text="&#xf007;" VerticalOptions="Center"/>
+                <Entry Grid.Column="1" Keyboard="Text" Placeholder="Login" x:Name="RegisterLogin" TextColor="White" ClearButtonVisibility="WhileEditing" PlaceholderColor="LightGray"/>
+            </Grid>
+            <Grid ColumnDefinitions="Auto, *" ColumnSpacing="10">
+                <Label Grid.Column="0" FontFamily="fa-solid-900.otf#Font Awesome 5 Free Solid" FontSize="Large" TextColor="White" Text="&#xf023;" VerticalOptions="Center"/>
+                <Entry Grid.Column="1" IsPassword="true" Placeholder="Hasło" x:Name="RegisterPassword1" TextColor="White" ClearButtonVisibility="WhileEditing" PlaceholderColor="LightGray"/>
+            </Grid>
+            <Grid ColumnDefinitions="Auto, *" ColumnSpacing="10">
+                <Label Grid.Column="0" FontFamily="fa-solid-900.otf#Font Awesome 5 Free Solid" FontSize="Large" TextColor="White" Text="&#xf023;" VerticalOptions="Center"/>
+                <Entry Grid.Column="1" IsPassword="true" Placeholder="Powtórz hasło" x:Name="RegisterPassword2" TextColor="White" ClearButtonVisibility="WhileEditing" PlaceholderColor="LightGray"/>
+            </Grid>
+            <StackLayout>
+                <Label x:Name="errorDisplay" FontSize="Medium" TextColor="Red" HorizontalOptions="Center" />
             </StackLayout>
-            <Label 
-			Text="Login" 
-			TextColor="White"
-			FontSize="18" 
-			HorizontalOptions="Center" />
-            <StackLayout Margin="30,0,30,0">
-                <Entry Keyboard="Text" Placeholder="login" x:Name="RegisterLogin"/>
-            </StackLayout>
-            <Label 
-			Text="Hasło" 
-			TextColor="White"
-			FontSize="18" 
-			HorizontalOptions="Center" />
-            <StackLayout Margin="30,0,30,0">
-                <Entry IsPassword="true" Placeholder="hasło" x:Name="RegisterPassword1"/>
-            </StackLayout>
-            <Label 
-			Text="Powtórz hasło" 
-			TextColor="White"
-			FontSize="18" 
-			HorizontalOptions="Center" />
-            <StackLayout Margin="30,0,30,0">
-                <Entry IsPassword="true" Placeholder="hasło" x:Name="RegisterPassword2"/>
-            </StackLayout>
-            <StackLayout Margin="30,0,30,0">
+            <StackLayout>
                 <Button 
 			Text="Zarejestruj" 
 			TextColor="White"
             CornerRadius="10"
             Clicked="Register"/>
-            </StackLayout>
-            <StackLayout>
-                <Label Text="{Binding RegisterErrors}" MinimumWidthRequest="40" HorizontalTextAlignment="Center" TextColor="Black" FontSize="10" VerticalOptions="Center"/>
             </StackLayout>
         </StackLayout>
     </AbsoluteLayout>
