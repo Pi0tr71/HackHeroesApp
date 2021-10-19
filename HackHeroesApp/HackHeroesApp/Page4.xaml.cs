@@ -80,5 +80,10 @@ namespace HackHeroesApp
             await Navigation.PushModalAsync(new Page5());
             BudowaButton.Opacity = 0;
         }
+        protected override bool OnBackButtonPressed()
+        {
+            Navigation.PushModalAsync(new Page1());
+            return true;
+        }
     }
 }

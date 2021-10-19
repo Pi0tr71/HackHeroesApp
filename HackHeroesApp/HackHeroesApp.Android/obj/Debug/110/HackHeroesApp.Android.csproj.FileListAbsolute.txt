@@ -1329,7 +1329,6 @@ C:\Users\Piotr\Source\Repos\Pi0tr71\HackHeroesApp\HackHeroesApp\HackHeroesApp.An
 C:\Users\Piotr\Source\Repos\Pi0tr71\HackHeroesApp\HackHeroesApp\HackHeroesApp.Android\obj\Debug\110\R.cs.flag
 C:\Users\Piotr\Source\Repos\Pi0tr71\HackHeroesApp\HackHeroesApp\HackHeroesApp.Android\obj\Debug\110\HackHeroesApp.Android.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Piotr\Source\Repos\Pi0tr71\HackHeroesApp\HackHeroesApp\HackHeroesApp.Android\obj\Debug\110\HackHeroesApp.Android.csproj.CoreCompileInputs.cache
-C:\Users\Piotr\Source\Repos\Pi0tr71\HackHeroesApp\HackHeroesApp\HackHeroesApp.Android\obj\Debug\110\HackHeroesApp.Android.csproj.CopyComplete
 C:\Users\Piotr\Source\Repos\Pi0tr71\HackHeroesApp\HackHeroesApp\HackHeroesApp.Android\obj\Debug\110\HackHeroesApp.Android.dll
 C:\Users\Piotr\Source\Repos\Pi0tr71\HackHeroesApp\HackHeroesApp\HackHeroesApp.Android\obj\Debug\110\HackHeroesApp.Android.pdb
 C:\Users\Piotr\Source\Repos\Pi0tr71\HackHeroesApp\HackHeroesApp\HackHeroesApp.Android\obj\Debug\110\android\bin\com.companyname.hackheroesapp.apk
@@ -1929,3 +1928,4 @@ C:\Users\Piotr\Source\Repos\Pi0tr71\HackHeroesApp\HackHeroesApp\HackHeroesApp.An
 C:\Users\Piotr\Source\Repos\Pi0tr71\HackHeroesApp\HackHeroesApp\HackHeroesApp.Android\obj\Debug\110\stamp\_GenerateJavaStubs.stamp
 C:\Users\Piotr\Source\Repos\Pi0tr71\HackHeroesApp\HackHeroesApp\HackHeroesApp.Android\obj\Debug\110\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\Piotr\Source\Repos\Pi0tr71\HackHeroesApp\HackHeroesApp\HackHeroesApp.Android\obj\Debug\110\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\Piotr\Source\Repos\Pi0tr71\HackHeroesApp\HackHeroesApp\HackHeroesApp.Android\obj\Debug\110\HackHeroesApp.Android.csproj.CopyComplete
