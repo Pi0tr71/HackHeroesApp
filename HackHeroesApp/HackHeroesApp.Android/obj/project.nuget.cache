@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "iCOlpXykz8QAROJNjBrKXiwMp4LHRnBGHHOwTL3TVqsbb+/n26Yr32GRIiDX2XMfTYDGFrbDs/lfMYlSTG725g==",
+  "dgSpecHash": "1PJIQP8rFmxO8QwWclQ+ScByyfpzgwhVkr0DmkyiTP1VrW2D5wXeoUTwu0OtOzHW0NY1Nwm0KscVCp8eoMcS+w==",
   "success": true,
   "projectFilePath": "C:\\Users\\Piotr\\Source\\Repos\\Pi0tr71\\HackHeroesApp\\HackHeroesApp\\HackHeroesApp.Android\\HackHeroesApp.Android.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "C:\\Users\\Piotr\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\Piotr\\.nuget\\packages\\refit\\6.1.15\\refit.6.1.15.nupkg.sha512",
     "C:\\Users\\Piotr\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
+    "C:\\Users\\Piotr\\.nuget\\packages\\system.componentmodel\\4.3.0\\system.componentmodel.4.3.0.nupkg.sha512",
     "C:\\Users\\Piotr\\.nuget\\packages\\system.net.http.json\\5.0.0\\system.net.http.json.5.0.0.nupkg.sha512",
     "C:\\Users\\Piotr\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\Piotr\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0\\system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512",
@@ -67,7 +68,8 @@
     "C:\\Users\\Piotr\\.nuget\\packages\\xamarin.androidx.viewpager\\1.0.0.8\\xamarin.androidx.viewpager.1.0.0.8.nupkg.sha512",
     "C:\\Users\\Piotr\\.nuget\\packages\\xamarin.androidx.viewpager2\\1.0.0.10\\xamarin.androidx.viewpager2.1.0.0.10.nupkg.sha512",
     "C:\\Users\\Piotr\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
-    "C:\\Users\\Piotr\\.nuget\\packages\\xamarin.forms\\5.0.0.2125\\xamarin.forms.5.0.0.2125.nupkg.sha512",
+    "C:\\Users\\Piotr\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512",
+    "C:\\Users\\Piotr\\.nuget\\packages\\xamarin.forms.pancakeview\\2.3.0.763-beta\\xamarin.forms.pancakeview.2.3.0.763-beta.nupkg.sha512",
     "C:\\Users\\Piotr\\.nuget\\packages\\xamarin.google.android.material\\1.4.0.2\\xamarin.google.android.material.1.4.0.2.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.google.guava.listenablefuture\\1.0.0.2\\xamarin.google.guava.listenablefuture.1.0.0.2.nupkg.sha512"
   ],

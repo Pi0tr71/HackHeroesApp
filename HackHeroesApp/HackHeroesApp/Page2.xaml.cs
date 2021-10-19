@@ -25,27 +25,33 @@ namespace HackHeroesApp
 
         async void Login(object sender, EventArgs e)
         {
-            // var LoginEmailValue = LoginEmail.Text;
-            var LoginEmailValue = "machel@dzban.com";
-            // var LoginPasswordValue = LoginPassword.Text;
+
+            //var LoginEmailValue = "blazejjaworskixd@gmail.com";
+            //var LoginPasswordValue = "!JaworroChan445";
+
+            var LoginEmailValue = "machel@dzban.com"; //zakomentuj to i odkomentuj swoje jak bdz używać Nauraa
             var LoginPasswordValue = "macheldzban";
+
+            //var LoginEmailValue = LoginEmail.Text;
+            //var LoginPasswordValue = LoginPassword.Text;
+
             string emailL = "a"; //Dodałem tu a bo inaczej wywala błąd że jest pusty więc regex się wywala i apka pada
             emailL += LoginEmailValue;
             Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$"); //Walidacja email
             Match match = regex.Match(emailL);
             if (!match.Success)
             {
-                Console.WriteLine("Wpisz poprawnie email");
+                errorDisplay.Text = "Wpisz poprawnie email";
             }
             else if (LoginPasswordValue == null)
             {
-                Console.WriteLine("Brak Hasła");
+                errorDisplay.Text = "Wpisz hasło";
             }
 
             else
             {
                 myAPI = RestService.For<IMyAPILog>(API_ENV.API_URL);
-                
+
                 try
                 {
 
@@ -58,7 +64,7 @@ namespace HackHeroesApp
                     Console.WriteLine(result.token);
                     Console.WriteLine(result.poziom);
 
-                    var v = new Values(result.token, result.poziom,"a");
+                    var v = new Values(result.token, result.poziom, "a");
                     //var v = new Values(result.token, result.poziom, Values.Cos.Login);
 
                     if (result.status == "loged in")
@@ -79,11 +85,11 @@ namespace HackHeroesApp
                     }
                     if (result.status == "user not found")
                     {
-                        Console.WriteLine("Błędne email");
+                        errorDisplay.Text = "Błędny email";
                     }
                     if (result.status == "bad password")
                     {
-                        Console.WriteLine("Błędne Hasło");
+                        errorDisplay.Text = "Błędne hasło";
                     }
 
                 }
