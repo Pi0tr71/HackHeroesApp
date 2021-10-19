@@ -38,4 +38,12 @@ namespace HackHeroesApp.Interface
         [Post("/queries/getQuestionById")]
         Task<QIDPost> SubmitPost([Body] QIDPost post);
     }
+
+    [Headers("Authorization: Bearer")]
+    public interface IMyAPIQCA
+    {
+        [Post("/queries/checkAnswer")]
+        Task<QCAPost> SubmitPost([Body] QCAPost post);
+    }
 }
+

@@ -15,75 +15,82 @@ using System.Threading;
 namespace HackHeroesApp
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Course : ContentPage
+    public partial class Page6 : ContentPage
     {
-        public Course()
+        public Page6()
         {
             InitializeComponent();
-            pytania();
-
-        }
-        int dlugosclisty = 0;
-        int lppytanie = 0;
-        List<int> pytanieid;
-        string odp_u = "";
-        bool buttonmaxone = true;
-
-        async void poprawna()
-        {
-            if (odp_tnabc == odp_u)
+            zapytanie();
+            switch (Values.Cos.Poziom)
             {
-                IMyAPIQCA myAPIQCA;
-                var authHeader = Values.Cos.Token;
-                var refitSettings = new RefitSettings()
-                {
-                    AuthorizationHeaderValueGetter = () => Task.FromResult(authHeader)
-                };
-                myAPIQCA = RestService.For<IMyAPIQCA>(API_ENV.API_URL, refitSettings);
-                QCAPost post = new QCAPost();
-                post.pytanie_id = pytanieid[lppytanie].ToString();
-                post.uzytkownik_odp = odp_tnabc;
-                QCAPost result = await myAPIQCA.SubmitPost(post);
-                Console.WriteLine(result.status);
-                if (result.status == "lvl up")
-                {
-                    await DisplayActionSheet("Level up","Ok",null, "Ukończyłeś ten poziom pytań!", "Teraz możesz przejść do kolejnego");
-                    IMyAPIToken myAPIT;
-
-                    var authHeader2 = Values.Cos.Token;
-                    var refitSettings2 = new RefitSettings()
-                    {
-                        AuthorizationHeaderValueGetter = () => Task.FromResult(authHeader2)
-                    };
-                    Console.WriteLine(refitSettings2.ToString());
-                    myAPIT = RestService.For<IMyAPIToken>(API_ENV.API_URL, refitSettings2);
-                    TokenPost post1 = new TokenPost();
-                    TokenPost result1 = await myAPIT.SubmitPost(post1);
-                    Console.WriteLine(result1.login);
-                    var a = new Values(Values.Cos.Token, result1.poziom, result1.login);
-
-                    await Navigation.PushModalAsync(new Page5());
-                }
+                case 1:
+                    maxid = 100;
+                    break;
+                case 2:
+                    maxid = 200;
+                    break;
+                case 3:
+                    maxid = 300;
+                    break;
+                case 4:
+                    maxid = 400;
+                    break;
+                case 5:
+                    maxid = 500;
+                    break;
+                case 6:
+                    maxid = 600;
+                    break;
+                case 7:
+                    maxid = 700;
+                    break;
+                case 8:
+                    maxid = 800;
+                    break;
+                case 9:
+                    maxid = 900;
+                    break;
+                case 10:
+                    maxid = 1000;
+                    break;
+                case 11:
+                    maxid = 1100;
+                    break;
+                case 12:
+                    maxid = 1200;
+                    break;
+                case 13:
+                    maxid = 1300;
+                    break;
+                case 14:
+                    maxid = 1400;
+                    break;
+                case 15:
+                    maxid = 1500;
+                    break;
+                case 16:
+                    maxid = 1600;
+                    break;
+                case 17:
+                    maxid = 1700;
+                    break;
+                case 18:
+                    maxid = 1800;
+                    break;
+                case 19:
+                    maxid = 1900;
+                    break;
+                case 20:
+                    maxid = 2000;
+                    break;
             }
         }
-
-        async void pytania()
-        {
-            IMyAPIQL myAPIQL;
-            var authHeader = Values.Cos.Token;
-            var refitSettings = new RefitSettings()
-            {
-                AuthorizationHeaderValueGetter = () => Task.FromResult(authHeader)
-            };
-            myAPIQL = RestService.For<IMyAPIQL>(API_ENV.API_URL, refitSettings);
-            QLPost post = new QLPost();
-            QLPost result1 = await myAPIQL.SubmitPost(post);
-            dlugosclisty = result1.pytania.Count;
-            Console.WriteLine(dlugosclisty);
-            pytanieid = result1.pytania;
-            zapytanie();
-        }
+        int pytanieid = 1;
+        int maxid = 0;
         string odp_tnabc = "";
+
+
+
         async void zapytanie()
         {
             IMyAPIQID myAPIQID;
@@ -94,9 +101,9 @@ namespace HackHeroesApp
             };
             myAPIQID = RestService.For<IMyAPIQID>(API_ENV.API_URL, refitSettings);
             QIDPost post = new QIDPost();
-            post.pytanie_id = pytanieid[lppytanie].ToString();
+            post.pytanie_id = pytanieid.ToString();
             QIDPost result = await myAPIQID.SubmitPost(post);
-            var informacje = "Punkty: " + result.pytanie.liczba_punktow + "  Nr pytania: " + result.pytanie.numer_pytania + "  Zakres: " + result.pytanie.zakres_struktury+"   "+(lppytanie+1) + "/" + dlugosclisty;
+            var informacje = "Punkty: " + result.pytanie.liczba_punktow + "  Nr pytania: " + result.pytanie.numer_pytania + "  Zakres: " + result.pytanie.zakres_struktury + "   " +pytanieid+ "/" +maxid;
             PZN.Text = informacje;
             PytanieText.Text = result.pytanie.pytanie;
             Console.WriteLine(result.pytanie.id);
@@ -130,38 +137,23 @@ namespace HackHeroesApp
         }
         private void button1_Clicked(object sender, EventArgs e)
         {
-            if("A" == odp_tnabc)
+            if ("A" == odp_tnabc)
             {
                 button1.BackgroundColor = Color.FromHex("18d698");
                 button2.BackgroundColor = Color.FromHex("B14157");
                 button3.BackgroundColor = Color.FromHex("B14157");
-                if(buttonmaxone)
-                {
-                    odp_u = odp_tnabc;
-                }
-                buttonmaxone = false;
             }
-            if(odp_tnabc == "B" || odp_tnabc == "T")
+            if (odp_tnabc == "B" || odp_tnabc == "T")
             {
                 button1.BackgroundColor = Color.FromHex("B14157");
                 button2.BackgroundColor = Color.FromHex("18d698");
                 button3.BackgroundColor = Color.FromHex("B14157");
-                if (buttonmaxone)
-                {
-                    odp_u = "B";
-                }
-                buttonmaxone = false;
             }
             if (odp_tnabc == "C" || odp_tnabc == "N")
             {
                 button1.BackgroundColor = Color.FromHex("B14157");
                 button2.BackgroundColor = Color.FromHex("B14157");
                 button3.BackgroundColor = Color.FromHex("18d698");
-                if (buttonmaxone)
-                {
-                    odp_u = "C";
-                }
-                buttonmaxone = false;
             }
         }
         private void button2_Clicked(object sender, EventArgs e)
@@ -171,33 +163,18 @@ namespace HackHeroesApp
                 button1.BackgroundColor = Color.FromHex("18d698");
                 button2.BackgroundColor = Color.FromHex("B14157");
                 button3.BackgroundColor = Color.FromHex("B14157");
-                if (buttonmaxone)
-                {
-                    odp_u = "A";
-                }
-                buttonmaxone = false;
             }
             if (odp_tnabc == "B" || odp_tnabc == "T")
             {
                 button1.BackgroundColor = Color.FromHex("B14157");
                 button2.BackgroundColor = Color.FromHex("18d698");
                 button3.BackgroundColor = Color.FromHex("B14157");
-                if (buttonmaxone)
-                {
-                    odp_u = odp_tnabc;
-                }
-                buttonmaxone = false;
             }
             if (odp_tnabc == "C" || odp_tnabc == "N")
             {
                 button1.BackgroundColor = Color.FromHex("B14157");
                 button2.BackgroundColor = Color.FromHex("B14157");
                 button3.BackgroundColor = Color.FromHex("18d698");
-                if (buttonmaxone)
-                {
-                    odp_u = "C";
-                }
-                buttonmaxone = false;
             }
         }
 
@@ -208,72 +185,35 @@ namespace HackHeroesApp
                 button1.BackgroundColor = Color.FromHex("18d698");
                 button2.BackgroundColor = Color.FromHex("B14157");
                 button3.BackgroundColor = Color.FromHex("B14157");
-                if (buttonmaxone)
-                {
-                    odp_u = "A";
-                }
-                buttonmaxone = false;
             }
             if (odp_tnabc == "B" || odp_tnabc == "T")
             {
                 button1.BackgroundColor = Color.FromHex("B14157");
                 button2.BackgroundColor = Color.FromHex("18d698");
                 button3.BackgroundColor = Color.FromHex("B14157");
-                if (buttonmaxone)
-                {
-                    odp_u = "B";
-                }
-                buttonmaxone = false;
             }
             if (odp_tnabc == "C" || odp_tnabc == "N")
             {
                 button1.BackgroundColor = Color.FromHex("B14157");
                 button2.BackgroundColor = Color.FromHex("B14157");
                 button3.BackgroundColor = Color.FromHex("18d698");
-                if (buttonmaxone)
-                {
-                    odp_u = odp_tnabc;
-                }
-                buttonmaxone = false;
             }
         }
 
         private async void button4_Clicked(object sender, EventArgs e)
         {
-            poprawna();
-            Thread.Sleep(100); //we will see
-            odp_u = "";
-            buttonmaxone = true;
-            lppytanie++;
+            Thread.Sleep(100);
             button1.BackgroundColor = Color.FromHex("3c987a");
             button2.BackgroundColor = Color.FromHex("3c987a");
             button3.BackgroundColor = Color.FromHex("3c987a");
-            if (lppytanie == dlugosclisty)
+            if (pytanieid == maxid)
             {
-                lppytanie = 0;
-                pytania();
-            }
-            else
-            {
+                pytanieid = 0;
                 zapytanie();
             }
-            
-        }
-        private void button5_Clicked(object sender, EventArgs e)
-        {
-            odp_u = "";
-            buttonmaxone = true;
-            lppytanie++;
-            button1.BackgroundColor = Color.FromHex("3c987a");
-            button2.BackgroundColor = Color.FromHex("3c987a");
-            button3.BackgroundColor = Color.FromHex("3c987a");
-            if (lppytanie == dlugosclisty)
-            {
-                lppytanie = 0;
-                pytania();
-            }
             else
             {
+                pytanieid++;
                 zapytanie();
             }
         }
@@ -284,5 +224,10 @@ namespace HackHeroesApp
             return true;
         }
 
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            pytanieid = Int32.Parse(idpytania.Text);
+            zapytanie();
+        }
     }
 }

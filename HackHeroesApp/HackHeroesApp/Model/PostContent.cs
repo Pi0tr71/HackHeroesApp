@@ -6,7 +6,7 @@ namespace HackHeroesApp.Model
 {
     public class API_ENV
     {
-        public static string API_URL = "http://46.41.136.62:5000/api/v1";
+        public static string API_URL = "http://192.168.0.180:5000/api/v1";
     }
 
     public class RegPost
@@ -27,6 +27,7 @@ namespace HackHeroesApp.Model
     public class TokenPost
     {
         public string login { get; set; }
+        public int poziom { get; set; }
     }
     public class QLPost
     {
@@ -51,6 +52,13 @@ namespace HackHeroesApp.Model
     {
         public Pytanie pytanie { get; set; }
         public string pytanie_id { get; set; }
+    }
+
+    public class QCAPost
+    {
+        public string uzytkownik_odp { get; set; }
+        public string pytanie_id { get; set; }
+        public string status { get; set; }
     }
 
 }
