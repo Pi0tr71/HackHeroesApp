@@ -20,6 +20,6 @@
         <Button Grid.Row="5" Grid.ColumnSpan="4" x:Name="button3" Clicked="button3_Clicked"/>
         <Button Grid.Row="6" Grid.ColumnSpan="2" x:Name="button4" Text="Dalej" Clicked="button4_Clicked"/>
         <Entry Grid.Row="6" Grid.Column="2" Keyboard="Numeric" Placeholder="id_pytania" x:Name="idpytania"/>
-        <Button Grid.Row="6" Grid.Column="3" FontSize="12" Text="Zatwierdź" Clicked="Button_Clicked"/>
+        <Button Grid.Row="6" Grid.Column="3" FontSize="12" Text="Zatwierdź" Clicked="Button_Clicked" />
     </Grid>
 </ContentPage>
