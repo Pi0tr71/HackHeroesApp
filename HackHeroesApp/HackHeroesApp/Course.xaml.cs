@@ -22,7 +22,9 @@ namespace HackHeroesApp
             pytania();
 
         }
+        int dlugosclisty = 0;
         int lppytanie = 0;
+        List<int> pytanieid;
         async void pytania()
         {
             IMyAPIQL myAPIQL;
@@ -34,9 +36,13 @@ namespace HackHeroesApp
             myAPIQL = RestService.For<IMyAPIQL>(API_ENV.API_URL, refitSettings);
             QLPost post = new QLPost();
             QLPost result1 = await myAPIQL.SubmitPost(post);
-            zapytanie(result1.pytania);
+            dlugosclisty = result1.pytania.Count;
+            Console.WriteLine(dlugosclisty);
+            pytanieid = result1.pytania;
+            zapytanie();
         }
-        async void zapytanie(List<int> pytanieid)
+        string odp_tnabc = "";
+        async void zapytanie()
         {
             IMyAPIQID myAPIQID;
             var authHeader = Values.Cos.Token;
@@ -48,48 +54,155 @@ namespace HackHeroesApp
             QIDPost post = new QIDPost();
             post.pytanie_id = pytanieid[lppytanie].ToString();
             QIDPost result = await myAPIQID.SubmitPost(post);
-            var informacje = "Punkty : " + result.pytanie.liczba_punktow + " Zakres : " + result.pytanie.zakres_struktury+ " Nr pytania : " + result.pytanie.numer_pytania;
+            var informacje = "Punkty : " + result.pytanie.liczba_punktow + "  Nr pytania : " + result.pytanie.numer_pytania + "  Zakres : " + result.pytanie.zakres_struktury;
             PZN.Text = informacje;
             PytanieText.Text = result.pytanie.pytanie;
-            if(result.pytanie.odpowiedz_a == null)
+            Console.WriteLine(result.pytanie.id);
+            Console.WriteLine(result.pytanie.poprawna_odp);
+            if (result.pytanie.odpowiedz_a == "")
             {
-                Gridd = new Grid();
-                var label = new Label
-                {
-                    Text = "Pytania",
-                    FontSize = 30
-                };
-                Gridd.Children.Add(label, 0, 0);
-                Grid.SetColumnSpan(label, 3);
-                Grid.SetRow(label, 0);
-                Grid.SetColumn(label, 1);
+                odp_tnabc = result.pytanie.poprawna_odp;
+                button1.IsEnabled = false;
+                button2.IsEnabled = true;
+                button3.IsEnabled = true;
+                button1.Opacity = 0;
+                button2.Text = "Tak";
+                button2.FontSize = 30;
+                button3.Text = "Nie";
+                button3.FontSize = 30;
+            }
+            if (result.pytanie.odpowiedz_a != "")
+            {
+                odp_tnabc = result.pytanie.poprawna_odp;
+                button1.IsEnabled = true;
+                button2.IsEnabled = true;
+                button3.IsEnabled = true;
+                button1.Opacity = 1;
+                button1.Text = result.pytanie.odpowiedz_a;
+                button1.FontSize = 20;
+                button2.Text = result.pytanie.odpowiedz_b;
+                button2.FontSize = 20;
+                button3.Text = result.pytanie.odpowiedz_c;
+                button3.FontSize = 20;
+            }
+        }
+        private void button1_Clicked(object sender, EventArgs e)
+        {
+            if("A" == odp_tnabc)
+            {
+
+                button1.BackgroundColor = Color.FromHex("3c987a");
+                button2.BackgroundColor = Color.FromHex("B14157");
+                button3.BackgroundColor = Color.FromHex("B14157");
+                
+            }
+            if(odp_tnabc == "B" || odp_tnabc == "T")
+            {
+                button1.BackgroundColor = Color.FromHex("B14157");
+                button2.BackgroundColor = Color.FromHex("3c987a");
+                button3.BackgroundColor = Color.FromHex("B14157");
+
+
+            }
+            if (odp_tnabc == "C" || odp_tnabc == "N")
+            {
+
+                button1.BackgroundColor = Color.FromHex("B14157");
+                button2.BackgroundColor = Color.FromHex("B14157");
+                button3.BackgroundColor = Color.FromHex("3c987a");
+
+
+            }
+        }
+        private void button2_Clicked(object sender, EventArgs e)
+        {
+            if ("A" == odp_tnabc)
+            {
+                button1.BackgroundColor = Color.FromHex("3c987a");
+                button2.BackgroundColor = Color.FromHex("B14157");
+                button3.BackgroundColor = Color.FromHex("B14157");
+
+            }
+            if (odp_tnabc == "B" || odp_tnabc == "T")
+            {
+                button1.BackgroundColor = Color.FromHex("B14157");
+                button2.BackgroundColor = Color.FromHex("3c987a");
+                button3.BackgroundColor = Color.FromHex("B14157");
+
+
+            }
+            if (odp_tnabc == "C" || odp_tnabc == "N")
+            {
+                button1.BackgroundColor = Color.FromHex("B14157");
+                button2.BackgroundColor = Color.FromHex("B14157");
+                button3.BackgroundColor = Color.FromHex("3c987a");
+
+
             }
         }
 
-        //static List<string> WildcardFiles()
-        //{
-        //    List<string> listRange = new List<string>();
-        //    listRange.Add("q");
-        //    listRange.Add("s");
-
-        //    return listRange;
-        //}
-        async void button4_Clicked(object sender, EventArgs e)
+        private void button3_Clicked(object sender, EventArgs e)
         {
-            //zapytanie();
+            if ("A" == odp_tnabc)
+            {
+                button1.BackgroundColor = Color.FromHex("3c987a");
+                button2.BackgroundColor = Color.FromHex("B14157");
+                button3.BackgroundColor = Color.FromHex("B14157");
+
+            }
+            if (odp_tnabc == "B" || odp_tnabc == "T")
+            {
+                button1.BackgroundColor = Color.FromHex("B14157");
+                button2.BackgroundColor = Color.FromHex("3c987a");
+                button3.BackgroundColor = Color.FromHex("B14157");
+
+
+            }
+            if (odp_tnabc == "C" || odp_tnabc == "N")
+            {
+                button1.BackgroundColor = Color.FromHex("B14157");
+                button2.BackgroundColor = Color.FromHex("B14157");
+                button3.BackgroundColor = Color.FromHex("3c987a");
+
+
+            }
         }
 
-        //private void button5_Clicked(object sender, EventArgs e)
-        //{
+        private void button4_Clicked(object sender, EventArgs e)
+        {
+            lppytanie++;
+            button1.BackgroundColor = Color.FromHex("3c987a");
+            button2.BackgroundColor = Color.FromHex("3c987a");
+            button3.BackgroundColor = Color.FromHex("3c987a");
+            if (lppytanie == dlugosclisty)
+            {
+                lppytanie = 0;
+                pytania();
+            }
+            else
+            {
+                zapytanie();
+            }
+            
+        }
+        private void button5_Clicked(object sender, EventArgs e)
+        {
+            lppytanie++;
+            button1.BackgroundColor = Color.FromHex("3c987a");
+            button2.BackgroundColor = Color.FromHex("3c987a");
+            button3.BackgroundColor = Color.FromHex("3c987a");
+            if (lppytanie == dlugosclisty)
+            {
+                lppytanie = 0;
+                pytania();
+            }
+            else
+            {
+                zapytanie();
+            }
+        }
 
-        //}
-        //static void Main(string[] args)
-        //{
-        //    List<string> range = WildcardFiles();
-        //    foreach (string item in range)
-        //    {
-        //        // Do something with item
-        //    }
-        //}
+
+
     }
 }
