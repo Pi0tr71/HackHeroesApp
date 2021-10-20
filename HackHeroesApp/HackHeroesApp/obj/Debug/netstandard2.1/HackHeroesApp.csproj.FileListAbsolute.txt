@@ -65,7 +65,6 @@ C:\Users\Piotr\Source\Repos\Pi0tr71\HackHeroesApp\HackHeroesApp\HackHeroesApp\ob
 C:\Users\Piotr\Source\Repos\Pi0tr71\HackHeroesApp\HackHeroesApp\HackHeroesApp\obj\Debug\netstandard2.1\Page3.xaml.g.cs
 C:\Users\Piotr\Source\Repos\Pi0tr71\HackHeroesApp\HackHeroesApp\HackHeroesApp\obj\Debug\netstandard2.1\Page4.xaml.g.cs
 C:\Users\Piotr\Source\Repos\Pi0tr71\HackHeroesApp\HackHeroesApp\HackHeroesApp\obj\Debug\netstandard2.1\Page5.xaml.g.cs
-C:\Users\Piotr\Source\Repos\Pi0tr71\HackHeroesApp\HackHeroesApp\HackHeroesApp\obj\Debug\netstandard2.1\RankingPage.xaml.g.cs
 C:\Users\Piotr\Source\Repos\Pi0tr71\HackHeroesApp\HackHeroesApp\HackHeroesApp\obj\Debug\netstandard2.1\Views\AboutPage.xaml.g.cs
 C:\Users\Piotr\Source\Repos\Pi0tr71\HackHeroesApp\HackHeroesApp\HackHeroesApp\obj\Debug\netstandard2.1\Views\ItemDetailPage.xaml.g.cs
 C:\Users\Piotr\Source\Repos\Pi0tr71\HackHeroesApp\HackHeroesApp\HackHeroesApp\obj\Debug\netstandard2.1\Views\ItemsPage.xaml.g.cs
@@ -79,3 +78,5 @@ C:\Users\Piotr\Source\Repos\Pi0tr71\HackHeroesApp\HackHeroesApp\HackHeroesApp\ob
 C:\Users\Piotr\Source\Repos\Pi0tr71\HackHeroesApp\HackHeroesApp\HackHeroesApp\obj\Debug\netstandard2.1\ref\HackHeroesApp.dll
 C:\Users\Piotr\Source\Repos\Pi0tr71\HackHeroesApp\HackHeroesApp\HackHeroesApp\obj\Debug\netstandard2.1\HackHeroesApp.pdb
 C:\Users\Piotr\Source\Repos\Pi0tr71\HackHeroesApp\HackHeroesApp\HackHeroesApp\obj\Debug\netstandard2.1\Page6.xaml.g.cs
+C:\Users\Piotr\Source\Repos\Pi0tr71\HackHeroesApp\HackHeroesApp\HackHeroesApp\obj\Debug\netstandard2.1\Page7.xaml.g.cs
+C:\Users\Piotr\Source\Repos\Pi0tr71\HackHeroesApp\HackHeroesApp\HackHeroesApp\obj\Debug\netstandard2.1\Page8.xaml.g.cs

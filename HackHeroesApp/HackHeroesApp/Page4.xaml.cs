@@ -107,7 +107,7 @@ namespace HackHeroesApp
         async void Skrzyzowania(object sender, EventArgs e)
         {
             SkrzyzowaniaButton.Opacity = 0.3;
-            await Navigation.PushModalAsync(new Page5());
+            await Navigation.PushModalAsync(new Page7());
             SkrzyzowaniaButton.Opacity = 0;
         }
         async void Budowa(object sender, EventArgs e)

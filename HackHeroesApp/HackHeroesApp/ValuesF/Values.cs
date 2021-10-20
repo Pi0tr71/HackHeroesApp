@@ -20,4 +20,16 @@ namespace HackHeroesApp.ValuesF
             Cos = this;
         }
     }
+    public class Skrzyzowanie
+    {
+        public static Skrzyzowanie Cos2;
+
+        public int SkrzyzowanieP = 0;
+
+        public Skrzyzowanie( int SkrzyzowanieP)
+        {
+            this.SkrzyzowanieP = SkrzyzowanieP;
+            Cos2 = this;
+        }
+    }
 }
