@@ -45,5 +45,19 @@ namespace HackHeroesApp.Interface
         [Post("/queries/checkAnswer")]
         Task<QCAPost> SubmitPost([Body] QCAPost post);
     }
+
+    [Headers("Authorization: Bearer")]
+    public interface IMyAPIGR
+    {
+        [Post("/statistics/getRanking")]
+        Task<GRPost> SubmitPost([Body] GRPost post);
+    }
+
+    [Headers("Authorization: Bearer")]
+    public interface IMyAPIGS
+    {
+        [Post("/statistics/getStats")]
+        Task<GSPost> SubmitPost([Body] GSPost post);
+    }
 }
 

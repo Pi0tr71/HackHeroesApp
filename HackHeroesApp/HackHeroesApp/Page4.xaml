@@ -24,8 +24,9 @@
                     </StackLayout>
                 </Grid>
                 <StackLayout Grid.Row="1">
-                    <Label Text="Najlepszy czas teoria: 00:10:00" FontSize="Medium" TextColor="White"/>
-                    <Label Text="Nauczonych pytań 0/2100" FontSize="Medium" TextColor="White"/>
+                    <Label Text="" x:Name="label1"  FontSize="Medium" TextColor="White"/>
+                    <Label Text="" x:Name="label2" FontSize="Medium" TextColor="White"/>
+                    <Label x:Name="label3" FontSize="Medium" TextColor="White"/>
                 </StackLayout>
             </Grid>
         </yummy:PancakeView>

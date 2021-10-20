@@ -6,7 +6,7 @@ namespace HackHeroesApp.Model
 {
     public class API_ENV
     {
-        public static string API_URL = "http://192.168.0.180:5000/api/v1";
+        public static string API_URL = "http://46.41.136.62:5000/api/v1";
     }
 
     public class RegPost
@@ -60,5 +60,33 @@ namespace HackHeroesApp.Model
         public string pytanie_id { get; set; }
         public string status { get; set; }
     }
+
+    public class Ranking
+    {
+        public string login { get; set; }
+        public int ilosc_punktow { get; set; }
+        public int czas { get; set; }
+    }
+
+    public class GRPost
+    {
+        public List<Ranking> ranking { get; set; }
+    }
+
+    public class NajWynikZTestTeoretycznego
+    {
+        public int id { get; set; }
+        public int uzytkownik_id { get; set; }
+        public int ilosc_punktow { get; set; }
+        public int czas { get; set; }
+    }
+
+    public class GSPost
+    {
+        public int ilosc_wszystkich_pytan { get; set; }
+        public int ilosc_przerobionych_pytan { get; set; }
+        public NajWynikZTestTeoretycznego naj_wynik_z_test_teoretycznego { get; set; }
+    }
+
 
 }
