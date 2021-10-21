@@ -9,6 +9,7 @@
     <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
         <Image Source="background.png" AbsoluteLayout.LayoutBounds="1,1,1,1" AbsoluteLayout.LayoutFlags="All" Aspect="AspectFill"></Image>
         <StackLayout AbsoluteLayout.LayoutBounds="1,1,1,1" AbsoluteLayout.LayoutFlags="All" BackgroundColor="Transparent" VerticalOptions="Center" Spacing="20">
+            <Image Source="LOGO_MACHEL_25.png" HeightRequest="160" WidthRequest="160" />
             <Label 
 			Text="Witaj w HackHeroesApp"
 			TextColor="White"

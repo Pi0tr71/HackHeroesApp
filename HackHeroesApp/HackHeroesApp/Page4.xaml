@@ -9,25 +9,27 @@
             android:TabbedPage.BarSelectedItemColor="{StaticResource Primary}">
     <ContentPage Title="Statystyki" BackgroundImageSource="https://cdn.w600.comps.canstockphoto.pl/prosty-stickman-cz%C5%82owiek-klipart-wektorowy_csp43585411.jpg" IconImageSource="https://img.icons8.com/external-kiranshastry-lineal-kiranshastry/64/000000/external-stats-data-science-kiranshastry-lineal-kiranshastry.png" BackgroundColor="White">
         <yummy:PancakeView VerticalOptions="End" CornerRadius="70, 70, 0, 0">
-            <Grid RowDefinitions="Auto, Auto" RowSpacing="15" BackgroundColor="{StaticResource Primary}" Padding="20">
-                <Grid Grid.Row="0" ColumnDefinitions="Auto, *" ColumnSpacing="15">
-                    <StackLayout Grid.Column="0">
-                        <Frame CornerRadius="50">
-                            <Image HeightRequest="60" WidthRequest="60" Source="https://cdn.w600.comps.canstockphoto.pl/prosty-stickman-cz%C5%82owiek-klipart-wektorowy_csp43585411.jpg" />
-                        </Frame>
-                    </StackLayout>
-                    <StackLayout Grid.Column="1">
-                        <FlexLayout Direction="Column">
-                            <Label x:Name="LoginText" FontAttributes="Bold" FontSize="Large" TextColor="White" />
-                            <Label x:Name="PoziomText" FontSize="Medium"  Margin="0,0,0,30" TextColor="LightGray"/>
-                        </FlexLayout>
+            <ScrollView>
+                <Grid RowDefinitions="Auto, Auto" RowSpacing="15" BackgroundColor="{StaticResource Primary}" Padding="20">
+                    <Grid Grid.Row="0" ColumnDefinitions="Auto, *" ColumnSpacing="15">
+                        <StackLayout Grid.Column="0">
+                            <Frame CornerRadius="50">
+                                <Image HeightRequest="60" WidthRequest="60" Source="https://cdn.w600.comps.canstockphoto.pl/prosty-stickman-cz%C5%82owiek-klipart-wektorowy_csp43585411.jpg" />
+                            </Frame>
+                        </StackLayout>
+                        <StackLayout Grid.Column="1">
+                            <FlexLayout Direction="Column">
+                                <Label x:Name="LoginText" FontAttributes="Bold" FontSize="Large" TextColor="White" />
+                                <Label x:Name="PoziomText" FontSize="Medium"  Margin="0,0,0,30" TextColor="LightGray"/>
+                            </FlexLayout>
+                        </StackLayout>
+                    </Grid>
+                    <StackLayout Grid.Row="1">
+                        <Label Text="Najlepszy czas teoria: 00:10:00" FontSize="Medium" TextColor="White"/>
+                        <Label Text="Nauczonych pytań 0/2100" FontSize="Medium" TextColor="White"/>
                     </StackLayout>
                 </Grid>
-                <StackLayout Grid.Row="1">
-                    <Label Text="Najlepszy czas teoria: 00:10:00" FontSize="Medium" TextColor="White"/>
-                    <Label Text="Nauczonych pytań 0/2100" FontSize="Medium" TextColor="White"/>
-                </StackLayout>
-            </Grid>
+            </ScrollView>
         </yummy:PancakeView>
     </ContentPage>
     <ContentPage Padding="40" Title="Nauka" BackgroundImageSource="background.png" IconImageSource="https://img.icons8.com/external-itim2101-lineal-itim2101/64/000000/external-learning-elearning-itim2101-lineal-itim2101-1.png">
