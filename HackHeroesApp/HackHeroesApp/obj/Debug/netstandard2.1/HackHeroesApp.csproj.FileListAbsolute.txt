@@ -80,3 +80,4 @@ C:\Users\Piotr\Source\Repos\Pi0tr71\HackHeroesApp\HackHeroesApp\HackHeroesApp\ob
 C:\Users\Piotr\Source\Repos\Pi0tr71\HackHeroesApp\HackHeroesApp\HackHeroesApp\obj\Debug\netstandard2.1\Page6.xaml.g.cs
 C:\Users\Piotr\Source\Repos\Pi0tr71\HackHeroesApp\HackHeroesApp\HackHeroesApp\obj\Debug\netstandard2.1\Page7.xaml.g.cs
 C:\Users\Piotr\Source\Repos\Pi0tr71\HackHeroesApp\HackHeroesApp\HackHeroesApp\obj\Debug\netstandard2.1\Page8.xaml.g.cs
+C:\Users\Piotr\Source\Repos\Pi0tr71\HackHeroesApp\HackHeroesApp\HackHeroesApp\obj\Debug\netstandard2.1\Page9.xaml.g.cs
