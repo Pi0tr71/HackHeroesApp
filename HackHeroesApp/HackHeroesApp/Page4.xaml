@@ -5,8 +5,9 @@
             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core" xmlns:viewmodel="clr-namespace:HackHeroesApp.ViewModels" xmlns:model="clr-namespace:HackHeroesApp.Models" xmlns:hackheroesapp="clr-namespace:HackHeroesApp" xmlns:d="http://xamarin.com/schemas/2014/forms/design" x:DataType="hackheroesapp:Page4"
             xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
             android:TabbedPage.ToolbarPlacement="Bottom"
-            android:TabbedPage.BarItemColor="#ffffff"
-            android:TabbedPage.BarSelectedItemColor="{StaticResource Primary}">
+            android:TabbedPage.BarItemColor="{AppThemeBinding Light=Black, Dark=White}"
+            android:TabbedPage.BarSelectedItemColor="{StaticResource Primary}"
+            BarBackgroundColor="{AppThemeBinding Light=White, Dark=Black}">
     <ContentPage Title="Statystyki" BackgroundImageSource="https://cdn.w600.comps.canstockphoto.pl/prosty-stickman-cz%C5%82owiek-klipart-wektorowy_csp43585411.jpg" IconImageSource="https://img.icons8.com/external-kiranshastry-lineal-kiranshastry/64/000000/external-stats-data-science-kiranshastry-lineal-kiranshastry.png" BackgroundColor="White">
         <yummy:PancakeView VerticalOptions="End" CornerRadius="70, 70, 0, 0">
             <Grid RowDefinitions="Auto, Auto" RowSpacing="15" BackgroundColor="{StaticResource Primary}" Padding="20">
@@ -129,7 +130,7 @@
                             <FlexLayout BackgroundColor="{Binding BackgroundColor}" Padding="10, 0" Direction="Row" AlignItems="Center" JustifyContent="SpaceBetween" HorizontalOptions="FillAndExpand">
                                 <Label Text="{Binding User.RankingPlace}" WidthRequest="100" HorizontalTextAlignment="Center" TextColor="{Binding FontColor}" FontSize="Medium" VerticalOptions="Center" />
                                 <Label Text="{Binding User.Login}" TextColor="{Binding FontColor}" FontSize="Medium" FontAttributes="Bold" VerticalOptions="Center"/>
-                                <Label Text="{Binding User.Level}" WidthRequest="100" HorizontalTextAlignment="Center" TextColor="{Binding FontColor}" FontSize="Medium" VerticalOptions="Center"/>
+                                <Label Text="{Binding User.Time}" WidthRequest="100" HorizontalTextAlignment="Center" TextColor="{Binding FontColor}" FontSize="Medium" VerticalOptions="Center"/>
                             </FlexLayout>
                         </ViewCell>
                     </DataTemplate>

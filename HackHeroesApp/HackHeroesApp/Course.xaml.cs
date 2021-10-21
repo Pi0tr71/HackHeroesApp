@@ -34,7 +34,7 @@ namespace HackHeroesApp
             if (odp_tnabc == odp_u)
             {
                 IMyAPIQCA myAPIQCA;
-                var authHeader = Values.Cos.Token;
+                var authHeader = Values.instance.Token;
                 var refitSettings = new RefitSettings()
                 {
                     AuthorizationHeaderValueGetter = () => Task.FromResult(authHeader)
@@ -50,7 +50,7 @@ namespace HackHeroesApp
                     await DisplayActionSheet("Level up","Ok",null, "Ukończyłeś ten poziom pytań!", "Teraz możesz przejść do kolejnego");
                     IMyAPIToken myAPIT;
 
-                    var authHeader2 = Values.Cos.Token;
+                    var authHeader2 = Values.instance.Token;
                     var refitSettings2 = new RefitSettings()
                     {
                         AuthorizationHeaderValueGetter = () => Task.FromResult(authHeader2)
@@ -60,7 +60,7 @@ namespace HackHeroesApp
                     TokenPost post1 = new TokenPost();
                     TokenPost result1 = await myAPIT.SubmitPost(post1);
                     Console.WriteLine(result1.login);
-                    var a = new Values(Values.Cos.Token, result1.poziom, result1.login);
+                    var a = new Values(Values.instance.Token, result1.poziom, result1.login);
 
                     await Navigation.PushModalAsync(new Page5());
                 }
@@ -70,7 +70,7 @@ namespace HackHeroesApp
         async void pytania()
         {
             IMyAPIQL myAPIQL;
-            var authHeader = Values.Cos.Token;
+            var authHeader = Values.instance.Token;
             var refitSettings = new RefitSettings()
             {
                 AuthorizationHeaderValueGetter = () => Task.FromResult(authHeader)
@@ -87,7 +87,7 @@ namespace HackHeroesApp
         async void zapytanie()
         {
             IMyAPIQID myAPIQID;
-            var authHeader = Values.Cos.Token;
+            var authHeader = Values.instance.Token;
             var refitSettings = new RefitSettings()
             {
                 AuthorizationHeaderValueGetter = () => Task.FromResult(authHeader)
@@ -276,12 +276,6 @@ namespace HackHeroesApp
             {
                 zapytanie();
             }
-        }
-
-        protected override bool OnBackButtonPressed()
-        {
-            Navigation.PushModalAsync(new Page5());
-            return true;
         }
 
     }

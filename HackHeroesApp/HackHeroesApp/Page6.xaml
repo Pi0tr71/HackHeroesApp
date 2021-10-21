@@ -1,25 +1,38 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="HackHeroesApp.Page6"
-             Padding="0,5,0,0">
+             x:Class="HackHeroesApp.Page6">
 
-    <Grid x:Name="Gridd">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-
-
-        </Grid.RowDefinitions>
-        <Label Grid.Row="0" Grid.ColumnSpan="4" Text="Pkt Zakres Nr Pytania" FontSize="10" x:Name="PZN" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
-        <Image Grid.Row="1" Grid.ColumnSpan="4" Source="background.png" Aspect="AspectFit" x:Name="PytanieZdj"/>
-        <Label Grid.Row="2" Grid.ColumnSpan="4" Text="Co było pierwsze kura czy jajko?" x:Name="PytanieText" FontSize="19" Padding="8,0,0,8" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
-        <Button Grid.Row="3" Grid.ColumnSpan="4" x:Name="button1" Clicked="button1_Clicked"/>
-        <Button Grid.Row="4" Grid.ColumnSpan="4" x:Name="button2" Clicked="button2_Clicked"/>
-        <Button Grid.Row="5" Grid.ColumnSpan="4" x:Name="button3" Clicked="button3_Clicked"/>
-        <Button Grid.Row="6" Grid.ColumnSpan="2" x:Name="button4" Text="Dalej" Clicked="button4_Clicked"/>
-        <Entry Grid.Row="6" Grid.Column="2" Keyboard="Numeric" Placeholder="id_pytania" x:Name="idpytania"/>
-        <Button Grid.Row="6" Grid.Column="3" FontSize="12" Text="Zatwierdź" Clicked="Button_Clicked" />
-    </Grid>
+    <FlexLayout x:Name="Gridd" Padding="10" Direction="Column" JustifyContent="SpaceBetween">
+        <Grid RowSpacing="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" Text="Pkt Zakres Nr Pytania" FontSize="10" x:Name="PZN" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+            <Image Grid.Row="1" Source="background.png" Aspect="AspectFit" x:Name="PytanieZdj"/>
+            <Label Grid.Row="2" Text="Co było pierwsze kura czy jajko?" x:Name="PytanieText" FontSize="19" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+        </Grid>
+        <Grid RowSpacing="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Button Grid.Row="0" CornerRadius="10" x:Name="button1" Clicked="button1_Clicked"/>
+            <Button Grid.Row="1" CornerRadius="10" x:Name="button2" Clicked="button2_Clicked"/>
+            <Button Grid.Row="2" CornerRadius="10" x:Name="button3" Clicked="button3_Clicked"/>
+        </Grid>
+        <Grid ColumnSpacing="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" CornerRadius="10" x:Name="button4" Text="Dalej" Clicked="button4_Clicked"/>
+            <Entry Grid.Column="1" Keyboard="Numeric" Placeholder="id_pytania" x:Name="idpytania"/>
+            <Button Grid.Column="2" CornerRadius="10" VerticalOptions="End" FontSize="12" Text="Zatwierdź" Clicked="Button_Clicked" />
+        </Grid>
+    </FlexLayout>
 </ContentPage>

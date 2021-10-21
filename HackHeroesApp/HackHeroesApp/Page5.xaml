@@ -5,12 +5,12 @@
              NavigationPage.HasNavigationBar="false"
              Padding="20,10,20,30">
     <Grid RowSpacing="20"
-          ColumnSpacing="20">
+          ColumnSpacing="20" x:Name="Menu">
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
 
-        <Button Grid.Row="0" Grid.Column="0" Text="&lt;" Font="20" CornerRadius="10" Clicked="Back"/>
+        <!-- <Button Grid.Row="0" Grid.Column="0" Text="&lt;" Font="20" CornerRadius="10" Clicked="Back"/> -->
         <Label Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" Text="Pytania" FontSize="30"/>
 
         <Button Grid.Row="1" Grid.Column="0"  Text="1" CornerRadius="10" x:Name="b1" Clicked="b1_Clicked"/>

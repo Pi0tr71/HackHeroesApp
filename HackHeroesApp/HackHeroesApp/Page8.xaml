@@ -4,16 +4,11 @@
              x:Class="HackHeroesApp.Page8"
              Padding="0,5,0,0">
 
-    <Grid x:Name="Gridd">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-        </Grid.RowDefinitions>
-        <Button Grid.Row="0" Grid.Column="0" Text="&lt;" Font="20" CornerRadius="10" Clicked="Back"/>
+    <FlexLayout x:Name="Gridd" Direction="Column" Padding="10">
         <Image Grid.Row="1" Grid.ColumnSpan="4" Source="background.png" Aspect="AspectFit" x:Name="PytanieZdj"/>
         <Button Grid.Row="2" Grid.ColumnSpan="4" x:Name="button1" Clicked="button1_Clicked"/>
         <Button Grid.Row="3" Grid.ColumnSpan="4" x:Name="button2" Clicked="button2_Clicked"/>
         <Button Grid.Row="4" Grid.ColumnSpan="4" x:Name="button3" Clicked="button3_Clicked"/>
         <Button Grid.Row="5" Grid.ColumnSpan="4" x:Name="button4" Clicked="button4_Clicked"/>
-    </Grid>
+    </FlexLayout>
 </ContentPage>

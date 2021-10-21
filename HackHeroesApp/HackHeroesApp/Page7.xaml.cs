@@ -16,7 +16,7 @@ namespace HackHeroesApp
         public Page7()
         {
             InitializeComponent();
-            switch (Values.Cos.Poziom)
+            switch (Values.instance.Level)
             {
                 case 0:
                     b1.BackgroundColor = Color.FromHex("B14157");
@@ -492,12 +492,12 @@ namespace HackHeroesApp
             Navigation.PushModalAsync(new Page4());
             return true;
         }
-        int poziomtutaj = Values.Cos.Poziom;
+        int poziomtutaj = Values.instance.Level;
         private void b1_Clicked(object sender, EventArgs e)
         {
             if (poziomtutaj >= 1)
             {
-                var a = new Skrzyzowanie(1);
+                var a = new Crossroad(1);
                 Navigation.PushModalAsync(new Page8());
             }
             
@@ -506,7 +506,7 @@ namespace HackHeroesApp
         {
             if (poziomtutaj >= 2)
             {
-                var a = new Skrzyzowanie(2);
+                var a = new Crossroad(2);
                 Navigation.PushModalAsync(new Page8());
             }
 
@@ -515,7 +515,7 @@ namespace HackHeroesApp
         {
             if (poziomtutaj >= 3)
             {
-                var a = new Skrzyzowanie(3);
+                var a = new Crossroad(3);
                 Navigation.PushModalAsync(new Page8());
             }
 
@@ -524,7 +524,7 @@ namespace HackHeroesApp
         {
             if (poziomtutaj >= 4)
             {
-                var a = new Skrzyzowanie(4);
+                var a = new Crossroad(4);
                 Navigation.PushModalAsync(new Page8());
             }
 
@@ -533,7 +533,7 @@ namespace HackHeroesApp
         {
             if (poziomtutaj >= 5)
             {
-                var a = new Skrzyzowanie(5);
+                var a = new Crossroad(5);
                 Navigation.PushModalAsync(new Page8());
             }
 
@@ -542,7 +542,7 @@ namespace HackHeroesApp
         {
             if (poziomtutaj >= 6)
             {
-                var a = new Skrzyzowanie(6);
+                var a = new Crossroad(6);
                 Navigation.PushModalAsync(new Page8());
             }
 
@@ -551,7 +551,7 @@ namespace HackHeroesApp
         {
             if (poziomtutaj >= 7)
             {
-                var a = new Skrzyzowanie(7);
+                var a = new Crossroad(7);
                 Navigation.PushModalAsync(new Page8());
             }
 
@@ -560,7 +560,7 @@ namespace HackHeroesApp
         {
             if (poziomtutaj >= 8)
             {
-                var a = new Skrzyzowanie(8);
+                var a = new Crossroad(8);
                 Navigation.PushModalAsync(new Page8());
             }
 
@@ -569,7 +569,7 @@ namespace HackHeroesApp
         {
             if (poziomtutaj >= 9)
             {
-                var a = new Skrzyzowanie(9);
+                var a = new Crossroad(9);
                 Navigation.PushModalAsync(new Page8());
             }
 
@@ -578,7 +578,7 @@ namespace HackHeroesApp
         {
             if (poziomtutaj >= 10)
             {
-                var a = new Skrzyzowanie(10);
+                var a = new Crossroad(10);
                 Navigation.PushModalAsync(new Page8());
             }
 
@@ -587,7 +587,7 @@ namespace HackHeroesApp
         {
             if (poziomtutaj >= 11)
             {
-                var a = new Skrzyzowanie(11);
+                var a = new Crossroad(11);
                 Navigation.PushModalAsync(new Page8());
             }
 
@@ -596,7 +596,7 @@ namespace HackHeroesApp
         {
             if (poziomtutaj >= 12)
             {
-                var a = new Skrzyzowanie(12);
+                var a = new Crossroad(12);
                 Navigation.PushModalAsync(new Page8());
             }
 
@@ -605,7 +605,7 @@ namespace HackHeroesApp
         {
             if (poziomtutaj >= 13)
             {
-                var a = new Skrzyzowanie(13);
+                var a = new Crossroad(13);
                 Navigation.PushModalAsync(new Page8());
             }
 
@@ -614,7 +614,7 @@ namespace HackHeroesApp
         {
             if (poziomtutaj >= 14)
             {
-                var a = new Skrzyzowanie(14);
+                var a = new Crossroad(14);
                 Navigation.PushModalAsync(new Page8());
             }
 
@@ -623,7 +623,7 @@ namespace HackHeroesApp
         {
             if (poziomtutaj >= 15)
             {
-                var a = new Skrzyzowanie(15);
+                var a = new Crossroad(15);
                 Navigation.PushModalAsync(new Page8());
             }
 
@@ -632,7 +632,7 @@ namespace HackHeroesApp
         {
             if (poziomtutaj >= 16)
             {
-                var a = new Skrzyzowanie(16);
+                var a = new Crossroad(16);
                 Navigation.PushModalAsync(new Page8());
             }
 
@@ -641,7 +641,7 @@ namespace HackHeroesApp
         {
             if (poziomtutaj >= 17)
             {
-                var a = new Skrzyzowanie(17);
+                var a = new Crossroad(17);
                 Navigation.PushModalAsync(new Page8());
             }
 
@@ -650,7 +650,7 @@ namespace HackHeroesApp
         {
             if (poziomtutaj >= 18)
             {
-                var a = new Skrzyzowanie(18);
+                var a = new Crossroad(18);
                 Navigation.PushModalAsync(new Page8());
             }
 
@@ -659,7 +659,7 @@ namespace HackHeroesApp
         {
             if (poziomtutaj >= 19)
             {
-                var a = new Skrzyzowanie(19);
+                var a = new Crossroad(19);
                 Navigation.PushModalAsync(new Page8());
             }
 
@@ -668,7 +668,7 @@ namespace HackHeroesApp
         {
             if (poziomtutaj >= 20)
             {
-                var a = new Skrzyzowanie(20);
+                var a = new Crossroad(20);
                 Navigation.PushModalAsync(new Page8());
             }
 

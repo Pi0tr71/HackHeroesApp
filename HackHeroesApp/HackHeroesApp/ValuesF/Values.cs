@@ -4,32 +4,49 @@ using System.Text;
 
 namespace HackHeroesApp.ValuesF
 {
+    /// <summary>
+    /// Obiekt przechowujący dane dostępu
+    /// </summary>
     public class Values
     {
-        public static Values Cos;
+        public static Values instance;
 
         public string Token;
-        public int Poziom;
+        public int Level;
         public string Login;
 
-        public Values(string token, int poziom, string login)
+        /// <summary>
+        /// Przypisuje wartości do ogólnodostępnych dla aplikacji danych o użytkowniku i jego dostępie do API
+        /// </summary>
+        /// <param name="token">Token dostępu do API</param>
+        /// <param name="level">Poziom użytkownika</param>
+        /// <param name="login">Login użytkownika</param>
+        public Values(string token, int level, string login)
         {
             this.Token = token;
-            this.Poziom = poziom;
+            this.Level = level;
             this.Login = login;
-            Cos = this;
+            instance = this;
         }
     }
-    public class Skrzyzowanie
+
+    /// <summary>
+    /// 
+    /// </summary>
+    public class Crossroad
     {
-        public static Skrzyzowanie Cos2;
+        public static Crossroad instance;
 
-        public int SkrzyzowanieP = 0;
+        public int crossroads = 0;
 
-        public Skrzyzowanie( int SkrzyzowanieP)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="crossroads"></param>
+        public Crossroad(int crossroads)
         {
-            this.SkrzyzowanieP = SkrzyzowanieP;
-            Cos2 = this;
+            this.crossroads = crossroads;
+            instance = this;
         }
     }
 }

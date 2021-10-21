@@ -29,7 +29,7 @@ namespace HackHeroesApp
         string odp_poprawna = "";
         async void generuj()
         {
-            switch (Skrzyzowanie.Cos2.SkrzyzowanieP)
+            switch (Crossroad.instance.crossroads)
             {
                 case 1:
                     //PytanieZdj.Source = "";
