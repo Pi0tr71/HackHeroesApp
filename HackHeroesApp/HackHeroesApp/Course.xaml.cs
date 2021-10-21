@@ -83,10 +83,7 @@ namespace HackHeroesApp
             pytanieid = result1.pytania;
             zapytanie();
         }
-        string medialink = "";
-        int dlugosc4 = 0;
         string odp_tnabc = "";
-        string link = "";
         async void zapytanie()
         {
             IMyAPIQID myAPIQID;
@@ -100,33 +97,6 @@ namespace HackHeroesApp
             post.pytanie_id = pytanieid[lppytanie].ToString();
             QIDPost result = await myAPIQID.SubmitPost(post);
             var informacje = "Punkty: " + result.pytanie.liczba_punktow + "  Nr pytania: " + result.pytanie.numer_pytania + "  Zakres: " + result.pytanie.zakres_struktury+"   "+(lppytanie+1) + "/" + dlugosclisty;
-            if (result.pytanie.media == "")
-            {
-                PytanieZdj.Source = "bz.png";
-            }
-            else
-            {
-                dlugosc4 = result.pytanie.media.Length;
-                Console.WriteLine("Długość "+dlugosc4);
-                medialink = result.pytanie.media;
-                link = "http://46.41.136.62/media/" + result.pytanie.media;
-                Console.WriteLine(link);
-                //wstaw();
-            }
-            //void wstaw()
-            //{
-            //    if (medialink[dlugosc4 - 1].ToString() == "4")
-            //    {
-            //        PytanieZdj.Opacity = 0;
-            //        PytanieFilm.Source = link;
-            //    }
-            //    else
-            //    {
-            //        PytanieFilm.Opacity = 0;
-            //        PytanieZdj.Source = link;
-            //    }
-            //}
-
             PZN.Text = informacje;
             PytanieText.Text = result.pytanie.pytanie;
             Console.WriteLine(result.pytanie.id);

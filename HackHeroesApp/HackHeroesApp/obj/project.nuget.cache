@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "2bh5YwRac3fuNweoYAHLBciEmvXT0N2FOt5aQi/jKE5EJzp+JwnTRJWZs67a9Qga2nwrIlSDugoYA7cupXE+zw==",
+  "dgSpecHash": "ZaU3fTkgnOfiPBKLKhhIk3VEDQ5suUulMx05b4f/9DI1pRvTTbLSFAtgq0NBK7R/7+6+umH7s7W10BtvyAIt/w==",
   "success": true,
   "projectFilePath": "C:\\Users\\Piotr\\Source\\Repos\\Pi0tr71\\HackHeroesApp\\HackHeroesApp\\HackHeroesApp\\HackHeroesApp.csproj",
   "expectedPackageFiles": [
@@ -19,7 +19,6 @@
     "C:\\Users\\Piotr\\.nuget\\packages\\system.text.encodings.web\\5.0.1\\system.text.encodings.web.5.0.1.nupkg.sha512",
     "C:\\Users\\Piotr\\.nuget\\packages\\system.text.json\\5.0.2\\system.text.json.5.0.2.nupkg.sha512",
     "C:\\Users\\Piotr\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
-    "C:\\Users\\Piotr\\.nuget\\packages\\xamarin.communitytoolkit\\1.3.0-pre2\\xamarin.communitytoolkit.1.3.0-pre2.nupkg.sha512",
     "C:\\Users\\Piotr\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
     "C:\\Users\\Piotr\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512",
     "C:\\Users\\Piotr\\.nuget\\packages\\xamarin.forms.pancakeview\\2.3.0.763-beta\\xamarin.forms.pancakeview.2.3.0.763-beta.nupkg.sha512"

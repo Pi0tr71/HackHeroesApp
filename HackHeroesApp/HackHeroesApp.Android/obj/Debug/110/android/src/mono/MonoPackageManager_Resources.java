@@ -1,8 +1,8 @@
 package mono;
 public class MonoPackageManager_Resources {
 	public static String[] Assemblies = new String[]{
-		/* We need to ensure that "Prawojazdy_NULL.dll" comes first in this list. */
-		"Prawojazdy_NULL.dll",
+		/* We need to ensure that "HackHeroesApp.Android.dll" comes first in this list. */
+		"HackHeroesApp.Android.dll",
 		"FormsViewGroup.dll",
 		"HackHeroesApp.dll",
 		"Microsoft.Bcl.AsyncInterfaces.dll",
@@ -63,7 +63,6 @@ public class MonoPackageManager_Resources {
 		"Xamarin.AndroidX.VersionedParcelable.dll",
 		"Xamarin.AndroidX.ViewPager.dll",
 		"Xamarin.AndroidX.ViewPager2.dll",
-		"Xamarin.CommunityToolkit.dll",
 		"Xamarin.Essentials.dll",
 		"Xamarin.Forms.Core.dll",
 		"Xamarin.Forms.PancakeView.dll",
