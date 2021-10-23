@@ -12,6 +12,7 @@
           "Newtonsoft.Json": "13.0.1",
           "Refit": "6.1.15",
           "System.Numerics.Vectors": "4.5.0",
+          "Xamarin.CommunityToolkit": "1.3.0-pre2",
           "Xamarin.Essentials": "1.7.0",
           "Xamarin.Forms": "5.0.0.2196",
           "Xamarin.Forms.PancakeView": "2.3.0.763-beta"
@@ -151,6 +152,17 @@
           "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll": {
             "assemblyVersion": "4.2.0.1",
             "fileVersion": "4.6.28619.1"
+          }
+        }
+      },
+      "Xamarin.CommunityToolkit/1.3.0-pre2": {
+        "dependencies": {
+          "Xamarin.Forms": "5.0.0.2196"
+        },
+        "runtime": {
+          "lib/netstandard2.1/Xamarin.CommunityToolkit.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
           }
         }
       },
@@ -305,6 +317,13 @@
       "sha512": "sha512-zteT+G8xuGu6mS+mzDzYXbzS7rd3K6Fjb9RiZlYlJPam2/hU7JCBZBVEcywNuR+oZ1ncTvc/cq0faRr3P01OVg==",
       "path": "system.threading.tasks.extensions/4.5.4",
       "hashPath": "system.threading.tasks.extensions.4.5.4.nupkg.sha512"
+    },
+    "Xamarin.CommunityToolkit/1.3.0-pre2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-BVue+uDh0XlSJJ5DtC6XdVImxbNgPS/y1L/9q5uEhcCwANj4eD2Q52/wHw27JXK+6VxtQJ0ndvJKb0C/XkU0rg==",
+      "path": "xamarin.communitytoolkit/1.3.0-pre2",
+      "hashPath": "xamarin.communitytoolkit.1.3.0-pre2.nupkg.sha512"
     },
     "Xamarin.Essentials/1.7.0": {
       "type": "package",

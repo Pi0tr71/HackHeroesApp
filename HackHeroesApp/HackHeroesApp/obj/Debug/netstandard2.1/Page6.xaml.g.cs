@@ -17,7 +17,7 @@ namespace HackHeroesApp {
     public partial class Page6 : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.Grid Gridd;
+        private global::Xamarin.Forms.FlexLayout Gridd;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::Xamarin.Forms.Label PZN;
@@ -46,7 +46,7 @@ namespace HackHeroesApp {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(Page6));
-            Gridd = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Grid>(this, "Gridd");
+            Gridd = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.FlexLayout>(this, "Gridd");
             PZN = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "PZN");
             PytanieZdj = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Image>(this, "PytanieZdj");
             PytanieText = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "PytanieText");

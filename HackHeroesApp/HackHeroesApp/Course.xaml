@@ -2,17 +2,17 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HackHeroesApp.Course"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              Padding="0,5,0,0">
 
     <FlexLayout x:Name="Gridd" Direction="Column" JustifyContent="SpaceBetween" Padding="10">
         <Grid RowSpacing="10">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
+
             </Grid.RowDefinitions>
             <Label Grid.Row="0" Text="Pkt Zakres Nr Pytania" FontSize="10" x:Name="PZN" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
-            <Image Grid.Row="1" Source="background.png" Aspect="AspectFit" x:Name="PytanieZdj"/>
+            <xct:MediaElement  Grid.Row="1" Aspect="AspectFill" x:Name="PytanieFilm"/>
             <Label Grid.Row="2" Text="Co było pierwsze kura czy jajko?" x:Name="PytanieText" FontSize="20" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
         </Grid>
         <Grid RowSpacing="10">

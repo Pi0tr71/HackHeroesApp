@@ -47,7 +47,7 @@ namespace HackHeroesApp
                 Console.WriteLine(result.status);
                 if (result.status == "lvl up")
                 {
-                    await DisplayActionSheet("Level up","Ok",null, "Ukończyłeś ten poziom pytań!", "Teraz możesz przejść do kolejnego");
+                    await DisplayActionSheet("Level up", "Ok", null, "Ukończyłeś ten poziom pytań!", "Teraz możesz przejść do kolejnego");
                     IMyAPIToken myAPIT;
 
                     var authHeader2 = Values.Cos.Token;
@@ -83,7 +83,10 @@ namespace HackHeroesApp
             pytanieid = result1.pytania;
             zapytanie();
         }
+        string medialink = "";
+        int dlugosc4 = 0;
         string odp_tnabc = "";
+        string link = "";
         async void zapytanie()
         {
             IMyAPIQID myAPIQID;
@@ -96,7 +99,25 @@ namespace HackHeroesApp
             QIDPost post = new QIDPost();
             post.pytanie_id = pytanieid[lppytanie].ToString();
             QIDPost result = await myAPIQID.SubmitPost(post);
-            var informacje = "Punkty: " + result.pytanie.liczba_punktow + "  Nr pytania: " + result.pytanie.numer_pytania + "  Zakres: " + result.pytanie.zakres_struktury+"   "+(lppytanie+1) + "/" + dlugosclisty;
+            var informacje = "Punkty: " + result.pytanie.liczba_punktow + "  Nr pytania: " + result.pytanie.numer_pytania + "  Zakres: " + result.pytanie.zakres_struktury + "   " + (lppytanie + 1) + "/" + dlugosclisty;
+            if (result.pytanie.media == "")
+            {
+                PytanieFilm.Source = "bz.png";
+            }
+            else
+            {
+                dlugosc4 = result.pytanie.media.Length;
+                Console.WriteLine("Długość " + dlugosc4);
+                medialink = result.pytanie.media;
+                link = "http://46.41.136.62/media/" + result.pytanie.media;
+                Console.WriteLine(link);
+                wstaw();
+            }
+            void wstaw()
+            {
+                PytanieFilm.Source = link;
+            }
+
             PZN.Text = informacje;
             PytanieText.Text = result.pytanie.pytanie;
             Console.WriteLine(result.pytanie.id);
@@ -130,18 +151,18 @@ namespace HackHeroesApp
         }
         private void button1_Clicked(object sender, EventArgs e)
         {
-            if("A" == odp_tnabc)
+            if ("A" == odp_tnabc)
             {
                 button1.BackgroundColor = Color.FromHex("18d698");
                 button2.BackgroundColor = Color.FromHex("B14157");
                 button3.BackgroundColor = Color.FromHex("B14157");
-                if(buttonmaxone)
+                if (buttonmaxone)
                 {
                     odp_u = odp_tnabc;
                 }
                 buttonmaxone = false;
             }
-            if(odp_tnabc == "B" || odp_tnabc == "T")
+            if (odp_tnabc == "B" || odp_tnabc == "T")
             {
                 button1.BackgroundColor = Color.FromHex("B14157");
                 button2.BackgroundColor = Color.FromHex("18d698");
@@ -257,7 +278,7 @@ namespace HackHeroesApp
             {
                 zapytanie();
             }
-            
+
         }
         private void button5_Clicked(object sender, EventArgs e)
         {
