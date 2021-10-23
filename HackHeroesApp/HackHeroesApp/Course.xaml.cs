@@ -11,6 +11,7 @@ using Xamarin.Forms.Xaml;
 using System.Text.RegularExpressions;
 using HackHeroesApp.ValuesF;
 using System.Threading;
+using System.IO;
 
 namespace HackHeroesApp
 {
@@ -21,7 +22,6 @@ namespace HackHeroesApp
         {
             InitializeComponent();
             pytania();
-
         }
         int dlugosclisty = 0;
         int lppytanie = 0;
@@ -83,10 +83,12 @@ namespace HackHeroesApp
             pytanieid = result1.pytania;
             zapytanie();
         }
+
         string medialink = "";
         int dlugosc4 = 0;
         string odp_tnabc = "";
         string link = "";
+
         async void zapytanie()
         {
             IMyAPIQID myAPIQID;
@@ -109,13 +111,26 @@ namespace HackHeroesApp
                 dlugosc4 = result.pytanie.media.Length;
                 Console.WriteLine("Długość " + dlugosc4);
                 medialink = result.pytanie.media;
-                link = "http://46.41.136.62/media/" + result.pytanie.media;
+                link = API_ENV.API_MEDIA + result.pytanie.media;
                 Console.WriteLine(link);
-                wstaw();
+                wstaw(link);
             }
-            void wstaw()
+            void wstaw(string link)
             {
-                PytanieFilm.Source = link;
+                string extension = Path.GetExtension(link);
+
+                if (extension == ".mp4")
+                {
+                    //PytanieZdj.HeightRequest = 0;
+                    PytanieFilm.Source = link;
+                    Console.WriteLine("Wysokość filmu: " + PytanieFilm.VideoHeight);
+                    //PytanieFilm.MinimumHeightRequest = PytanieFilm.VideoHeight * 2;
+                }
+                else
+                {
+                    //PytanieFilm.HeightRequest = 0;
+                    PytanieZdj.Source = link;
+                }
             }
 
             PZN.Text = informacje;
@@ -262,7 +277,6 @@ namespace HackHeroesApp
         private async void button4_Clicked(object sender, EventArgs e)
         {
             poprawna();
-            Thread.Sleep(100); //we will see
             odp_u = "";
             buttonmaxone = true;
             lppytanie++;

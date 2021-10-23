@@ -47,9 +47,21 @@ namespace HackHeroesApp
             int sekundy = result.naj_wynik_z_test_teoretycznego.czas % 60;
             label2.Text = "Największy wynik "+ result.naj_wynik_z_test_teoretycznego.ilosc_punktow + "/72 pkt";
             label3.Text = "Czas najlepszego testu " + minuty + "min " + sekundy+"s";
-            
-            
+
+            //slider.Minimum = 0;
+            //slider.Maximum = result.ilosc_wszystkich_pytan;
+
+            //slider.Value = result.ilosc_przerobionych_pytan;
+            //slider.ValueChanged += StopDraging;
+
+            //percent.Text = (result.ilosc_przerobionych_pytan / result.ilosc_wszystkich_pytan * 100).ToString() + "%";
         }
+
+        private void StopDraging(object sender, ValueChangedEventArgs e)
+        {
+            return;
+        }
+
         async void ranking()
         {
             IMyAPIGR myAPIGR;

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HackHeroesApp.Page9">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Image Grid.Row="0" Grid.ColumnSpan="2" Aspect="AspectFill" Source="background.png" x:Name="FrontImage" />
+        <Label Padding="10,0,0,10" Grid.Row="1" Grid.ColumnSpan="2"  x:Name="LabelText" FontSize="25"/>
+        <Button Padding="10,0,0,10" Grid.Row="2" Grid.Column="0"  Text="Cofnij" x:Name="Cofnij" Clicked="Cofnij_Clicked"/>
+        <Button Padding="10,0,0,10" Grid.Row="2" Grid.Column="1" Text="Następny" x:Name="Nastepny" Clicked="Nastepny_Clicked"/>
+    </Grid>
+</ContentPage>

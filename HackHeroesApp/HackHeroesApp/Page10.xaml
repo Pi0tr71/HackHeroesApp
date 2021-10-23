@@ -1,19 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="HackHeroesApp.Course"
+             x:Class="HackHeroesApp.Page10"
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              Padding="0,5,0,0">
-
     <FlexLayout x:Name="Gridd" Direction="Column" JustifyContent="SpaceBetween" Padding="10">
         <Grid RowSpacing="10">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
-            <Label Grid.Row="0" Text="Pkt Zakres Nr Pytania" FontSize="10" x:Name="PZN" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
-            <xct:MediaElement Grid.Row="1" HeightRequest="250" Aspect="AspectFill" x:Name="PytanieFilm"/>
-            <Image Grid.Row="1" Aspect="AspectFill" x:Name="PytanieZdj" />
-            <Label Grid.Row="2" Text="Co było pierwsze kura czy jajko?" x:Name="PytanieText" FontSize="20" HorizontalOptions="CenterAndExpand"/>
+            <Image Grid.Row="0" x:Name="Zdj"/>
+            <Label Grid.Row="1" Text="Co było pierwsze kura czy jajko?" x:Name="PytanieText" FontSize="20" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
         </Grid>
         <Grid RowSpacing="10">
             <Grid.RowDefinitions>
@@ -28,10 +26,8 @@
         <Grid ColumnSpacing="10" HorizontalOptions="Center" Margin="0, 10, 0, 0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-            <Button Grid.Column="0" CornerRadius="10" x:Name="button4" Text="Dalej" Clicked="button4_Clicked"/>
-            <Button Grid.Column="1" CornerRadius="10" x:Name="button5" Text="Jestem niepewny" Clicked="button5_Clicked"/>
+            <Button Grid.Column="0" CornerRadius="10" x:Name="button4" Text="Losuj" Clicked="button4_Clicked"/>
         </Grid>
     </FlexLayout>
 </ContentPage>

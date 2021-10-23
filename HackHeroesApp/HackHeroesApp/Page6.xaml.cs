@@ -11,6 +11,7 @@ using Xamarin.Forms.Xaml;
 using System.Text.RegularExpressions;
 using HackHeroesApp.ValuesF;
 using System.Threading;
+using HackHeroesApp.Helpers;
 
 namespace HackHeroesApp
 {
@@ -20,6 +21,8 @@ namespace HackHeroesApp
         int pytanieid = 1;
         int maxid = 0;
         string odp_tnabc = "";
+
+        TimerExtended timer;
 
         public Page6()
         {
@@ -72,6 +75,7 @@ namespace HackHeroesApp
                 button3.FontSize = 20;
             }
         }
+
         private void button1_Clicked(object sender, EventArgs e)
         {
             if ("A" == odp_tnabc)
@@ -139,20 +143,11 @@ namespace HackHeroesApp
 
         private async void button4_Clicked(object sender, EventArgs e)
         {
-            Thread.Sleep(100);
             button1.BackgroundColor = Color.FromHex("3c987a");
             button2.BackgroundColor = Color.FromHex("3c987a");
             button3.BackgroundColor = Color.FromHex("3c987a");
-            if (pytanieid >= maxid)
-            {
-                pytanieid = 0;
-                zapytanie();
-            }
-            else
-            {
-                pytanieid++;
-                zapytanie();
-            }
+
+            ChangeQuestion();
         }
 
         protected override bool OnBackButtonPressed()
@@ -164,6 +159,14 @@ namespace HackHeroesApp
         private void Button_Clicked(object sender, EventArgs e)
         {
             pytanieid = Int32.Parse(idpytania.Text);
+            zapytanie();
+        }
+
+        private void ChangeQuestion()
+        {
+            if (pytanieid >= maxid) pytanieid = 0;
+            else pytanieid++;
+
             zapytanie();
         }
     }

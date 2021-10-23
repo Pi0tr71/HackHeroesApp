@@ -7,6 +7,8 @@ namespace HackHeroesApp.Model
     public class API_ENV
     {
         public static string API_URL = "http://46.41.136.62:5000/api/v1";
+        public static string API_MEDIA = "http://46.41.136.62/media/";
+        public static string API_HOME = "http://46.41.136.62/";
     }
 
     public class RegPost

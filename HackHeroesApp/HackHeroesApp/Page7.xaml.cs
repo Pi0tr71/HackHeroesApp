@@ -30,7 +30,6 @@ namespace HackHeroesApp
             for (int i = 0; i < buttons.Count; i++)
             {
                 if (i < Values.Cos.Poziom) buttons[i].BackgroundColor = Color.FromHex("18d698");
-                else if (i == Values.Cos.Poziom) buttons[i].BackgroundColor = Color.FromHex("fcba03");
                 else buttons[i].BackgroundColor = Color.FromHex("B14157");
             }
         }
