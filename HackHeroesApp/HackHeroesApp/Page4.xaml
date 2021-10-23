@@ -5,7 +5,8 @@
             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core" xmlns:viewmodel="clr-namespace:HackHeroesApp.ViewModels" xmlns:model="clr-namespace:HackHeroesApp.Models" xmlns:hackheroesapp="clr-namespace:HackHeroesApp" xmlns:d="http://xamarin.com/schemas/2014/forms/design" x:DataType="hackheroesapp:Page4"
             xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
             android:TabbedPage.ToolbarPlacement="Bottom"
-            android:TabbedPage.BarItemColor="#ffffff"
+            android:TabbedPage.BarItemColor="{AppThemeBinding Light={StaticResource DarkThemeColor}, Dark={StaticResource LightThemeColor}}"
+            BackgroundColor="{AppThemeBinding Light={StaticResource LightThemeColor}, Dark={StaticResource DarkThemeColor}}"
             android:TabbedPage.BarSelectedItemColor="{StaticResource Primary}">
     <ContentPage Title="Statystyki" BackgroundImageSource="https://cdn.w600.comps.canstockphoto.pl/prosty-stickman-cz%C5%82owiek-klipart-wektorowy_csp43585411.jpg" IconImageSource="https://img.icons8.com/external-kiranshastry-lineal-kiranshastry/64/000000/external-stats-data-science-kiranshastry-lineal-kiranshastry.png" BackgroundColor="White">
         <yummy:PancakeView CornerRadius="45, 45, 0, 0" VerticalOptions="End" >
@@ -36,65 +37,67 @@
         </yummy:PancakeView>
     </ContentPage>
     <ContentPage Padding="40" Title="Nauka" BackgroundImageSource="background.png" IconImageSource="https://img.icons8.com/external-itim2101-lineal-itim2101/64/000000/external-learning-elearning-itim2101-lineal-itim2101-1.png">
-        <FlexLayout Direction="Column">
-            <StackLayout>
-                <Frame CornerRadius="30" Padding="0">
-                    <Image Source="learning.jpg" Aspect="AspectFill" />
-                </Frame>
-                <Grid Margin="0, -65, 0, 15">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="80"/>
-                    </Grid.RowDefinitions>
-                    <StackLayout>
-                        <Frame Padding="0" CornerRadius="30">
-                            <FlexLayout Grid.Row="0" Direction="Row" BackgroundColor="{StaticResource Primary}" HeightRequest="80" JustifyContent="Start" AlignItems="Center" Padding="25, 0">
-                                <Label FontFamily="fa-solid-900.otf#Font Awesome 5 Free Solid" FontSize="Large" TextColor="White" Text="&#xf128;" VerticalOptions="Center"/>
-                                <Label Text="Pytania" FontSize="Large" Margin="10, 0, 0, 0" TextColor="White" VerticalOptions="Center"/>
-                            </FlexLayout>
-                        </Frame>
-                    </StackLayout>
-                    <Button Grid.Row="0" Grid.RowSpan="1" Clicked="KursT" Opacity="0" BackgroundColor="Black" TextColor="Transparent" x:Name="KursButton" />
-                </Grid>
-            </StackLayout>
-            <StackLayout>
-                <Frame CornerRadius="30" Padding="0">
-                    <Image Source="learning.jpg" Aspect="AspectFill" />
-                </Frame>
-                <Grid Margin="0, -65, 0, 15">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="80"/>
-                    </Grid.RowDefinitions>
-                    <StackLayout>
-                        <Frame Padding="0" CornerRadius="30">
-                            <FlexLayout Grid.Row="0" Direction="Row" BackgroundColor="{StaticResource Primary}" HeightRequest="80" JustifyContent="Start" AlignItems="Center" Padding="25, 0">
-                                <Label FontFamily="fa-solid-900.otf#Font Awesome 5 Free Solid" FontSize="Large" TextColor="White" Text="&#xf00d;"/>
-                                <Label Text="Skrzyżowania" FontSize="Large" Margin="10, 0, 0, 0" TextColor="White"/>
-                            </FlexLayout>
-                        </Frame>
-                    </StackLayout>
-                    <Button Grid.Row="0" Grid.RowSpan="1" Opacity="0" BackgroundColor="Black" TextColor="Transparent" x:Name="SkrzyzowaniaButton"  Clicked="Skrzyzowania"/>
-                </Grid>
-            </StackLayout>
-            <StackLayout>
-                <Frame CornerRadius="30" Padding="0">
-                    <Image Source="learning.jpg" Aspect="AspectFill" />
-                </Frame>
-                <Grid Margin="0, -65, 0, 15">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="80"/>
-                    </Grid.RowDefinitions>
-                    <StackLayout>
-                        <Frame Padding="0" CornerRadius="30">
-                            <FlexLayout Grid.Row="0" Direction="Row" BackgroundColor="{StaticResource Primary}" HeightRequest="80" JustifyContent="Start" AlignItems="Center" Padding="25, 0">
-                                <Label FontFamily="fa-solid-900.otf#Font Awesome 5 Free Solid" FontSize="Large" TextColor="White" Text="&#xf7d9;" VerticalOptions="Center"/>
-                                <Label Text="Budowa samochodu" FontSize="Large" Margin="10, 0, 0, 0" TextColor="White" VerticalOptions="Center"/>
-                            </FlexLayout>
-                        </Frame>
-                    </StackLayout>
-                    <Button Grid.Row="0" Grid.RowSpan="1"  Opacity="0" BackgroundColor="Black" TextColor="Transparent" x:Name="BudowaButton" Clicked="Budowa"/>
-                </Grid>
-            </StackLayout>
-        </FlexLayout>
+        <ScrollView>
+            <FlexLayout Direction="Column">
+                <StackLayout>
+                    <Frame CornerRadius="30" Padding="0">
+                        <Image Source="learning.jpg" Aspect="AspectFill" />
+                    </Frame>
+                    <Grid Margin="0, -65, 0, 15">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="80"/>
+                        </Grid.RowDefinitions>
+                        <StackLayout>
+                            <Frame Padding="0" CornerRadius="30" HeightRequest="220">
+                                <FlexLayout Grid.Row="0" Direction="Row" BackgroundColor="{AppThemeBinding Light={StaticResource LightThemeColor}, Dark={StaticResource DarkThemeColor}}" HeightRequest="80" JustifyContent="Start" AlignItems="Center" Padding="25, 0">
+                                    <Label FontFamily="fa-solid-900.otf#Font Awesome 5 Free Solid" FontSize="Large" TextColor="{AppThemeBinding Light={StaticResource DarkThemeColor}, Dark={StaticResource LightThemeColor}}" Text="&#xf128;" VerticalOptions="Center"/>
+                                    <Label Text="Pytania" FontSize="Large" Margin="10, 0, 0, 0" TextColor="{AppThemeBinding Light={StaticResource DarkThemeColor}, Dark={StaticResource LightThemeColor}}" VerticalOptions="Center"/>
+                                </FlexLayout>
+                            </Frame>
+                        </StackLayout>
+                        <Button Grid.Row="0" Grid.RowSpan="1" Clicked="KursT" Opacity="0" BackgroundColor="Black" TextColor="Transparent" x:Name="KursButton" />
+                    </Grid>
+                </StackLayout>
+                <StackLayout>
+                    <Frame CornerRadius="30" Padding="0" HeightRequest="220">
+                        <Image Source="crossroad.jpg" Aspect="AspectFill" />
+                    </Frame>
+                    <Grid Margin="0, -65, 0, 15">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="80"/>
+                        </Grid.RowDefinitions>
+                        <StackLayout>
+                            <Frame Padding="0" CornerRadius="30">
+                                <FlexLayout Grid.Row="0" Direction="Row" BackgroundColor="{AppThemeBinding Light={StaticResource LightThemeColor}, Dark={StaticResource DarkThemeColor}}" HeightRequest="80" JustifyContent="Start" AlignItems="Center" Padding="25, 0">
+                                    <Label FontFamily="fa-solid-900.otf#Font Awesome 5 Free Solid" FontSize="Large" TextColor="{AppThemeBinding Light={StaticResource DarkThemeColor}, Dark={StaticResource LightThemeColor}}" Text="&#xf00d;"/>
+                                    <Label Text="Skrzyżowania" FontSize="Large" Margin="10, 0, 0, 0" TextColor="{AppThemeBinding Light={StaticResource DarkThemeColor}, Dark={StaticResource LightThemeColor}}"/>
+                                </FlexLayout>
+                            </Frame>
+                        </StackLayout>
+                        <Button Grid.Row="0" Grid.RowSpan="1" Opacity="0" BackgroundColor="Black" TextColor="Transparent" x:Name="SkrzyzowaniaButton"  Clicked="Skrzyzowania"/>
+                    </Grid>
+                </StackLayout>
+                <StackLayout>
+                    <Frame CornerRadius="30" Padding="0" HeightRequest="220">
+                        <Image Source="learning.jpg" Aspect="AspectFill" />
+                    </Frame>
+                    <Grid Margin="0, -65, 0, 15">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="80"/>
+                        </Grid.RowDefinitions>
+                        <StackLayout>
+                            <Frame Padding="0" CornerRadius="30">
+                                <FlexLayout Grid.Row="0" Direction="Row" BackgroundColor="{AppThemeBinding Light={StaticResource LightThemeColor}, Dark={StaticResource DarkThemeColor}}" HeightRequest="80" JustifyContent="Start" AlignItems="Center" Padding="25, 0">
+                                    <Label FontFamily="fa-solid-900.otf#Font Awesome 5 Free Solid" FontSize="Large" TextColor="{AppThemeBinding Light={StaticResource DarkThemeColor}, Dark={StaticResource LightThemeColor}}" Text="&#xf7d9;" VerticalOptions="Center"/>
+                                    <Label Text="Budowa samochodu" FontSize="Large" Margin="10, 0, 0, 0" TextColor="{AppThemeBinding Light={StaticResource DarkThemeColor}, Dark={StaticResource LightThemeColor}}" VerticalOptions="Center"/>
+                                </FlexLayout>
+                            </Frame>
+                        </StackLayout>
+                        <Button Grid.Row="0" Grid.RowSpan="1"  Opacity="0" BackgroundColor="Black" TextColor="Transparent" x:Name="BudowaButton" Clicked="Budowa"/>
+                    </Grid>
+                </StackLayout>
+            </FlexLayout>
+        </ScrollView>
     </ContentPage>
     <ContentPage Padding="40" BackgroundImageSource="background.png" Title="Testy" IconImageSource="https://img.icons8.com/external-vitaliy-gorbachev-lineal-vitaly-gorbachev/50/000000/external-test-back-to-school-vitaliy-gorbachev-lineal-vitaly-gorbachev.png">
         <FlexLayout Direction="Column">

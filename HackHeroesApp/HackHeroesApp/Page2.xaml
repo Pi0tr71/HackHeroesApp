@@ -25,7 +25,20 @@
                 <Button Text="Login" TextColor="White" CornerRadius="10" Clicked="Login"/>
             </StackLayout>
             <StackLayout>
-                <Label Text="{Binding LoginErrors}" MinimumWidthRequest="40" HorizontalTextAlignment="Center" TextColor="Black" FontSize="10" VerticalOptions="Center"/>
+                <Label HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Masz już konto? " />
+                            <Span Text="Zaloguj się!" TextColor="DeepPink">
+                                <Span.GestureRecognizers>
+                                    <TapGestureRecognizer  Command="{Binding ClickCommand}"
+                                          CommandParameter="https://xamarin.com" />
+                                </Span.GestureRecognizers>
+                            </Span>
+                            <Span Text=" Some more text." />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
             </StackLayout>
         </StackLayout>
     </AbsoluteLayout>
