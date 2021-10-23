@@ -27,7 +27,6 @@ namespace HackHeroesApp
             InitializeComponent();
             PoziomText.Text = "Poziom " + Values.Cos.Poziom; 
             LoginText.Text = Values.Cos.Login;
-            UsersRanking();
             staty();
             ranking();
         }
@@ -62,42 +61,21 @@ namespace HackHeroesApp
             myAPIGR = RestService.For<IMyAPIGR>(API_ENV.API_URL, refitSettings);
             GRPost post = new GRPost();
             GRPost result = await myAPIGR.SubmitPost(post);
-            var ilość_miejsc = result.ranking.Count;    //Tu masz ilość miejsc
-            var czas = result.ranking[0].czas;          //Tu masz czas w s
-            var login = result.ranking[0].login;         //Tu masz login gracza  wiem że wiesz ale i tak pisze XDD
-            //najlepiej zrób ranking do max 30 miejsc
-
-
-
-        }
-
-        private void UsersRanking()
-        {
-            Random rnd = new Random();
-
-            // Tworzy przykładowych użytkowników
-            for (int i = 1; i <= 30; i++)
-            {
-                int level = rnd.Next(1, 20);
-                users.Add(new UserModel(i, $"Nazwa{i}", $"user{i}@test.com", level, i));
-            }
 
             // Sortuję tablicę użytkowników po ilości punktów
-            List<UserModel> sorted = users.OrderByDescending(user => user.Level).ToList();
+            List<Ranking> sorted = result.ranking.OrderBy(user => user.czas).ToList();
 
-            // Zmienia miejsca w rankingu po sortowaniu
-            foreach (UserModel user in sorted)
+            foreach (Ranking user in sorted)
             {
-                user.ChangeUserRankingPlace(sorted.IndexOf(user));
-                UserRanking userRanking = new UserRanking(user);
+                UserRanking userRanking = new UserRanking(new UserModel(user.login, user.czas, sorted.IndexOf(user) + 1));
                 usersColors.Add(userRanking);
             }
 
             // Przekazuje posortowaną listę do front-endu
             UserRankingList.ItemsSource = usersColors;
 
-
         }
+
         async void KursT(object sender, EventArgs e)
         {
             KursButton.Opacity = 0.3;

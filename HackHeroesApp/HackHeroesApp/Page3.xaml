@@ -8,12 +8,7 @@
         <Image Source="background.png" AbsoluteLayout.LayoutBounds="1,1,1,1" AbsoluteLayout.LayoutFlags="All" Aspect="AspectFill"></Image>
         <StackLayout AbsoluteLayout.LayoutBounds="1,1,1,1" Padding="30, 0" AbsoluteLayout.LayoutFlags="All" BackgroundColor="Transparent" VerticalOptions="Center" Spacing="15">
             <StackLayout Margin="0,0,0,40">
-                <Label 
-			Text="Tworzenie konta"
-			TextColor="White"
-			FontSize="30" 
-			FontAttributes="Bold"  
-			HorizontalOptions="Center" />
+                <Label Text="Tworzenie konta" TextColor="White" FontSize="30" FontAttributes="Bold" HorizontalOptions="Center" />
             </StackLayout>
             <Grid ColumnDefinitions="Auto, *" ColumnSpacing="10">
                 <Label Grid.Column="0" FontFamily="fa-solid-900.otf#Font Awesome 5 Free Solid" FontSize="Large" TextColor="White" Text="&#xf0e0;" VerticalOptions="Center"/>
@@ -35,11 +30,7 @@
                 <Label x:Name="errorDisplay" FontSize="Medium" TextColor="Red" HorizontalOptions="Center" />
             </StackLayout>
             <StackLayout>
-                <Button 
-			Text="Zarejestruj" 
-			TextColor="White"
-            CornerRadius="10"
-            Clicked="Register"/>
+                <Button Text="Zarejestruj" TextColor="White" CornerRadius="10" Clicked="Register"/>
             </StackLayout>
         </StackLayout>
     </AbsoluteLayout>

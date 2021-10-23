@@ -8,12 +8,7 @@
         <Image Source="background.png" AbsoluteLayout.LayoutBounds="1,1,1,1" AbsoluteLayout.LayoutFlags="All" Aspect="AspectFill"></Image>
         <StackLayout AbsoluteLayout.LayoutBounds="1,1,1,1" Padding="30, 0" AbsoluteLayout.LayoutFlags="All" BackgroundColor="Transparent" VerticalOptions="Center" Spacing="20">
             <StackLayout Margin="0,0,0,40">
-                <Label 
-			Text="Logowanie do konta"
-			TextColor="White"
-			FontSize="30" 
-			FontAttributes="Bold"  
-			HorizontalOptions="Center" />
+                <Label Text="Logowanie do konta" TextColor="White" FontSize="30" FontAttributes="Bold" HorizontalOptions="Center" />
             </StackLayout>
             <Grid ColumnDefinitions="Auto, *" ColumnSpacing="10">
                 <Label Grid.Column="0" FontFamily="fa-solid-900.otf#Font Awesome 5 Free Solid" FontSize="Large" TextColor="White" Text="&#xf0e0;" VerticalOptions="Center"/>
@@ -27,11 +22,7 @@
                 <Label x:Name="errorDisplay" FontSize="Medium" TextColor="Red" HorizontalOptions="Center" />
             </StackLayout>
             <StackLayout>
-                <Button 
-			Text="Login" 
-			TextColor="White"
-            CornerRadius="10"
-            Clicked="Login"/>
+                <Button Text="Login" TextColor="White" CornerRadius="10" Clicked="Login"/>
             </StackLayout>
             <StackLayout>
                 <Label Text="{Binding LoginErrors}" MinimumWidthRequest="40" HorizontalTextAlignment="Center" TextColor="Black" FontSize="10" VerticalOptions="Center"/>

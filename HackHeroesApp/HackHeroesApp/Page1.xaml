@@ -9,30 +9,14 @@
     <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
         <Image Source="background.png" AbsoluteLayout.LayoutBounds="1,1,1,1" AbsoluteLayout.LayoutFlags="All" Aspect="AspectFill"></Image>
         <StackLayout AbsoluteLayout.LayoutBounds="1,1,1,1" AbsoluteLayout.LayoutFlags="All" BackgroundColor="Transparent" VerticalOptions="Center" Spacing="20">
-            <Label 
-			Text="Witaj w HackHeroesApp"
-			TextColor="White"
-			FontSize="30" 
-			FontAttributes="Bold"  
-			HorizontalOptions="Center" />
-            <Label 
-			Text="Aplikacji dzieki, której zdasz!" 
-			TextColor="White"
-			FontSize="18" 
-			HorizontalOptions="Center" />
+            <Image Source="logo.png" WidthRequest="150" HeightRequest="150" />
+            <Label Text="Witaj w HackHeroesApp" TextColor="White" FontSize="30" FontAttributes="Bold" HorizontalOptions="Center" />
+            <Label Text="Aplikacji dzieki, której zdasz!" TextColor="White" FontSize="18" HorizontalOptions="Center" />
             <StackLayout Margin="30,60,30,0">
-                <Button 
-			Text="Logowanie" 
-			TextColor="White"
-            CornerRadius="10"
-            Clicked="LoginPage"/>
+                <Button Text="Logowanie" TextColor="White" CornerRadius="10" Clicked="LoginPage"/>
             </StackLayout>
             <StackLayout Margin="30,0,30,0">
-                <Button 
-			Text="Rejestracja" 
-			TextColor="White"
-            CornerRadius="10"
-            Clicked="RegisterPage"/>
+                <Button Text="Rejestracja" TextColor="White" CornerRadius="10" Clicked="RegisterPage"/>
             </StackLayout>
         </StackLayout>
     </AbsoluteLayout>

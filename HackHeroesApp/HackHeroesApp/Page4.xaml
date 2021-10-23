@@ -129,7 +129,7 @@
                             <FlexLayout BackgroundColor="{Binding BackgroundColor}" Padding="10, 0" Direction="Row" AlignItems="Center" JustifyContent="SpaceBetween" HorizontalOptions="FillAndExpand">
                                 <Label Text="{Binding User.RankingPlace}" WidthRequest="100" HorizontalTextAlignment="Center" TextColor="{Binding FontColor}" FontSize="Medium" VerticalOptions="Center" />
                                 <Label Text="{Binding User.Login}" TextColor="{Binding FontColor}" FontSize="Medium" FontAttributes="Bold" VerticalOptions="Center"/>
-                                <Label Text="{Binding User.Level}" WidthRequest="100" HorizontalTextAlignment="Center" TextColor="{Binding FontColor}" FontSize="Medium" VerticalOptions="Center"/>
+                                <Label Text="{Binding User.Time}" WidthRequest="100" HorizontalTextAlignment="Center" TextColor="{Binding FontColor}" FontSize="Medium" VerticalOptions="Center"/>
                             </FlexLayout>
                         </ViewCell>
                     </DataTemplate>

@@ -6,16 +6,12 @@ namespace HackHeroesApp.Models
 {
     public class UserModel
     {
-        private int id;
         private string login;
-        private string email;
-        private int level;
+        private int time;
         private int rankingPlace;
 
-        public int ID { get { return id; } }
         public string Login { get { return login; } }
-        public string Email { get { return email; } }
-        public int Level { get { return level; } }
+        public int Time { get { return time; } }
         public int RankingPlace { get { return rankingPlace; } }
 
         /// <summary>
@@ -26,12 +22,10 @@ namespace HackHeroesApp.Models
         /// <param name="email"></param>
         /// <param name="level"></param>
         /// <param name="rankingPlace"></param>
-        public UserModel(int id, string login, string email, int level, int rankingPlace)
+        public UserModel(string login, int time, int rankingPlace)
         {
-            this.id = id;
             this.login = login;
-            this.email = email;
-            this.level = level;
+            this.time = time;
             this.rankingPlace = rankingPlace;
         }
 

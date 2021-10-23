@@ -143,7 +143,7 @@ namespace HackHeroesApp
             button1.BackgroundColor = Color.FromHex("3c987a");
             button2.BackgroundColor = Color.FromHex("3c987a");
             button3.BackgroundColor = Color.FromHex("3c987a");
-            if (pytanieid == maxid)
+            if (pytanieid >= maxid)
             {
                 pytanieid = 0;
                 zapytanie();
