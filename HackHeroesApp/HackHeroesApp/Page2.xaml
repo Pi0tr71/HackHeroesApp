@@ -24,22 +24,10 @@
             <StackLayout>
                 <Button Text="Login" TextColor="White" CornerRadius="10" Clicked="Login"/>
             </StackLayout>
-            <StackLayout>
-                <Label HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
-                    <Label.FormattedText>
-                        <FormattedString>
-                            <Span Text="Masz już konto? " />
-                            <Span Text="Zaloguj się!" TextColor="DeepPink">
-                                <Span.GestureRecognizers>
-                                    <TapGestureRecognizer  Command="{Binding ClickCommand}"
-                                          CommandParameter="https://xamarin.com" />
-                                </Span.GestureRecognizers>
-                            </Span>
-                            <Span Text=" Some more text." />
-                        </FormattedString>
-                    </Label.FormattedText>
-                </Label>
-            </StackLayout>
+            <FlexLayout Direction="Row" AlignItems="Center" JustifyContent="Center" Margin="0, 25, 0, 0">
+                <Label HorizontalOptions="Center" TextColor="White" Text="Nie masz jeszcze konta? " VerticalOptions="CenterAndExpand" />
+                <Button Text="Zarejestruj się" TextTransform="None" TextColor="DeepPink" Padding="0" BackgroundColor="Transparent" Clicked="GoToRegisterPage" />
+            </FlexLayout>
         </StackLayout>
     </AbsoluteLayout>
 </ContentPage>

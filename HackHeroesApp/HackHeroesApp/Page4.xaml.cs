@@ -103,7 +103,7 @@ namespace HackHeroesApp
         async void Budowa(object sender, EventArgs e)
         {
             BudowaButton.Opacity = 0.3;
-            await Navigation.PushModalAsync(new Page5());
+            await Navigation.PushModalAsync(new Page9());
             BudowaButton.Opacity = 0;
         }
         protected override bool OnBackButtonPressed()

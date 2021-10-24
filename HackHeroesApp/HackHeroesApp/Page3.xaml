@@ -32,6 +32,10 @@
             <StackLayout>
                 <Button Text="Zarejestruj" TextColor="White" CornerRadius="10" Clicked="Register"/>
             </StackLayout>
+            <FlexLayout Direction="Row" AlignItems="Center" JustifyContent="Center" Margin="0, 25, 0, 0">
+                <Label HorizontalOptions="Center" TextColor="White" Text="Masz już konto?" VerticalOptions="CenterAndExpand" />
+                <Button Text="Zaloguj się" TextTransform="None" TextColor="DeepPink" Padding="0" BackgroundColor="Transparent" Clicked="GoToLoginPage" />
+            </FlexLayout>
         </StackLayout>
     </AbsoluteLayout>
 </ContentPage>

@@ -9,6 +9,7 @@ using Refit;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using System.Text.RegularExpressions;
+using System.Windows.Input;
 
 namespace HackHeroesApp
 {
@@ -103,6 +104,11 @@ namespace HackHeroesApp
                 }
             }
 
+        }
+
+        public async void GoToLoginPage(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new Page2());
         }
 
     }

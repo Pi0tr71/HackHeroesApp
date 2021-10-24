@@ -2,21 +2,26 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HackHeroesApp.Page8"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              Padding="0,5,0,0">
-
-    <FlexLayout x:Name="Gridd" Direction="Column" Padding="10" JustifyContent="SpaceBetween">
-        <Image Grid.Row="1" Grid.ColumnSpan="4" Source="background.png" Aspect="AspectFit" x:Name="PytanieZdj"/>
+    <FlexLayout x:Name="Gridd" Direction="Column" JustifyContent="SpaceBetween" Padding="10">
         <Grid RowSpacing="10">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
-            <Button Grid.Row="0" x:Name="button1" Clicked="button1_Clicked"/>
-            <Button Grid.Row="1" x:Name="button2" Clicked="button2_Clicked"/>
-            <Button Grid.Row="2" x:Name="button3" Clicked="button3_Clicked"/>
-            <Button Grid.Row="3" x:Name="button4" Clicked="button4_Clicked"/>
+            <Image Grid.Row="0" Source="1.png" Aspect="AspectFill" x:Name="Zdj"/>
+            <Label Grid.Row="1" Text="Co było pierwsze kura czy jajko?" x:Name="PytanieText" FontSize="20" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+        </Grid>
+        <Grid RowSpacing="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Button Grid.Row="0" CornerRadius="10" x:Name="button1" Clicked="button1_Clicked"/>
+            <Button Grid.Row="1" CornerRadius="10" x:Name="button2" Clicked="button2_Clicked"/>
+            <Button Grid.Row="2" CornerRadius="10" x:Name="button3" Clicked="button3_Clicked"/>
         </Grid>
     </FlexLayout>
 </ContentPage>

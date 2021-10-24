@@ -12,6 +12,7 @@ using System.Text.RegularExpressions;
 using HackHeroesApp.ValuesF;
 using System.Threading;
 using HackHeroesApp.Helpers;
+using System.IO;
 
 namespace HackHeroesApp
 {
@@ -23,6 +24,16 @@ namespace HackHeroesApp
         string odp_tnabc = "";
 
         TimerExtended timer;
+
+        int dlugosclisty = 0;
+        int lppytanie = 0;
+        string odp_u = "";
+        bool buttonmaxone = true;
+
+
+        string medialink = "";
+        int dlugosc4 = 0;
+        string link = "";
 
         public Page6()
         {
@@ -46,6 +57,37 @@ namespace HackHeroesApp
             post.pytanie_id = pytanieid.ToString();
             QIDPost result = await myAPIQID.SubmitPost(post);
             var informacje = "Punkty: " + result.pytanie.liczba_punktow + "  Nr pytania: " + result.pytanie.numer_pytania + "  Zakres: " + result.pytanie.zakres_struktury + "   " +pytanieid+ "/" +maxid;
+            if (result.pytanie.media == "")
+            {
+                PytanieFilm.Source = "bz.png";
+            }
+            else
+            {
+                dlugosc4 = result.pytanie.media.Length;
+                Console.WriteLine("Długość " + dlugosc4);
+                medialink = result.pytanie.media;
+                link = API_ENV.API_MEDIA + result.pytanie.media;
+                Console.WriteLine(link);
+                wstaw(link);
+            }
+            void wstaw(string link)
+            {
+                string extension = Path.GetExtension(link);
+
+                if (extension == ".mp4")
+                {
+                    //PytanieZdj.HeightRequest = 0;
+                    PytanieFilm.Source = link;
+                    Console.WriteLine("Wysokość filmu: " + PytanieFilm.VideoHeight);
+                    //PytanieFilm.MinimumHeightRequest = PytanieFilm.VideoHeight * 2;
+                }
+                else
+                {
+                    //PytanieFilm.HeightRequest = 0;
+                    PytanieZdj.Source = link;
+                }
+            }
+
             PZN.Text = informacje;
             PytanieText.Text = result.pytanie.pytanie;
             Console.WriteLine(result.pytanie.id);
