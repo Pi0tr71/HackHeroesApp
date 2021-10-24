@@ -104,7 +104,9 @@ namespace HackHeroesApp
             var informacje = "Punkty: " + result.pytanie.liczba_punktow + "  Nr pytania: " + result.pytanie.numer_pytania + "  Zakres: " + result.pytanie.zakres_struktury + "   " + (lppytanie + 1) + "/" + dlugosclisty;
             if (result.pytanie.media == "")
             {
-                PytanieFilm.Source = "bz.png";
+                PytanieFilm.IsVisible = false;
+                PytanieZdj.IsVisible = true;
+                PytanieZdj.Source = "bz.png";
             }
             else
             {

@@ -42,19 +42,27 @@ namespace HackHeroesApp
             myAPIGS = RestService.For<IMyAPIGS>(API_ENV.API_URL, refitSettings);
             GSPost post = new GSPost();
             GSPost result = await myAPIGS.SubmitPost(post);
-            label1.Text = "Rozwiązałeś poprawnie "+result.ilosc_przerobionych_pytan+"/"+result.ilosc_wszystkich_pytan+" pytań";
-            int minuty = result.naj_wynik_z_test_teoretycznego.czas / 60;
-            int sekundy = result.naj_wynik_z_test_teoretycznego.czas % 60;
-            label2.Text = "Największy wynik "+ result.naj_wynik_z_test_teoretycznego.ilosc_punktow + "/72 pkt";
-            label3.Text = "Czas najlepszego testu " + minuty + "min " + sekundy+"s";
 
-            //slider.Minimum = 0;
-            //slider.Maximum = result.ilosc_wszystkich_pytan;
+            int done = Double.IsNaN(result.ilosc_przerobionych_pytan) ? 0 : result.ilosc_przerobionych_pytan;
+            int all = Double.IsNaN(result.ilosc_wszystkich_pytan) ? 0 : result.ilosc_wszystkich_pytan;
 
-            //slider.Value = result.ilosc_przerobionych_pytan;
-            //slider.ValueChanged += StopDraging;
+            label1.Text = "Rozwiązałeś poprawnie " + done + "/" + all + " pytań";
 
-            //percent.Text = (result.ilosc_przerobionych_pytan / result.ilosc_wszystkich_pytan * 100).ToString() + "%";
+            if (result.naj_wynik_z_test_teoretycznego != null)
+            {
+                NajWynikZTestTeoretycznego best = result.naj_wynik_z_test_teoretycznego;
+                int minutes = best.czas / 60;
+                int seconds = best.czas - (minutes * 60);
+                label2.Text = "Największy wynik " + best.ilosc_punktow + "/72 pkt";
+                label3.Text = "Czas najlepszego testu " + minutes + "min " + seconds + "s";
+            }
+
+            sliderBackground.Children.Add(
+                new BoxView { BackgroundColor = Color.Green },
+                Constraint.RelativeToParent((parent) =>
+                {
+                    return parent.Width * 0.35;
+                }));
         }
 
         private void StopDraging(object sender, ValueChangedEventArgs e)
@@ -110,6 +118,18 @@ namespace HackHeroesApp
         {
             Navigation.PushModalAsync(new Page1());
             return true;
+        }
+        async void Teoretyczny(object sender, EventArgs e)
+        {
+            TeoretycznyButton.Opacity = 0.3;
+            await Navigation.PushModalAsync(new Page7());
+            TeoretycznyButton.Opacity = 0;
+        }
+        async void Praktyczny(object sender, EventArgs e)
+        {
+            PraktycznyButton.Opacity = 0.3;
+            await Navigation.PushModalAsync(new Page7());
+            PraktycznyButton.Opacity = 0;
         }
     }
 }

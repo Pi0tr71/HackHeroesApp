@@ -25,12 +25,8 @@ namespace HackHeroesApp
 
         async void Login(object sender, EventArgs e)
         {
-
-            var LoginEmailValue = "blazejjaworskixd@gmail.com";
-            var LoginPasswordValue = "!JaworroChan445";
-
-            //var LoginEmailValue = LoginEmail.Text;
-            //var LoginPasswordValue = LoginPassword.Text;
+            var LoginEmailValue = LoginEmail.Text;
+            var LoginPasswordValue = LoginPassword.Text;
 
             string emailL = "a"; //Dodałem tu a bo inaczej wywala błąd że jest pusty więc regex się wywala i apka pada
             emailL += LoginEmailValue;

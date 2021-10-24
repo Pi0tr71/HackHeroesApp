@@ -89,6 +89,24 @@ namespace HackHeroesApp.Model
         public int ilosc_przerobionych_pytan { get; set; }
         public NajWynikZTestTeoretycznego naj_wynik_z_test_teoretycznego { get; set; }
     }
+    public class Pytania
+    {
+        public string numer_pytania { get; set; }
+        public string pytanie { get; set; }
+        public string odpowiedz_a { get; set; }
+        public string odpowiedz_b { get; set; }
+        public string odpowiedz_c { get; set; }
+        public string poprawna_odp { get; set; }
+        public string media { get; set; }
+        public string zakres_struktury { get; set; }
+        public string liczba_punktow { get; set; }
+        public string nazwa_bloku { get; set; }
+        public int id { get; set; }
+    }
 
+    public class GTPost
+    {
+        public List<Pytania> pytania { get; set; }
+    }
 
 }

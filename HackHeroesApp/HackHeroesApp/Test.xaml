@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HackHeroesApp.Test"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             Padding="0,5,0,0">
+
+    <FlexLayout x:Name="Gridd" Direction="Column" JustifyContent="SpaceBetween" Padding="10">
+        <Grid RowSpacing="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" Text="Pkt Zakres Nr Pytania" FontSize="10" x:Name="PZN" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+            <xct:MediaElement Grid.Row="1" HeightRequest="250" Aspect="AspectFill" x:Name="PytaniaFilm"/>
+            <Image Grid.Row="1" Aspect="AspectFill" x:Name="PytanieZdj" />
+            <Label Grid.Row="2" Text="Co było pierwsze kura czy jajko?" x:Name="PytanieText" FontSize="20" HorizontalOptions="CenterAndExpand"/>
+        </Grid>
+        <Grid RowSpacing="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Button Grid.Row="0" CornerRadius="10" x:Name="button1" Clicked="button1_Clicked" FontSize="12"/>
+            <Button Grid.Row="1" CornerRadius="10" x:Name="button2" Clicked="button2_Clicked" FontSize="12"/>
+            <Button Grid.Row="2" CornerRadius="10" x:Name="button3" Clicked="button3_Clicked" FontSize="12"/>
+        </Grid>
+        <Grid ColumnSpacing="10" HorizontalOptions="Center" Margin="0, 10, 0, 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" CornerRadius="10" x:Name="button4" Text="Dalej" Clicked="button4_Clicked"/>
+        </Grid>
+    </FlexLayout>
+</ContentPage>

@@ -22,7 +22,8 @@
                         <Label Text="" x:Name="label1"  FontSize="Medium" TextColor="White"/>
                         <Grid ColumnSpacing="0" ColumnDefinitions="Auto, *">
                             <Label x:Name="percent" Grid.Column="0" TextColor="White" />
-                            <!-- <Slider x:Name="slider" Grid.Column="1" ThumbColor="Transparent" BackgroundColor="Transparent" /> -->
+                            <RelativeLayout x:Name="sliderBackground" Grid.Column="1" BackgroundColor="{AppThemeBinding Light={StaticResource LightThemeColor}, Dark={StaticResource DarkThemeColor}}">
+                            </RelativeLayout>
                         </Grid>
                         <Label Text="" x:Name="label2" FontSize="Medium" TextColor="White"/>
                         <Label x:Name="label3" FontSize="Medium" TextColor="White"/>
@@ -118,7 +119,7 @@
                                 </FlexLayout>
                             </Frame>
                         </StackLayout>
-                        <Button Grid.Row="0" Grid.RowSpan="1" Opacity="0" BackgroundColor="Black" TextColor="Transparent" x:Name="TeoretycznyButton" />
+                        <Button Grid.Row="0" Grid.RowSpan="1" Opacity="0" BackgroundColor="Black" TextColor="Transparent" x:Name="TeoretycznyButton" Clicked="Teoretyczny" />
                     </Grid>
                 </StackLayout>
                 <StackLayout Margin="0, 25, 0, 0">
@@ -137,7 +138,7 @@
                                 </FlexLayout>
                             </Frame>
                         </StackLayout>
-                        <Button Grid.Row="0" Grid.RowSpan="1" Opacity="0" BackgroundColor="Black" TextColor="Transparent" x:Name="PraktycznyButton"/>
+                        <Button Grid.Row="0" Grid.RowSpan="1" Opacity="0" BackgroundColor="Black" TextColor="Transparent" x:Name="PraktycznyButton" Clicked="Praktyczny"/>
                     </Grid>
                 </StackLayout>
             </FlexLayout>
