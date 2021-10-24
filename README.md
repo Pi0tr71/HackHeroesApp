@@ -1,4 +1,4 @@
-# Aplikacja mobilna NullTeam Prawko
+Aplikacja mobilna NullTeam Prawko
 
 # Stworzona celem udziału w konkursie Hack Heroes (https://hackheroes.pl), edycja 2021
 
