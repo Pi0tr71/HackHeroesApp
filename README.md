@@ -10,6 +10,6 @@
   <li><a href="https://pl.freepik.com/aleksandarlittlewolf">aleksandarlittlewolf</a></li>
   <li><a href="https://pl.freepik.com/jannoon028">jannoon028</a></li>
   <li><a href="https://pl.freepik.com/tawatchai07">tawatchai07</a></li>
-  <li><a href=""></a></li>
-  <li><a href=""></a></li>
+  <li><a href="https://pl.freepik.com/standret">standret</a></li>
+  <li><a href="https://pl.freepik.com/freepik">freepik</a></li>
 </ul>
