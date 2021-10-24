@@ -8,45 +8,37 @@
             android:TabbedPage.BarItemColor="{AppThemeBinding Light={StaticResource DarkThemeColor}, Dark={StaticResource LightThemeColor}}"
             BackgroundColor="{AppThemeBinding Light={StaticResource LightThemeColor}, Dark={StaticResource DarkThemeColor}}"
             android:TabbedPage.BarSelectedItemColor="{StaticResource Primary}">
-    <ContentPage Title="Statystyki" BackgroundColor="White" IconImageSource="https://img.icons8.com/external-kiranshastry-lineal-kiranshastry/64/000000/external-stats-data-science-kiranshastry-lineal-kiranshastry.png">
-        <RelativeLayout>
-            <Image Aspect="AspectFill"
-                   RelativeLayout.WidthConstraint= "{ConstraintExpression Type=RelativeToParent, Property=Width}"
-                   RelativeLayout.HeightConstraint= "{ConstraintExpression Type=RelativeToParent, Property=Height}"
-                   Source = "background.png" />
-            <yummy:PancakeView CornerRadius="45, 45, 0, 0" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.65}" >
-                <ScrollView>
-                    <Grid RowDefinitions="Auto, Auto" RowSpacing="25" BackgroundColor="{StaticResource Primary}" Padding="20">
-                        <Grid Grid.Row="0" ColumnDefinitions="Auto, *" ColumnSpacing="15">
-                            <StackLayout Grid.Column="0">
-                                <Frame CornerRadius="50" HasShadow="True">
-                                    <Image HeightRequest="60" WidthRequest="60" Source="https://cdn.w600.comps.canstockphoto.pl/prosty-stickman-cz%C5%82owiek-klipart-wektorowy_csp43585411.jpg" />
-                                </Frame>
-                            </StackLayout>
-                            <StackLayout Grid.Column="1">
-                                <FlexLayout Direction="Column">
-                                    <Label x:Name="LoginText" FontAttributes="Bold" FontSize="Large" TextColor="White" />
-                                    <Label x:Name="PoziomText" FontSize="Medium"  Margin="0,0,0,30" TextColor="LightGray"/>
-                                </FlexLayout>
-                            </StackLayout>
+    <ContentPage Title="Statystyki" BackgroundColor="{AppThemeBinding Light='#e6e6e6', Dark='#2e2e2e'}" IconImageSource="https://img.icons8.com/external-kiranshastry-lineal-kiranshastry/64/000000/external-stats-data-science-kiranshastry-lineal-kiranshastry.png">
+        <AbsoluteLayout Padding="0, 115, 0, 0" VerticalOptions="FillAndExpand">
+            <yummy:PancakeView CornerRadius="45, 45, 0, 0" AbsoluteLayout.LayoutBounds="1, 1, 1, 1" AbsoluteLayout.LayoutFlags="SizeProportional">
+                <StackLayout BackgroundColor="{StaticResource Primary}"  Padding="20, 132, 20, 20" VerticalOptions="FillAndExpand" >
+                    <StackLayout>
+                        <FlexLayout Direction="Column" JustifyContent="Center">
+                            <Label x:Name="LoginText" FontAttributes="Bold" HorizontalTextAlignment="Center" FontSize="Large" TextColor="White" />
+                            <Label x:Name="PoziomText" FontSize="Medium" HorizontalTextAlignment="Center"  Margin="0,0,0,30" TextColor="LightGray"/>
+                        </FlexLayout>
+                    </StackLayout>
+                    <StackLayout Margin="0, 35, 0, 0">
+                        <Label Text="" x:Name="label1"  FontSize="Medium" TextColor="White"/>
+                        <Grid ColumnSpacing="0" ColumnDefinitions="Auto, *">
+                            <Label x:Name="percent" Grid.Column="0" TextColor="White" />
+                            <!-- <Slider x:Name="slider" Grid.Column="1" ThumbColor="Transparent" BackgroundColor="Transparent" /> -->
                         </Grid>
-                        <StackLayout Grid.Row="1">
-                            <Label Text="" x:Name="label1"  FontSize="Medium" TextColor="White"/>
-                            <Grid ColumnSpacing="0" ColumnDefinitions="Auto, *">
-                                <Label x:Name="percent" Grid.Column="0" TextColor="White" />
-                                <!-- <Slider x:Name="slider" Grid.Column="1" ThumbColor="Transparent" BackgroundColor="Transparent" /> -->
-                            </Grid>
-                            <Label Text="" x:Name="label2" FontSize="Medium" TextColor="White"/>
-                            <Label x:Name="label3" FontSize="Medium" TextColor="White"/>
-                        </StackLayout>
-                    </Grid>
-                </ScrollView>
+                        <Label Text="" x:Name="label2" FontSize="Medium" TextColor="White"/>
+                        <Label x:Name="label3" FontSize="Medium" TextColor="White"/>
+                    </StackLayout>
+                </StackLayout>
             </yummy:PancakeView>
-        </RelativeLayout>
+            <StackLayout AbsoluteLayout.LayoutBounds="0.5, 0" Margin="0, -75, 0, 0" AbsoluteLayout.LayoutFlags="PositionProportional">
+                <Frame CornerRadius="120" HasShadow="True" HorizontalOptions="Center" >
+                    <Image HeightRequest="160" WidthRequest="160" Source="https://cdn.w600.comps.canstockphoto.pl/prosty-stickman-cz%C5%82owiek-klipart-wektorowy_csp43585411.jpg" />
+                </Frame>
+            </StackLayout>
+        </AbsoluteLayout>
     </ContentPage>
-    <ContentPage Padding="40" Title="Nauka" BackgroundImageSource="background.png" IconImageSource="https://img.icons8.com/external-itim2101-lineal-itim2101/64/000000/external-learning-elearning-itim2101-lineal-itim2101-1.png">
+    <ContentPage Title="Nauka" BackgroundColor="{AppThemeBinding Light='#e6e6e6', Dark='#2e2e2e'}" IconImageSource="https://img.icons8.com/external-itim2101-lineal-itim2101/64/000000/external-learning-elearning-itim2101-lineal-itim2101-1.png">
         <ScrollView>
-            <FlexLayout Direction="Column">
+            <FlexLayout Direction="Column" Padding="40">
                 <StackLayout>
                     <Frame CornerRadius="30" Padding="0">
                         <Image Source="learning.jpg" Aspect="AspectFill" />
@@ -66,7 +58,7 @@
                         <Button Grid.Row="0" Grid.RowSpan="1" Clicked="KursT" Opacity="0" BackgroundColor="Black" TextColor="Transparent" x:Name="KursButton" />
                     </Grid>
                 </StackLayout>
-                <StackLayout>
+                <StackLayout Margin="0, 25, 0, 0">
                     <Frame CornerRadius="30" Padding="0" HeightRequest="220">
                         <Image Source="crossroad.jpg" Aspect="AspectFill" />
                     </Frame>
@@ -85,9 +77,9 @@
                         <Button Grid.Row="0" Grid.RowSpan="1" Opacity="0" BackgroundColor="Black" TextColor="Transparent" x:Name="SkrzyzowaniaButton"  Clicked="Skrzyzowania"/>
                     </Grid>
                 </StackLayout>
-                <StackLayout>
+                <StackLayout Margin="0, 25, 0, 0">
                     <Frame CornerRadius="30" Padding="0" HeightRequest="220">
-                        <Image Source="learning.jpg" Aspect="AspectFill" />
+                        <Image Source="car.jpg" Aspect="AspectFill" />
                     </Frame>
                     <Grid Margin="0, -75, 0, 15">
                         <Grid.RowDefinitions>
@@ -107,39 +99,51 @@
             </FlexLayout>
         </ScrollView>
     </ContentPage>
-    <ContentPage Padding="40" BackgroundImageSource="background.png" Title="Testy" IconImageSource="https://img.icons8.com/external-vitaliy-gorbachev-lineal-vitaly-gorbachev/50/000000/external-test-back-to-school-vitaliy-gorbachev-lineal-vitaly-gorbachev.png">
-        <FlexLayout Direction="Column">
-            <Grid Margin="0, 0, 0, 15">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="80"/>
-                </Grid.RowDefinitions>
+    <ContentPage BackgroundColor="{AppThemeBinding Light='#e6e6e6', Dark='#2e2e2e'}" Title="Testy" IconImageSource="https://img.icons8.com/external-vitaliy-gorbachev-lineal-vitaly-gorbachev/50/000000/external-test-back-to-school-vitaliy-gorbachev-lineal-vitaly-gorbachev.png">
+        <ScrollView>
+            <FlexLayout Direction="Column" Padding="40">
                 <StackLayout>
-                    <Frame Padding="0" CornerRadius="30">
-                        <FlexLayout Grid.Row="0" Direction="Row" BackgroundColor="{StaticResource Primary}" HeightRequest="80" JustifyContent="Start" AlignItems="Center" Padding="25, 0">
-                            <Label FontFamily="fa-solid-900.otf#Font Awesome 5 Free Solid" FontSize="Large" TextColor="White" Text="&#xf02d;" VerticalOptions="Center"/>
-                            <Label Text="Teoria" FontSize="Large" Margin="10, 0, 0, 0" TextColor="White" VerticalOptions="Center"/>
-                        </FlexLayout>
+                    <Frame CornerRadius="30" Padding="0">
+                        <Image Source="exams.jpg" Aspect="AspectFill" />
                     </Frame>
+                    <Grid Margin="0, -75, 0, 15">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="80"/>
+                        </Grid.RowDefinitions>
+                        <StackLayout>
+                            <Frame Padding="0" CornerRadius="60" HeightRequest="220">
+                                <FlexLayout Grid.Row="0" Direction="Row" BackgroundColor="{AppThemeBinding Light={StaticResource LightThemeColor}, Dark={StaticResource DarkThemeColor}}" HeightRequest="80" JustifyContent="Start" AlignItems="Center" Padding="25, 0">
+                                    <Label FontFamily="fa-solid-900.otf#Font Awesome 5 Free Solid" FontSize="Large" TextColor="{AppThemeBinding Light={StaticResource DarkThemeColor}, Dark={StaticResource LightThemeColor}}" Text="&#xf02d;" VerticalOptions="Center"/>
+                                    <Label Text="Teoretyczny" FontSize="Large" Margin="10, 0, 0, 0" TextColor="{AppThemeBinding Light={StaticResource DarkThemeColor}, Dark={StaticResource LightThemeColor}}" VerticalOptions="Center"/>
+                                </FlexLayout>
+                            </Frame>
+                        </StackLayout>
+                        <Button Grid.Row="0" Grid.RowSpan="1" Opacity="0" BackgroundColor="Black" TextColor="Transparent" x:Name="TeoretycznyButton" />
+                    </Grid>
                 </StackLayout>
-                <Button Grid.Row="0" Grid.RowSpan="1" Opacity="0" BackgroundColor="Black" TextColor="Transparent" />
-            </Grid>
-            <Grid Margin="0, 0, 0, 15">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="80"/>
-                </Grid.RowDefinitions>
-                <StackLayout>
-                    <Frame Padding="0" CornerRadius="30">
-                        <FlexLayout Grid.Row="0" Direction="Row" BackgroundColor="{StaticResource Primary}" HeightRequest="80" JustifyContent="Start" AlignItems="Center" Padding="25, 0">
-                            <Label FontFamily="fa-solid-900.otf#Font Awesome 5 Free Solid" FontSize="Large" TextColor="White" Text="&#xf5e1;"/>
-                            <Label Text="Praktyka" FontSize="Large" Margin="10, 0, 0, 0" TextColor="White"/>
-                        </FlexLayout>
+                <StackLayout Margin="0, 25, 0, 0">
+                    <Frame CornerRadius="30" Padding="0" HeightRequest="220">
+                        <Image Source="practise.jpg" Aspect="AspectFill" />
                     </Frame>
+                    <Grid Margin="0, -75, 0, 15">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="80"/>
+                        </Grid.RowDefinitions>
+                        <StackLayout>
+                            <Frame Padding="0" CornerRadius="60">
+                                <FlexLayout Grid.Row="0" Direction="Row" BackgroundColor="{AppThemeBinding Light={StaticResource LightThemeColor}, Dark={StaticResource DarkThemeColor}}" HeightRequest="80" JustifyContent="Start" AlignItems="Center" Padding="25, 0">
+                                    <Label FontFamily="fa-solid-900.otf#Font Awesome 5 Free Solid" FontSize="Large" TextColor="{AppThemeBinding Light={StaticResource DarkThemeColor}, Dark={StaticResource LightThemeColor}}" Text="&#xf5e1;"/>
+                                    <Label Text="Praktyczny" FontSize="Large" Margin="10, 0, 0, 0" TextColor="{AppThemeBinding Light={StaticResource DarkThemeColor}, Dark={StaticResource LightThemeColor}}"/>
+                                </FlexLayout>
+                            </Frame>
+                        </StackLayout>
+                        <Button Grid.Row="0" Grid.RowSpan="1" Opacity="0" BackgroundColor="Black" TextColor="Transparent" x:Name="PraktycznyButton"/>
+                    </Grid>
                 </StackLayout>
-                <Button Grid.Row="0" Grid.RowSpan="1" Opacity="0" BackgroundColor="Black" TextColor="Transparent" />
-            </Grid>
-        </FlexLayout>
+            </FlexLayout>
+        </ScrollView>
     </ContentPage>
-    <ContentPage Title="Ranking" IconImageSource="https://img.icons8.com/external-bearicons-detailed-outline-bearicons/50/000000/external-ranking-reputation-bearicons-detailed-outline-bearicons.png">
+    <ContentPage Title="Ranking" BackgroundColor="{AppThemeBinding Light='#e6e6e6', Dark='#2e2e2e'}" IconImageSource="https://img.icons8.com/external-bearicons-detailed-outline-bearicons/50/000000/external-ranking-reputation-bearicons-detailed-outline-bearicons.png">
         <ScrollView>
             <ListView x:Name="UserRankingList" SeparatorColor="LightGray" VerticalOptions="FillAndExpand"
                           HorizontalOptions="FillAndExpand" >

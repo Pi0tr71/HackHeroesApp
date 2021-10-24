@@ -26,11 +26,8 @@ namespace HackHeroesApp
         async void Login(object sender, EventArgs e)
         {
 
-            //var LoginEmailValue = "blazejjaworskixd@gmail.com";
-            //var LoginPasswordValue = "!JaworroChan445";
-
-            var LoginEmailValue = "machel@dzban.com"; //zakomentuj to i odkomentuj swoje jak bdz używać Nauraa
-            var LoginPasswordValue = "macheldzban";
+            var LoginEmailValue = "blazejjaworskixd@gmail.com";
+            var LoginPasswordValue = "!JaworroChan445";
 
             //var LoginEmailValue = LoginEmail.Text;
             //var LoginPasswordValue = LoginPassword.Text;

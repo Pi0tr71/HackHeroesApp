@@ -121,15 +121,15 @@ namespace HackHeroesApp
 
                 if (extension == ".mp4")
                 {
-                    //PytanieZdj.HeightRequest = 0;
                     PytanieFilm.Source = link;
-                    Console.WriteLine("Wysokość filmu: " + PytanieFilm.VideoHeight);
-                    //PytanieFilm.MinimumHeightRequest = PytanieFilm.VideoHeight * 2;
+                    PytanieZdj.IsVisible = false;
+                    PytanieFilm.IsVisible = true;
                 }
                 else
                 {
-                    //PytanieFilm.HeightRequest = 0;
                     PytanieZdj.Source = link;
+                    PytanieFilm.IsVisible = false;
+                    PytanieZdj.IsVisible = true;
                 }
             }
 

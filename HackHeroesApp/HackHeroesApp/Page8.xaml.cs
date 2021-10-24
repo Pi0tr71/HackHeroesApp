@@ -13,11 +13,8 @@ namespace HackHeroesApp
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Page8 : ContentPage
     {
-        public Page8()
-        {
-            InitializeComponent();
-            slajd();
-        }
+        int slideID;
+
         string odpowiedz_a = "";
         string odpowiedz_b = "";
         string odpowiedz_c = "";
@@ -25,9 +22,16 @@ namespace HackHeroesApp
         string pytanie = "";
         string poprawna_odp = "";
 
+        public Page8(int slideID)
+        {
+            InitializeComponent();
+            this.slideID = slideID;
+            slajd();
+        }
+
         void slajd()
         {
-            switch (Values.Cos.Poziom)
+            switch (slideID)
             {
                 case 1:
                     media = "a1";
@@ -265,6 +269,18 @@ namespace HackHeroesApp
                 button2.BackgroundColor = Color.FromHex("B14157");
                 button3.BackgroundColor = Color.FromHex("18d698");
             }
+        }
+
+        private async void GoToNextSlide()
+        {
+            slideID++;
+
+            if(slideID > Values.Cos.Poziom)
+            {
+                await Navigation.PushModalAsync(new Page7());
+            }
+
+            slajd();
         }
     }
 }

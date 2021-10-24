@@ -48,7 +48,7 @@ namespace HackHeroesApp
             if (poziomtutaj >= 1)
             {
                 var a = new Skrzyzowanie(1);
-                Navigation.PushModalAsync(new Page8());
+                Navigation.PushModalAsync(new Page8(1));
             }
             
         }
@@ -57,7 +57,7 @@ namespace HackHeroesApp
             if (poziomtutaj >= 2)
             {
                 var a = new Skrzyzowanie(2);
-                Navigation.PushModalAsync(new Page8());
+                Navigation.PushModalAsync(new Page8(2));
             }
 
         }
@@ -66,7 +66,7 @@ namespace HackHeroesApp
             if (poziomtutaj >= 3)
             {
                 var a = new Skrzyzowanie(3);
-                Navigation.PushModalAsync(new Page8());
+                Navigation.PushModalAsync(new Page8(3));
             }
 
         }
@@ -75,7 +75,7 @@ namespace HackHeroesApp
             if (poziomtutaj >= 4)
             {
                 var a = new Skrzyzowanie(4);
-                Navigation.PushModalAsync(new Page8());
+                Navigation.PushModalAsync(new Page8(4));
             }
 
         }
@@ -84,7 +84,7 @@ namespace HackHeroesApp
             if (poziomtutaj >= 5)
             {
                 var a = new Skrzyzowanie(5);
-                Navigation.PushModalAsync(new Page8());
+                Navigation.PushModalAsync(new Page8(5));
             }
 
         }
@@ -93,7 +93,7 @@ namespace HackHeroesApp
             if (poziomtutaj >= 6)
             {
                 var a = new Skrzyzowanie(6);
-                Navigation.PushModalAsync(new Page8());
+                Navigation.PushModalAsync(new Page8(6));
             }
 
         }
@@ -102,7 +102,7 @@ namespace HackHeroesApp
             if (poziomtutaj >= 7)
             {
                 var a = new Skrzyzowanie(7);
-                Navigation.PushModalAsync(new Page8());
+                Navigation.PushModalAsync(new Page8(7));
             }
 
         }
@@ -111,7 +111,7 @@ namespace HackHeroesApp
             if (poziomtutaj >= 8)
             {
                 var a = new Skrzyzowanie(8);
-                Navigation.PushModalAsync(new Page8());
+                Navigation.PushModalAsync(new Page8(8));
             }
 
         }
@@ -120,7 +120,7 @@ namespace HackHeroesApp
             if (poziomtutaj >= 9)
             {
                 var a = new Skrzyzowanie(9);
-                Navigation.PushModalAsync(new Page8());
+                Navigation.PushModalAsync(new Page8(9));
             }
 
         }
@@ -129,7 +129,7 @@ namespace HackHeroesApp
             if (poziomtutaj >= 10)
             {
                 var a = new Skrzyzowanie(10);
-                Navigation.PushModalAsync(new Page8());
+                Navigation.PushModalAsync(new Page8(10));
             }
 
         }
@@ -138,7 +138,7 @@ namespace HackHeroesApp
             if (poziomtutaj >= 11)
             {
                 var a = new Skrzyzowanie(11);
-                Navigation.PushModalAsync(new Page8());
+                Navigation.PushModalAsync(new Page8(11));
             }
 
         }
@@ -147,7 +147,7 @@ namespace HackHeroesApp
             if (poziomtutaj >= 12)
             {
                 var a = new Skrzyzowanie(12);
-                Navigation.PushModalAsync(new Page8());
+                Navigation.PushModalAsync(new Page8(12));
             }
 
         }
@@ -156,7 +156,7 @@ namespace HackHeroesApp
             if (poziomtutaj >= 13)
             {
                 var a = new Skrzyzowanie(13);
-                Navigation.PushModalAsync(new Page8());
+                Navigation.PushModalAsync(new Page8(13));
             }
 
         }
@@ -165,7 +165,7 @@ namespace HackHeroesApp
             if (poziomtutaj >= 14)
             {
                 var a = new Skrzyzowanie(14);
-                Navigation.PushModalAsync(new Page8());
+                Navigation.PushModalAsync(new Page8(14));
             }
 
         }
@@ -174,7 +174,7 @@ namespace HackHeroesApp
             if (poziomtutaj >= 15)
             {
                 var a = new Skrzyzowanie(15);
-                Navigation.PushModalAsync(new Page8());
+                Navigation.PushModalAsync(new Page8(15));
             }
 
         }
@@ -183,7 +183,7 @@ namespace HackHeroesApp
             if (poziomtutaj >= 16)
             {
                 var a = new Skrzyzowanie(16);
-                Navigation.PushModalAsync(new Page8());
+                Navigation.PushModalAsync(new Page8(16));
             }
 
         }
@@ -192,7 +192,7 @@ namespace HackHeroesApp
             if (poziomtutaj >= 17)
             {
                 var a = new Skrzyzowanie(17);
-                Navigation.PushModalAsync(new Page8());
+                Navigation.PushModalAsync(new Page8(17));
             }
 
         }
@@ -201,7 +201,7 @@ namespace HackHeroesApp
             if (poziomtutaj >= 18)
             {
                 var a = new Skrzyzowanie(18);
-                Navigation.PushModalAsync(new Page8());
+                Navigation.PushModalAsync(new Page8(18));
             }
 
         }
@@ -210,7 +210,7 @@ namespace HackHeroesApp
             if (poziomtutaj >= 19)
             {
                 var a = new Skrzyzowanie(19);
-                Navigation.PushModalAsync(new Page8());
+                Navigation.PushModalAsync(new Page8(19));
             }
 
         }
@@ -219,7 +219,7 @@ namespace HackHeroesApp
             if (poziomtutaj >= 20)
             {
                 var a = new Skrzyzowanie(20);
-                Navigation.PushModalAsync(new Page8());
+                Navigation.PushModalAsync(new Page8(20));
             }
 
         }
