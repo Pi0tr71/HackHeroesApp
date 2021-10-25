@@ -1,6 +1,6 @@
 <h1>Aplikacja mobilna NullTeam Prawko</h1>
 
-<h4>Stworzona celem udziału w konkursie Hack Heroes (https://hackheroes.pl), edycja 2021</h4>
+<h3>Stworzona celem udziału w konkursie Hack Heroes (https://hackheroes.pl), edycja 2021</h3>
 
 <p>Aplikacja pozwalająca ci przygotować się do egzaminu na prawo jazdy.
 <br>Ucz się testów teoretycznych, skrzyżowań i elementów samochodu.
