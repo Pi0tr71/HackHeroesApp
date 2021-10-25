@@ -44,6 +44,10 @@
       "frameworks": {
         "monoandroid11.0": {
           "dependencies": {
+            "Acr.UserDialogs": {
+              "target": "Package",
+              "version": "[7.2.0.534, )"
+            },
             "Refit": {
               "target": "Package",
               "version": "[6.1.15, )"

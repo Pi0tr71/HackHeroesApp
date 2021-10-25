@@ -35,14 +35,21 @@ namespace HackHeroesApp.ValuesF
 
     public class TestWynik
     {
-        public static TestWynik Cos;
+        public static TestWynik instance;
 
         public int Pkt;
+        public TimeSpan Time;
 
-        public TestWynik(int pkt)
+        public TestWynik(int pkt, TimeSpan time)
         {
+            this.Time = time;
             this.Pkt = pkt;
-            Cos = this;
+            instance = this;
+        }
+
+        public int getSeconds()
+        {
+            return (int)Time.TotalSeconds;
         }
     }
 }

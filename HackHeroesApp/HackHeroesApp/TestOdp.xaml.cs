@@ -13,15 +13,43 @@ namespace HackHeroesApp
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class TestOdp : ContentPage
     {
-        int pkt = TestWynik.Cos.Pkt;
+        TestWynik wynik = TestWynik.instance;
+
+
         public TestOdp()
         {
             InitializeComponent();
-            if(pkt >= 68)
+
+            if (wynik.Pkt >= 68)
             {
-                Console.WriteLine("Zdałeś gratualcje");
+                title.Text = "Gratulacje!";
+                title.TextColor = Color.Green;
             }
-            LabelText.Text = "Zdobyłeś " + pkt + "/72";
+            else
+            {
+                title.Text = "Próbuj ponownie!";
+                title.TextColor = Color.Red;
+            }
+
+            points.Text = "Zdobyłeś " + wynik.Pkt + "/72";
+
+            int minutes = wynik.getSeconds() / 60;
+            int seconds = wynik.getSeconds() % 60;
+
+            time.Text = "W czasie " + minutes + " minut i " + seconds + "sekund";
+        }
+
+        async void Back(object sender, EventArgs e)
+        {
+            BackButton.Opacity = 0.3;
+            await Navigation.PushModalAsync(new Page4());
+            BackButton.Opacity = 0;
+        }
+
+        protected override bool OnBackButtonPressed()
+        {
+            Navigation.PushModalAsync(new Page4());
+            return true;
         }
     }
 }

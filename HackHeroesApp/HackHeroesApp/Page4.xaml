@@ -149,21 +149,31 @@
                           HorizontalOptions="FillAndExpand" >
                 <ListView.Header>
                     <Frame HasShadow="True" Padding="0">
-                        <FlexLayout Padding="10, 20" Direction="Row" AlignItems="Center" JustifyContent="SpaceBetween" BackgroundColor="{StaticResource Primary}" HorizontalOptions="FillAndExpand">
-                            <Label Text="Miejsce" WidthRequest="100" HorizontalTextAlignment="Center" FontAttributes="Bold" TextColor="White" FontSize="Large" VerticalOptions="Center" />
-                            <Label Text="Użytkownik" TextColor="White" FontSize="Large" FontAttributes="Bold" VerticalOptions="Center"/>
-                            <Label Text="Czas" MinimumWidthRequest="100" HorizontalTextAlignment="Center" FontAttributes="Bold" TextColor="White" FontSize="Large" VerticalOptions="Center"/>
-                        </FlexLayout>
+                        <Grid Padding="10, 20" BackgroundColor="{StaticResource Primary}" HorizontalOptions="FillAndExpand">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="2*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" Text="Miejsce" WidthRequest="100" HorizontalTextAlignment="Center" FontAttributes="Bold" TextColor="White" FontSize="Large" VerticalOptions="Center" />
+                            <Label Grid.Column="1" Text="Użytkownik" TextColor="White" FontSize="Large" FontAttributes="Bold" VerticalOptions="Center" HorizontalTextAlignment="Center"/>
+                            <Label Grid.Column="2" Text="Czas" MinimumWidthRequest="100" HorizontalTextAlignment="Center" FontAttributes="Bold" TextColor="White" FontSize="Large" VerticalOptions="Center"/>
+                        </Grid>
                     </Frame>
                 </ListView.Header>
                 <ListView.ItemTemplate>
                     <DataTemplate x:DataType="model:UserRanking">
                         <ViewCell>
-                            <FlexLayout BackgroundColor="{Binding BackgroundColor}" Padding="10, 0" Direction="Row" AlignItems="Center" JustifyContent="SpaceBetween" HorizontalOptions="FillAndExpand">
-                                <Label Text="{Binding User.RankingPlace}" WidthRequest="100" HorizontalTextAlignment="Center" TextColor="{Binding FontColor}" FontSize="Medium" VerticalOptions="Center" />
-                                <Label Text="{Binding User.Login}" TextColor="{Binding FontColor}" FontSize="Medium" FontAttributes="Bold" VerticalOptions="Center"/>
-                                <Label Text="{Binding ConvertedTime}" MinimumWidthRequest="100" HorizontalTextAlignment="Center" TextColor="{Binding FontColor}" FontSize="Medium" VerticalOptions="Center"/>
-                            </FlexLayout>
+                            <Grid BackgroundColor="{Binding BackgroundColor}" Padding="10, 0" HorizontalOptions="FillAndExpand">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="2*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Column="0" Text="{Binding User.RankingPlace}" WidthRequest="100" HorizontalTextAlignment="Center" TextColor="{Binding FontColor}" FontSize="Small" VerticalOptions="Center" />
+                                <Label Grid.Column="1" Text="{Binding User.Login}" TextColor="{Binding FontColor}" FontSize="Small" FontAttributes="Bold" VerticalOptions="Center" HorizontalTextAlignment="Center"/>
+                                <Label Grid.Column="2" Text="{Binding ConvertedTime}" MinimumWidthRequest="100" HorizontalTextAlignment="Center" TextColor="{Binding FontColor}" FontSize="Small" VerticalOptions="Center"/>
+                            </Grid>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>

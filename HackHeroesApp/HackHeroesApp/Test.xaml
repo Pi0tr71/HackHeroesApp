@@ -12,10 +12,10 @@
                 <RowDefinition Height="250" />
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
-            <Label Grid.Row="0" Text="Pkt Zakres Nr Pytania" FontSize="10" x:Name="PZN" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+            <Label Grid.Row="0" Text="Pkt Zakres Nr Pytania" FontSize="Micro" x:Name="PZN" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
             <xct:MediaElement Grid.Row="1" HeightRequest="250" Aspect="AspectFill" x:Name="PytaniaFilm"/>
             <Image Grid.Row="1" Aspect="AspectFill" x:Name="PytanieZdj" />
-            <Label Grid.Row="2" Text="Co było pierwsze kura czy jajko?" x:Name="PytanieText" FontSize="20" HorizontalOptions="CenterAndExpand"/>
+            <Label Grid.Row="2" Text="Co było pierwsze kura czy jajko?" x:Name="PytanieText" FontSize="Medium" HorizontalOptions="CenterAndExpand"/>
         </Grid>
         <Grid RowSpacing="10">
             <Grid.RowDefinitions>
@@ -23,16 +23,10 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <Button Grid.Row="0" CornerRadius="10" x:Name="button1" Clicked="button1_Clicked" FontSize="12"/>
-            <Button Grid.Row="1" CornerRadius="10" x:Name="button2" Clicked="button2_Clicked" FontSize="12"/>
-            <Button Grid.Row="2" CornerRadius="10" x:Name="button3" Clicked="button3_Clicked" FontSize="12"/>
+            <Button Grid.Row="0" CornerRadius="10" x:Name="button1" Clicked="button1_Clicked" FontSize="Small"/>
+            <Button Grid.Row="1" CornerRadius="10" x:Name="button2" Clicked="button2_Clicked" FontSize="Small"/>
+            <Button Grid.Row="2" CornerRadius="10" x:Name="button3" Clicked="button3_Clicked" FontSize="Small"/>
         </Grid>
-        <Grid ColumnSpacing="10" HorizontalOptions="Center" Margin="0, 10, 0, 0">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
-            <Button Grid.Column="0" CornerRadius="10" x:Name="button4" Text="Dalej" Clicked="button4_Clicked"/>
-        </Grid>
+        <Button Grid.Column="0" HorizontalOptions="End" CornerRadius="10" x:Name="button4" Text="Dalej" Clicked="button4_Clicked" FontSize="Medium"/>
     </FlexLayout>
 </ContentPage>

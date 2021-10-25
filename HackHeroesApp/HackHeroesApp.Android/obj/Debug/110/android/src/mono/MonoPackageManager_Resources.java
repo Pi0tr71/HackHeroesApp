@@ -3,6 +3,8 @@ public class MonoPackageManager_Resources {
 	public static String[] Assemblies = new String[]{
 		/* We need to ensure that "HackHeroesApp.Android.dll" comes first in this list. */
 		"HackHeroesApp.Android.dll",
+		"Acr.UserDialogs.dll",
+		"AndHUD.dll",
 		"FormsViewGroup.dll",
 		"HackHeroesApp.dll",
 		"Microsoft.Bcl.AsyncInterfaces.dll",

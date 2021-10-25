@@ -18,10 +18,12 @@ namespace HackHeroesApp
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Test : ContentPage
     {
+        DateTime start;
         public Test()
         {
             InitializeComponent();
             pytania();
+            start = DateTime.Now;
         }
         int dlugosclisty;
         int lppytanie = 0;
@@ -139,22 +141,10 @@ namespace HackHeroesApp
         }
         async void wynik()
         {
-            var v = new TestWynik(punkty_zdobyte);
+            DateTime end = DateTime.Now;
+            TimeSpan finalTime = end.Subtract(start);
+            var v = new TestWynik(punkty_zdobyte, finalTime);
             await Navigation.PushModalAsync(new TestOdp());
-            //string listawynik = "";
-            //if (punkty_zdobyte >= 68)
-            //{
-            //    listawynik += "Zdałeś " + punkty_zdobyte + "/72";
-            //}
-            //else
-            //{
-            //    listawynik += "Nie zdałeś " + punkty_zdobyte + "/72";
-            //}
-            //for(int i = 0; i < (dlugosclisty-1); i++)
-            //{
-            //    listawynik += "\n" + (i + 1) + ". Id pytania: " + pytaniatablica[i].id + " Odpowiedz: " + odpowiedzi_u[i] + " Poprawna odpowiedz: " + pytaniatablica[i].poprawna_odp;
-            //}
-            //PytanieText.Text = listawynik;
         }
         private void button1_Clicked(object sender, EventArgs e)
         {
@@ -197,6 +187,9 @@ namespace HackHeroesApp
 
         private async void button4_Clicked(object sender, EventArgs e)
         {
+            button1.BackgroundColor = Color.FromHex("3c987a");
+            button2.BackgroundColor = Color.FromHex("3c987a");
+            button3.BackgroundColor = Color.FromHex("3c987a");
             if (lppytanie >= (dlugosclisty - 1))
             {
                 Console.WriteLine("dziala?");
