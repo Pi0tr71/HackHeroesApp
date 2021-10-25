@@ -65,5 +65,11 @@ namespace HackHeroesApp.Interface
         [Post("/test/getTest")]
         Task<GTPost> SubmitPost([Body] GTPost post);
     }
+    [Headers("Authorization: Bearer")]
+    public interface IMyAPIIS
+    {
+        [Post("/test/insertScore")]
+        Task<ISPost> SubmitPost([Body] ISPost post);
+    }
 }
 

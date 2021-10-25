@@ -25,10 +25,10 @@ namespace HackHeroesApp
 
         async void Login(object sender, EventArgs e)
         {
-            //var LoginEmailValue = LoginEmail.Text;
-            //var LoginPasswordValue = LoginPassword.Text;
-            var LoginEmailValue = "test@user2.pl";
-            var LoginPasswordValue = "password2";
+            var LoginEmailValue = LoginEmail.Text;
+            var LoginPasswordValue = LoginPassword.Text;
+            //var LoginEmailValue = "test@user2.pl";
+            //var LoginPasswordValue = "password2";
             //var LoginEmailValue = "p-martenka@wp.pl";
             //var LoginPasswordValue = "password";
 

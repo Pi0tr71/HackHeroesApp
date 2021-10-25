@@ -110,4 +110,9 @@ namespace HackHeroesApp.Model
         public List<Pytania> pytania { get; set; }
     }
 
+    public class ISPost
+    {
+        public string ilosc_punktow { get; set; }
+        public string sekund { get; set; }
+    }
 }

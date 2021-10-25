@@ -141,9 +141,24 @@ namespace HackHeroesApp
         }
         async void wynik()
         {
+            IMyAPIIS myAPIIS;
+
             DateTime end = DateTime.Now;
             TimeSpan finalTime = end.Subtract(start);
             var v = new TestWynik(punkty_zdobyte, finalTime);
+
+            var authHeader = Values.instance.Token;
+            var refitSettings = new RefitSettings()
+            {
+                AuthorizationHeaderValueGetter = () => Task.FromResult(authHeader)
+            };
+            myAPIIS = RestService.For<IMyAPIIS>(API_ENV.API_URL, refitSettings);
+            ISPost post = new ISPost();
+            //post.ilosc_punktow = "72";
+            //post.sekund = "1200";
+            post.ilosc_punktow = punkty_zdobyte.ToString();
+            post.sekund = finalTime.Seconds.ToString();
+            ISPost result = await myAPIIS.SubmitPost(post);
             await Navigation.PushModalAsync(new TestOdp());
         }
         private void button1_Clicked(object sender, EventArgs e)
