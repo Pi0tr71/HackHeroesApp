@@ -43,7 +43,7 @@ namespace HackHeroesApp
         async void pytania()
         {
             IMyAPIGT myAPIGT;
-            var authHeader = Values.Cos.Token;
+            var authHeader = Values.instance.Token;
             var refitSettings = new RefitSettings()
             {
                 AuthorizationHeaderValueGetter = () => Task.FromResult(authHeader)
@@ -137,8 +137,10 @@ namespace HackHeroesApp
                 }
             }
         }
-        void wynik()
+        async void wynik()
         {
+            var v = new TestWynik(punkty_zdobyte);
+            await Navigation.PushModalAsync(new TestOdp());
             //string listawynik = "";
             //if (punkty_zdobyte >= 68)
             //{
@@ -164,7 +166,7 @@ namespace HackHeroesApp
             {
                 odp_u = "A";
             }
-            
+
         }
         private void button2_Clicked(object sender, EventArgs e)
         {
@@ -185,7 +187,7 @@ namespace HackHeroesApp
 
         private async void button4_Clicked(object sender, EventArgs e)
         {
-            if (lppytanie >= (dlugosclisty-1))
+            if (lppytanie >= (dlugosclisty - 1))
             {
                 Console.WriteLine("dziala?");
                 if (odp_u == pop_odp)

@@ -29,7 +29,7 @@ namespace HackHeroesApp
 
             for (int i = 0; i < buttons.Count; i++)
             {
-                if (i < Values.Cos.Poziom) buttons[i].BackgroundColor = Color.FromHex("18d698");
+                if (i < Values.instance.Poziom) buttons[i].BackgroundColor = Color.FromHex("18d698");
                 else buttons[i].BackgroundColor = Color.FromHex("B14157");
             }
         }
@@ -42,7 +42,7 @@ namespace HackHeroesApp
             Navigation.PushModalAsync(new Page4());
             return true;
         }
-        int poziomtutaj = Values.Cos.Poziom;
+        int poziomtutaj = Values.instance.Poziom;
         private void b1_Clicked(object sender, EventArgs e)
         {
             if (poziomtutaj >= 1)

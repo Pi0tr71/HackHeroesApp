@@ -11,7 +11,7 @@ using HackHeroesApp.ValuesF;
 using HackHeroesApp.Interface;
 using HackHeroesApp.Model;
 using Refit;
-
+using System.Reflection;
 
 namespace HackHeroesApp
 {
@@ -25,8 +25,11 @@ namespace HackHeroesApp
         public Page4()
         {
             InitializeComponent();
-            PoziomText.Text = "Poziom " + Values.Cos.Poziom; 
-            LoginText.Text = Values.Cos.Login;
+            PoziomText.Text = "Poziom " + Values.instance.Poziom; 
+            LoginText.Text = Values.instance.Login;
+
+            Console.WriteLine("Avatar: " + avatar.Source);
+
             staty();
             ranking();
         }
@@ -34,7 +37,7 @@ namespace HackHeroesApp
         async void staty()
         {
             IMyAPIGS myAPIGS;
-            var authHeader = Values.Cos.Token;
+            var authHeader = Values.instance.Token;
             var refitSettings = new RefitSettings()
             {
                 AuthorizationHeaderValueGetter = () => Task.FromResult(authHeader)
@@ -43,8 +46,8 @@ namespace HackHeroesApp
             GSPost post = new GSPost();
             GSPost result = await myAPIGS.SubmitPost(post);
 
-            int done = Double.IsNaN(result.ilosc_przerobionych_pytan) ? 0 : result.ilosc_przerobionych_pytan;
-            int all = Double.IsNaN(result.ilosc_wszystkich_pytan) ? 0 : result.ilosc_wszystkich_pytan;
+            int done = result.ilosc_przerobionych_pytan;
+            int all = result.ilosc_wszystkich_pytan;
 
             label1.Text = "Rozwiązałeś poprawnie " + done + "/" + all + " pytań";
 
@@ -57,12 +60,10 @@ namespace HackHeroesApp
                 label3.Text = "Czas najlepszego testu " + minutes + "min " + seconds + "s";
             }
 
-            sliderBackground.Children.Add(
-                new BoxView { BackgroundColor = Color.Green },
-                Constraint.RelativeToParent((parent) =>
-                {
-                    return parent.Width * 0.35;
-                }));
+            percent.Text = Math.Round((double)done / (double)all * 100D, 2).ToString() + "%";
+
+            progressBar.Progress = (double)done / (double)all;
+            progressBar.ProgressColor = Color.White;
         }
 
         private void StopDraging(object sender, ValueChangedEventArgs e)
@@ -73,7 +74,7 @@ namespace HackHeroesApp
         async void ranking()
         {
             IMyAPIGR myAPIGR;
-            var authHeader = Values.Cos.Token;
+            var authHeader = Values.instance.Token;
             var refitSettings = new RefitSettings()
             {
                 AuthorizationHeaderValueGetter = () => Task.FromResult(authHeader)
@@ -122,13 +123,13 @@ namespace HackHeroesApp
         async void Teoretyczny(object sender, EventArgs e)
         {
             TeoretycznyButton.Opacity = 0.3;
-            await Navigation.PushModalAsync(new Page7());
+            await Navigation.PushModalAsync(new Test());
             TeoretycznyButton.Opacity = 0;
         }
         async void Praktyczny(object sender, EventArgs e)
         {
             PraktycznyButton.Opacity = 0.3;
-            await Navigation.PushModalAsync(new Page7());
+            await Navigation.PushModalAsync(new Page9());
             PraktycznyButton.Opacity = 0;
         }
     }

@@ -58,11 +58,11 @@ namespace HackHeroesApp
                     Console.WriteLine(result.poziom);
 
                     var v = new Values(result.token, result.poziom, "a");
-                    //var v = new Values(result.token, result.poziom, Values.Cos.Login);
+                    //var v = new Values(result.token, result.poziom, Values.instance.Login);
 
                     if (result.status == "loged in")
                     {
-                        var authHeader = Values.Cos.Token;
+                        var authHeader = Values.instance.Token;
                         var refitSettings = new RefitSettings()
                         {
                             AuthorizationHeaderValueGetter = () => Task.FromResult(authHeader)
@@ -72,7 +72,7 @@ namespace HackHeroesApp
                         TokenPost post1 = new TokenPost();
                         TokenPost result1 = await myAPIT.SubmitPost(post1);
                         Console.WriteLine(result1.login);
-                        var a = new Values(Values.Cos.Token, Values.Cos.Poziom, result1.login);
+                        var a = new Values(Values.instance.Token, Values.instance.Poziom, result1.login);
 
                         await Navigation.PushModalAsync(new Page4());
                     }

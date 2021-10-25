@@ -275,7 +275,7 @@ namespace HackHeroesApp
         {
             slideID++;
 
-            if(slideID > Values.Cos.Poziom)
+            if(slideID > Values.instance.Poziom)
             {
                 await Navigation.PushModalAsync(new Page7());
             }

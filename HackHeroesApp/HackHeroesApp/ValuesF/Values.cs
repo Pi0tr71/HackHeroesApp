@@ -6,7 +6,7 @@ namespace HackHeroesApp.ValuesF
 {
     public class Values
     {
-        public static Values Cos;
+        public static Values instance;
 
         public string Token;
         public int Poziom;
@@ -17,19 +17,32 @@ namespace HackHeroesApp.ValuesF
             this.Token = token;
             this.Poziom = poziom;
             this.Login = login;
-            Cos = this;
+            instance = this;
         }
     }
     public class Skrzyzowanie
     {
-        public static Skrzyzowanie Cos2;
+        public static Skrzyzowanie instance2;
 
         public int SkrzyzowanieP = 0;
 
         public Skrzyzowanie( int SkrzyzowanieP)
         {
             this.SkrzyzowanieP = SkrzyzowanieP;
-            Cos2 = this;
+            instance2 = this;
+        }
+    }
+
+    public class TestWynik
+    {
+        public static TestWynik Cos;
+
+        public int Pkt;
+
+        public TestWynik(int pkt)
+        {
+            this.Pkt = pkt;
+            Cos = this;
         }
     }
 }

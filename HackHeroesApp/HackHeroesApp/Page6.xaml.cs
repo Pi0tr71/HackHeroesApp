@@ -41,14 +41,14 @@ namespace HackHeroesApp
             InitializeComponent();
             zapytanie();
 
-            maxid = Values.Cos.Poziom;
-            maxid = Values.Cos.Poziom == 20 ? 2200 : 2000;
+            maxid = Values.instance.Poziom;
+            maxid = Values.instance.Poziom == 20 ? 2200 : 2000;
         }
 
         async void zapytanie()
         {
             IMyAPIQID myAPIQID;
-            var authHeader = Values.Cos.Token;
+            var authHeader = Values.instance.Token;
             var refitSettings = new RefitSettings()
             {
                 AuthorizationHeaderValueGetter = () => Task.FromResult(authHeader)
