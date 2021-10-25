@@ -154,10 +154,10 @@ namespace HackHeroesApp
             };
             myAPIIS = RestService.For<IMyAPIIS>(API_ENV.API_URL, refitSettings);
             ISPost post = new ISPost();
-            post.ilosc_punktow = "72";
-            post.sekund = "1200";
-            //post.ilosc_punktow = punkty_zdobyte.ToString();
-            //post.sekund = finalTime.Seconds.ToString();
+            //post.ilosc_punktow = "72";
+            //post.sekund = "1200";
+            post.ilosc_punktow = punkty_zdobyte.ToString();
+            post.sekund = finalTime.Seconds.ToString();
             ISPost result = await myAPIIS.SubmitPost(post);
             await Navigation.PushModalAsync(new TestOdp());
         }
