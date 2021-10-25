@@ -166,6 +166,10 @@ namespace HackHeroesApp
             {
                 odp_u = "A";
             }
+            button1.BackgroundColor = Color.FromHex("2a6b56");
+            button2.BackgroundColor = Color.FromHex("3c987a");
+            button3.BackgroundColor = Color.FromHex("3c987a");
+
 
         }
         private void button2_Clicked(object sender, EventArgs e)
@@ -178,11 +182,17 @@ namespace HackHeroesApp
             {
                 odp_u = "B";
             }
+            button1.BackgroundColor = Color.FromHex("3c987a");
+            button2.BackgroundColor = Color.FromHex("2a6b56");
+            button3.BackgroundColor = Color.FromHex("3c987a");
         }
 
         private void button3_Clicked(object sender, EventArgs e)
         {
             odp_u = "C";
+            button1.BackgroundColor = Color.FromHex("3c987a");
+            button2.BackgroundColor = Color.FromHex("3c987a");
+            button3.BackgroundColor = Color.FromHex("2a6b56");
         }
 
         private async void button4_Clicked(object sender, EventArgs e)

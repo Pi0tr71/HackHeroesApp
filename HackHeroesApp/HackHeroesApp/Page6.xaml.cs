@@ -41,8 +41,8 @@ namespace HackHeroesApp
             InitializeComponent();
             zapytanie();
 
-            maxid = Values.instance.Poziom;
-            maxid = Values.instance.Poziom == 20 ? 2200 : 2000;
+            maxid = Values.instance.Poziom * 100;
+            maxid = Values.instance.Poziom == 20 ? 2020 : maxid;
         }
 
         async void zapytanie()
@@ -60,7 +60,7 @@ namespace HackHeroesApp
             var informacje = "Punkty: " + result.pytanie.liczba_punktow + "  Nr pytania: " + result.pytanie.numer_pytania + "  Zakres: " + result.pytanie.zakres_struktury + "   " +pytanieid+ "/" +maxid;
             if (result.pytanie.media == "")
             {
-                PytanieFilm.Source = "bz.png";
+                PytanieZdj.Source = "bz.png";
             }
             else
             {
@@ -202,12 +202,14 @@ namespace HackHeroesApp
         private void Button_Clicked(object sender, EventArgs e)
         {
             pytanieid = Int32.Parse(idpytania.Text);
+            if (pytanieid >= maxid) pytanieid = maxid;
+            else if (pytanieid <= 1) pytanieid = 1;
             zapytanie();
         }
 
         private void ChangeQuestion()
         {
-            if (pytanieid >= maxid) pytanieid = 0;
+            if (pytanieid >= maxid) pytanieid = 1;
             else pytanieid++;
 
             zapytanie();

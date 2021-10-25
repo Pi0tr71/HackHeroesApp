@@ -88,6 +88,7 @@ namespace HackHeroesApp.Model
         public int ilosc_wszystkich_pytan { get; set; }
         public int ilosc_przerobionych_pytan { get; set; }
         public NajWynikZTestTeoretycznego naj_wynik_z_test_teoretycznego { get; set; }
+        public string status { get; set; }
     }
     public class Pytania
     {

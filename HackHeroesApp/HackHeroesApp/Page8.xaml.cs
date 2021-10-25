@@ -208,19 +208,19 @@ namespace HackHeroesApp
 
         private void button1_Clicked(object sender, EventArgs e)
         {
-            if ("A" == poprawna_odp)
+            if ("A" == poprawna_odp || poprawna_odp == "T")
             {
                 button1.BackgroundColor = Color.FromHex("18d698");
                 button2.BackgroundColor = Color.FromHex("B14157");
                 button3.BackgroundColor = Color.FromHex("B14157");
             }
-            if (poprawna_odp == "B" || poprawna_odp == "T")
+            if (poprawna_odp == "B" || poprawna_odp == "N")
             {
                 button1.BackgroundColor = Color.FromHex("B14157");
                 button2.BackgroundColor = Color.FromHex("18d698");
                 button3.BackgroundColor = Color.FromHex("B14157");
             }
-            if (poprawna_odp == "C" || poprawna_odp == "N")
+            if (poprawna_odp == "C")
             {
                 button1.BackgroundColor = Color.FromHex("B14157");
                 button2.BackgroundColor = Color.FromHex("B14157");
@@ -229,19 +229,19 @@ namespace HackHeroesApp
         }
         private void button2_Clicked(object sender, EventArgs e)
         {
-            if ("A" == poprawna_odp)
+            if ("A" == poprawna_odp || poprawna_odp == "T") 
             {
                 button1.BackgroundColor = Color.FromHex("18d698");
                 button2.BackgroundColor = Color.FromHex("B14157");
                 button3.BackgroundColor = Color.FromHex("B14157");
             }
-            if (poprawna_odp == "B" || poprawna_odp == "T")
+            if (poprawna_odp == "B" || poprawna_odp == "N")
             {
                 button1.BackgroundColor = Color.FromHex("B14157");
                 button2.BackgroundColor = Color.FromHex("18d698");
                 button3.BackgroundColor = Color.FromHex("B14157");
             }
-            if (poprawna_odp == "C" || poprawna_odp == "N")
+            if (poprawna_odp == "C")
             {
                 button1.BackgroundColor = Color.FromHex("B14157");
                 button2.BackgroundColor = Color.FromHex("B14157");
@@ -251,19 +251,19 @@ namespace HackHeroesApp
 
         private void button3_Clicked(object sender, EventArgs e)
         {
-            if ("A" == poprawna_odp)
+            if ("A" == poprawna_odp || poprawna_odp == "T")
             {
                 button1.BackgroundColor = Color.FromHex("18d698");
                 button2.BackgroundColor = Color.FromHex("B14157");
                 button3.BackgroundColor = Color.FromHex("B14157");
             }
-            if (poprawna_odp == "B" || poprawna_odp == "T")
+            if (poprawna_odp == "B" || poprawna_odp == "N")
             {
                 button1.BackgroundColor = Color.FromHex("B14157");
                 button2.BackgroundColor = Color.FromHex("18d698");
                 button3.BackgroundColor = Color.FromHex("B14157");
             }
-            if (poprawna_odp == "C" || poprawna_odp == "N")
+            if (poprawna_odp == "C" )
             {
                 button1.BackgroundColor = Color.FromHex("B14157");
                 button2.BackgroundColor = Color.FromHex("B14157");

@@ -28,7 +28,11 @@ namespace HackHeroesApp
             PoziomText.Text = "Poziom " + Values.instance.Poziom; 
             LoginText.Text = Values.instance.Login;
 
+            avatar.Source = "p" + Values.instance.Poziom + ".png";
+
             Console.WriteLine("Avatar: " + avatar.Source);
+
+
 
             staty();
             ranking();
@@ -50,8 +54,14 @@ namespace HackHeroesApp
             int all = result.ilosc_wszystkich_pytan;
 
             label1.Text = "Rozwiązałeś poprawnie " + done + "/" + all + " pytań";
+            //string nwzt = result.naj_wynik_z_test_teoretycznego.;
 
-            if (result.naj_wynik_z_test_teoretycznego != null)
+            if (result.status == "brak")
+            {
+                label2.Text = "Nie zrobiono testu teoretycznego";
+                label3.Text = "Nie zrobiono testu teoretycznego";
+            }
+            else
             {
                 NajWynikZTestTeoretycznego best = result.naj_wynik_z_test_teoretycznego;
                 int minutes = best.czas / 60;
@@ -129,7 +139,7 @@ namespace HackHeroesApp
         async void Praktyczny(object sender, EventArgs e)
         {
             PraktycznyButton.Opacity = 0.3;
-            await Navigation.PushModalAsync(new Page9());
+            await Navigation.PushModalAsync(new Page10());
             PraktycznyButton.Opacity = 0;
         }
     }

@@ -104,6 +104,7 @@ namespace HackHeroesApp
             var informacje = "Punkty: " + result.pytanie.liczba_punktow + "  Nr pytania: " + result.pytanie.numer_pytania + "  Zakres: " + result.pytanie.zakres_struktury + "   " + (lppytanie + 1) + "/" + dlugosclisty;
             if (result.pytanie.media == "")
             {
+                Console.WriteLine("bz");
                 PytanieFilm.IsVisible = false;
                 PytanieZdj.IsVisible = true;
                 PytanieZdj.Source = "bz.png";
@@ -123,12 +124,14 @@ namespace HackHeroesApp
 
                 if (extension == ".mp4")
                 {
+                    Console.WriteLine("video");
                     PytanieFilm.Source = link;
                     PytanieZdj.IsVisible = false;
                     PytanieFilm.IsVisible = true;
                 }
                 else
                 {
+                    Console.WriteLine("zdjecie");
                     PytanieZdj.Source = link;
                     PytanieFilm.IsVisible = false;
                     PytanieZdj.IsVisible = true;
@@ -285,7 +288,7 @@ namespace HackHeroesApp
             button1.BackgroundColor = Color.FromHex("3c987a");
             button2.BackgroundColor = Color.FromHex("3c987a");
             button3.BackgroundColor = Color.FromHex("3c987a");
-            if (lppytanie == dlugosclisty)
+            if (lppytanie >= dlugosclisty)
             {
                 lppytanie = 0;
                 pytania();
@@ -304,7 +307,7 @@ namespace HackHeroesApp
             button1.BackgroundColor = Color.FromHex("3c987a");
             button2.BackgroundColor = Color.FromHex("3c987a");
             button3.BackgroundColor = Color.FromHex("3c987a");
-            if (lppytanie == dlugosclisty)
+            if (lppytanie >= dlugosclisty)
             {
                 lppytanie = 0;
                 pytania();
